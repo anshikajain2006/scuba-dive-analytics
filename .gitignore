@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Power BI temp
+*.pbix.tmp
+~$*
+
+# NOTE: data/raw/ and data/clean/ are intentionally COMMITTED.
+# The raw messy dataset is a deliverable of this case study (brief §8), not a build artifact.
