@@ -1,0 +1,923 @@
+trip_id,dive_site,difficulty,boat_capacity,season,seats_sold,completed_seats,cancelled_seats,no_show_seats,dive_date,season_year,dive_month,dive_ym,empty_seats,never_sold_seats
+T00001,Lighthouse Reef,Intermediate,12,Peak,11,9,2,0,2024-01-01,2023-24 (half),1,2024-01,3,1
+T00002,Pinnacle Rock,Intermediate,12,Peak,9,9,0,0,2024-01-01,2023-24 (half),1,2024-01,3,3
+T00003,Coral Ridge,Beginner,9,Peak,8,7,1,0,2024-01-02,2023-24 (half),1,2024-01,2,1
+T00004,Lighthouse Reef,Intermediate,10,Peak,8,8,0,0,2024-01-02,2023-24 (half),1,2024-01,2,2
+T00005,Coral Ridge,Beginner,10,Peak,7,6,1,0,2024-01-03,2023-24 (half),1,2024-01,4,3
+T00006,Lighthouse Reef,Intermediate,8,Peak,6,5,0,1,2024-01-03,2023-24 (half),1,2024-01,3,2
+T00007,Pinnacle Rock,Intermediate,11,Peak,9,9,0,0,2024-01-04,2023-24 (half),1,2024-01,2,2
+T00008,Manta Alley,Advanced,11,Peak,10,6,3,1,2024-01-04,2023-24 (half),1,2024-01,5,1
+T00009,Pinnacle Rock,Intermediate,10,Peak,7,6,1,0,2024-01-05,2023-24 (half),1,2024-01,4,3
+T00010,Seagrass Flats,Beginner,11,Peak,8,6,0,2,2024-01-05,2023-24 (half),1,2024-01,5,3
+T00011,Shark Bank,Advanced,12,Peak,10,10,0,0,2024-01-06,2023-24 (half),1,2024-01,2,2
+T00012,Lighthouse Reef,Intermediate,8,Peak,7,6,1,0,2024-01-06,2023-24 (half),1,2024-01,2,1
+T00013,The Wall,Advanced,9,Peak,7,5,2,0,2024-01-07,2023-24 (half),1,2024-01,4,2
+T00014,Blue Hollow,Intermediate,10,Peak,9,9,0,0,2024-01-07,2023-24 (half),1,2024-01,1,1
+T00015,Anchor Point,Intermediate,8,Peak,7,5,2,0,2024-01-07,2023-24 (half),1,2024-01,3,1
+T00016,Barracuda Point,Advanced,10,Peak,7,7,0,0,2024-01-08,2023-24 (half),1,2024-01,3,3
+T00017,Lighthouse Reef,Intermediate,11,Peak,9,8,0,1,2024-01-08,2023-24 (half),1,2024-01,3,2
+T00018,Pinnacle Rock,Intermediate,9,Peak,7,7,0,0,2024-01-09,2023-24 (half),1,2024-01,2,2
+T00019,Manta Alley,Advanced,11,Peak,10,7,0,3,2024-01-09,2023-24 (half),1,2024-01,4,1
+T00020,Coral Ridge,Beginner,10,Peak,9,9,0,0,2024-01-10,2023-24 (half),1,2024-01,1,1
+T00021,The Wall,Advanced,11,Peak,8,7,1,0,2024-01-10,2023-24 (half),1,2024-01,4,3
+T00022,Shark Bank,Advanced,8,Peak,6,5,0,1,2024-01-11,2023-24 (half),1,2024-01,3,2
+T00023,Turtle Bay,Beginner,11,Peak,9,9,0,0,2024-01-11,2023-24 (half),1,2024-01,2,2
+T00024,Shark Bank,Advanced,9,Peak,7,7,0,0,2024-01-12,2023-24 (half),1,2024-01,2,2
+T00025,Coral Ridge,Beginner,9,Peak,8,7,0,1,2024-01-12,2023-24 (half),1,2024-01,2,1
+T00026,Sunken Barge,Intermediate,8,Peak,6,6,0,0,2024-01-13,2023-24 (half),1,2024-01,2,2
+T00027,Seagrass Flats,Beginner,8,Peak,6,6,0,0,2024-01-13,2023-24 (half),1,2024-01,2,2
+T00028,Anchor Point,Intermediate,11,Peak,8,6,2,0,2024-01-14,2023-24 (half),1,2024-01,5,3
+T00029,The Wall,Advanced,8,Peak,7,7,0,0,2024-01-14,2023-24 (half),1,2024-01,1,1
+T00030,Barracuda Point,Advanced,11,Peak,9,9,0,0,2024-01-15,2023-24 (half),1,2024-01,2,2
+T00031,Anchor Point,Intermediate,10,Peak,8,7,0,1,2024-01-15,2023-24 (half),1,2024-01,3,2
+T00032,Turtle Bay,Beginner,12,Peak,10,8,2,0,2024-01-16,2023-24 (half),1,2024-01,4,2
+T00033,Seagrass Flats,Beginner,12,Peak,9,7,1,1,2024-01-16,2023-24 (half),1,2024-01,5,3
+T00034,Anchor Point,Intermediate,10,Peak,7,7,0,0,2024-01-17,2023-24 (half),1,2024-01,3,3
+T00035,Nemo Garden,Beginner,8,Peak,7,7,0,0,2024-01-17,2023-24 (half),1,2024-01,1,1
+T00036,Seagrass Flats,Beginner,11,Peak,9,8,1,0,2024-01-18,2023-24 (half),1,2024-01,3,2
+T00037,Blue Hollow,Intermediate,11,Peak,10,10,0,0,2024-01-18,2023-24 (half),1,2024-01,1,1
+T00038,Turtle Bay,Beginner,10,Peak,9,9,0,0,2024-01-19,2023-24 (half),1,2024-01,1,1
+T00039,Shark Bank,Advanced,10,Peak,8,8,0,0,2024-01-19,2023-24 (half),1,2024-01,2,2
+T00040,The Wall,Advanced,10,Peak,8,6,0,2,2024-01-20,2023-24 (half),1,2024-01,4,2
+T00041,Manta Alley,Advanced,11,Peak,8,6,2,0,2024-01-20,2023-24 (half),1,2024-01,5,3
+T00042,Turtle Bay,Beginner,11,Peak,7,6,1,0,2024-01-21,2023-24 (half),1,2024-01,5,4
+T00043,Seagrass Flats,Beginner,11,Peak,9,9,0,0,2024-01-21,2023-24 (half),1,2024-01,2,2
+T00044,Turtle Bay,Beginner,10,Peak,7,7,0,0,2024-01-21,2023-24 (half),1,2024-01,3,3
+T00045,Manta Alley,Advanced,8,Peak,5,4,1,0,2024-01-22,2023-24 (half),1,2024-01,4,3
+T00046,Blue Hollow,Intermediate,12,Peak,11,8,2,1,2024-01-22,2023-24 (half),1,2024-01,4,1
+T00047,Lighthouse Reef,Intermediate,9,Peak,7,3,3,1,2024-01-23,2023-24 (half),1,2024-01,6,2
+T00048,Manta Alley,Advanced,9,Peak,7,5,1,1,2024-01-23,2023-24 (half),1,2024-01,4,2
+T00049,Blue Hollow,Intermediate,9,Peak,8,6,2,0,2024-01-24,2023-24 (half),1,2024-01,3,1
+T00050,Turtle Bay,Beginner,9,Peak,6,5,0,1,2024-01-24,2023-24 (half),1,2024-01,4,3
+T00051,Nemo Garden,Beginner,11,Peak,8,8,0,0,2024-01-25,2023-24 (half),1,2024-01,3,3
+T00052,Coral Ridge,Beginner,10,Peak,8,8,0,0,2024-01-25,2023-24 (half),1,2024-01,2,2
+T00053,Anchor Point,Intermediate,11,Peak,8,8,0,0,2024-01-26,2023-24 (half),1,2024-01,3,3
+T00054,Shark Bank,Advanced,12,Peak,10,10,0,0,2024-01-26,2023-24 (half),1,2024-01,2,2
+T00055,Turtle Bay,Beginner,10,Peak,8,8,0,0,2024-01-27,2023-24 (half),1,2024-01,2,2
+T00056,Pinnacle Rock,Intermediate,11,Peak,9,8,1,0,2024-01-27,2023-24 (half),1,2024-01,3,2
+T00057,Drift Corner,Advanced,12,Peak,10,10,0,0,2024-01-28,2023-24 (half),1,2024-01,2,2
+T00058,Turtle Bay,Beginner,9,Peak,7,5,1,1,2024-01-28,2023-24 (half),1,2024-01,4,2
+T00059,Barracuda Point,Advanced,8,Peak,6,5,1,0,2024-01-29,2023-24 (half),1,2024-01,3,2
+T00060,Barracuda Point,Advanced,12,Peak,9,7,2,0,2024-01-30,2023-24 (half),1,2024-01,5,3
+T00061,Anchor Point,Intermediate,9,Peak,7,6,1,0,2024-01-30,2023-24 (half),1,2024-01,3,2
+T00062,Shark Bank,Advanced,12,Peak,10,10,0,0,2024-01-31,2023-24 (half),1,2024-01,2,2
+T00063,Barracuda Point,Advanced,12,Peak,11,9,1,1,2024-01-31,2023-24 (half),1,2024-01,3,1
+T00064,Seagrass Flats,Beginner,11,Peak,8,8,0,0,2024-02-01,2023-24 (half),2,2024-02,3,3
+T00065,Blue Hollow,Intermediate,8,Peak,6,5,1,0,2024-02-01,2023-24 (half),2,2024-02,3,2
+T00066,Blue Hollow,Intermediate,9,Peak,7,7,0,0,2024-02-02,2023-24 (half),2,2024-02,2,2
+T00067,Lighthouse Reef,Intermediate,9,Peak,6,6,0,0,2024-02-02,2023-24 (half),2,2024-02,3,3
+T00068,Nemo Garden,Beginner,10,Peak,8,8,0,0,2024-02-03,2023-24 (half),2,2024-02,2,2
+T00069,Blue Hollow,Intermediate,10,Peak,7,6,0,1,2024-02-03,2023-24 (half),2,2024-02,4,3
+T00070,Barracuda Point,Advanced,12,Peak,8,7,1,0,2024-02-04,2023-24 (half),2,2024-02,5,4
+T00071,Lighthouse Reef,Intermediate,9,Peak,7,4,2,1,2024-02-04,2023-24 (half),2,2024-02,5,2
+T00072,The Wall,Advanced,12,Peak,9,7,1,1,2024-02-05,2023-24 (half),2,2024-02,5,3
+T00073,Turtle Bay,Beginner,12,Peak,9,8,0,1,2024-02-05,2023-24 (half),2,2024-02,4,3
+T00074,The Wall,Advanced,12,Peak,9,9,0,0,2024-02-06,2023-24 (half),2,2024-02,3,3
+T00075,Seagrass Flats,Beginner,9,Peak,8,7,1,0,2024-02-06,2023-24 (half),2,2024-02,2,1
+T00076,Manta Alley,Advanced,12,Peak,9,8,0,1,2024-02-07,2023-24 (half),2,2024-02,4,3
+T00077,Anchor Point,Intermediate,12,Peak,11,11,0,0,2024-02-07,2023-24 (half),2,2024-02,1,1
+T00078,Drift Corner,Advanced,8,Peak,7,6,1,0,2024-02-08,2023-24 (half),2,2024-02,2,1
+T00079,Turtle Bay,Beginner,8,Peak,6,5,1,0,2024-02-08,2023-24 (half),2,2024-02,3,2
+T00080,Shark Bank,Advanced,12,Peak,10,8,2,0,2024-02-09,2023-24 (half),2,2024-02,4,2
+T00081,The Wall,Advanced,11,Peak,8,8,0,0,2024-02-10,2023-24 (half),2,2024-02,3,3
+T00082,The Wall,Advanced,8,Peak,7,6,1,0,2024-02-10,2023-24 (half),2,2024-02,2,1
+T00083,Lighthouse Reef,Intermediate,10,Peak,7,5,2,0,2024-02-11,2023-24 (half),2,2024-02,5,3
+T00084,Sunken Barge,Intermediate,9,Peak,8,7,1,0,2024-02-11,2023-24 (half),2,2024-02,2,1
+T00085,Barracuda Point,Advanced,11,Peak,10,10,0,0,2024-02-12,2023-24 (half),2,2024-02,1,1
+T00086,Lighthouse Reef,Intermediate,11,Peak,8,8,0,0,2024-02-12,2023-24 (half),2,2024-02,3,3
+T00087,Coral Ridge,Beginner,9,Peak,7,5,0,2,2024-02-13,2023-24 (half),2,2024-02,4,2
+T00088,Sunken Barge,Intermediate,11,Peak,8,5,1,2,2024-02-13,2023-24 (half),2,2024-02,6,3
+T00089,Nemo Garden,Beginner,10,Peak,7,7,0,0,2024-02-14,2023-24 (half),2,2024-02,3,3
+T00090,The Wall,Advanced,9,Peak,6,4,2,0,2024-02-14,2023-24 (half),2,2024-02,5,3
+T00091,Manta Alley,Advanced,10,Peak,8,7,0,1,2024-02-15,2023-24 (half),2,2024-02,3,2
+T00092,Manta Alley,Advanced,10,Peak,8,8,0,0,2024-02-15,2023-24 (half),2,2024-02,2,2
+T00093,Seagrass Flats,Beginner,10,Peak,8,7,1,0,2024-02-16,2023-24 (half),2,2024-02,3,2
+T00094,Nemo Garden,Beginner,11,Peak,10,9,0,1,2024-02-17,2023-24 (half),2,2024-02,2,1
+T00095,Turtle Bay,Beginner,10,Peak,8,7,1,0,2024-02-17,2023-24 (half),2,2024-02,3,2
+T00096,Sunken Barge,Intermediate,9,Peak,7,6,1,0,2024-02-17,2023-24 (half),2,2024-02,3,2
+T00097,Pinnacle Rock,Intermediate,12,Peak,9,9,0,0,2024-02-18,2023-24 (half),2,2024-02,3,3
+T00098,Pinnacle Rock,Intermediate,9,Peak,8,7,0,1,2024-02-18,2023-24 (half),2,2024-02,2,1
+T00099,Drift Corner,Advanced,9,Peak,7,4,1,2,2024-02-18,2023-24 (half),2,2024-02,5,2
+T00100,The Wall,Advanced,10,Peak,8,8,0,0,2024-02-19,2023-24 (half),2,2024-02,2,2
+T00101,Nemo Garden,Beginner,9,Peak,7,6,1,0,2024-02-19,2023-24 (half),2,2024-02,3,2
+T00102,Blue Hollow,Intermediate,11,Peak,7,6,1,0,2024-02-20,2023-24 (half),2,2024-02,5,4
+T00103,Sunken Barge,Intermediate,10,Peak,9,9,0,0,2024-02-20,2023-24 (half),2,2024-02,1,1
+T00104,Turtle Bay,Beginner,11,Peak,9,8,0,1,2024-02-21,2023-24 (half),2,2024-02,3,2
+T00105,Blue Hollow,Intermediate,11,Peak,9,8,1,0,2024-02-21,2023-24 (half),2,2024-02,3,2
+T00106,Nemo Garden,Beginner,12,Peak,10,9,1,0,2024-02-22,2023-24 (half),2,2024-02,3,2
+T00107,Coral Ridge,Beginner,10,Peak,9,8,0,1,2024-02-23,2023-24 (half),2,2024-02,2,1
+T00108,Sunken Barge,Intermediate,12,Peak,8,7,1,0,2024-02-23,2023-24 (half),2,2024-02,5,4
+T00109,Sunken Barge,Intermediate,10,Peak,9,7,2,0,2024-02-24,2023-24 (half),2,2024-02,3,1
+T00110,Pinnacle Rock,Intermediate,9,Peak,7,5,1,1,2024-02-25,2023-24 (half),2,2024-02,4,2
+T00111,Lighthouse Reef,Intermediate,10,Peak,9,8,0,1,2024-02-25,2023-24 (half),2,2024-02,2,1
+T00112,Anchor Point,Intermediate,8,Peak,6,5,1,0,2024-02-26,2023-24 (half),2,2024-02,3,2
+T00113,Pinnacle Rock,Intermediate,8,Peak,6,6,0,0,2024-02-26,2023-24 (half),2,2024-02,2,2
+T00114,Nemo Garden,Beginner,10,Peak,8,8,0,0,2024-02-27,2023-24 (half),2,2024-02,2,2
+T00115,Blue Hollow,Intermediate,10,Peak,7,7,0,0,2024-02-27,2023-24 (half),2,2024-02,3,3
+T00116,Blue Hollow,Intermediate,11,Peak,8,8,0,0,2024-02-28,2023-24 (half),2,2024-02,3,3
+T00117,Shark Bank,Advanced,12,Peak,9,9,0,0,2024-02-28,2023-24 (half),2,2024-02,3,3
+T00118,The Wall,Advanced,12,Peak,9,9,0,0,2024-02-29,2023-24 (half),2,2024-02,3,3
+T00119,Turtle Bay,Beginner,9,Peak,8,4,2,2,2024-02-29,2023-24 (half),2,2024-02,5,1
+T00120,Pinnacle Rock,Intermediate,10,Peak,8,8,0,0,2024-03-01,2023-24 (half),3,2024-03,2,2
+T00121,Anchor Point,Intermediate,9,Peak,8,6,1,1,2024-03-02,2023-24 (half),3,2024-03,3,1
+T00122,Blue Hollow,Intermediate,8,Peak,6,1,5,0,2024-03-03,2023-24 (half),3,2024-03,7,2
+T00123,Coral Ridge,Beginner,8,Peak,6,3,3,0,2024-03-03,2023-24 (half),3,2024-03,5,2
+T00124,Anchor Point,Intermediate,11,Peak,9,7,2,0,2024-03-04,2023-24 (half),3,2024-03,4,2
+T00125,Blue Hollow,Intermediate,11,Peak,10,7,3,0,2024-03-04,2023-24 (half),3,2024-03,4,1
+T00126,Blue Hollow,Intermediate,9,Peak,7,6,0,1,2024-03-05,2023-24 (half),3,2024-03,3,2
+T00127,Anchor Point,Intermediate,12,Peak,10,10,0,0,2024-03-05,2023-24 (half),3,2024-03,2,2
+T00128,Pinnacle Rock,Intermediate,12,Peak,11,9,2,0,2024-03-06,2023-24 (half),3,2024-03,3,1
+T00129,Manta Alley,Advanced,10,Peak,8,7,0,1,2024-03-06,2023-24 (half),3,2024-03,3,2
+T00130,Blue Hollow,Intermediate,12,Peak,10,10,0,0,2024-03-07,2023-24 (half),3,2024-03,2,2
+T00131,Blue Hollow,Intermediate,11,Peak,8,7,0,1,2024-03-07,2023-24 (half),3,2024-03,4,3
+T00132,Lighthouse Reef,Intermediate,11,Peak,8,7,1,0,2024-03-08,2023-24 (half),3,2024-03,4,3
+T00133,Barracuda Point,Advanced,8,Peak,6,6,0,0,2024-03-09,2023-24 (half),3,2024-03,2,2
+T00134,Shark Bank,Advanced,8,Peak,6,3,3,0,2024-03-10,2023-24 (half),3,2024-03,5,2
+T00135,Lighthouse Reef,Intermediate,12,Peak,9,8,0,1,2024-03-11,2023-24 (half),3,2024-03,4,3
+T00136,The Wall,Advanced,9,Peak,7,5,1,1,2024-03-11,2023-24 (half),3,2024-03,4,2
+T00137,The Wall,Advanced,11,Peak,8,7,1,0,2024-03-12,2023-24 (half),3,2024-03,4,3
+T00138,Barracuda Point,Advanced,12,Peak,9,8,1,0,2024-03-13,2023-24 (half),3,2024-03,4,3
+T00139,Shark Bank,Advanced,11,Peak,9,9,0,0,2024-03-13,2023-24 (half),3,2024-03,2,2
+T00140,Barracuda Point,Advanced,9,Peak,7,6,1,0,2024-03-14,2023-24 (half),3,2024-03,3,2
+T00141,Coral Ridge,Beginner,12,Peak,9,8,1,0,2024-03-14,2023-24 (half),3,2024-03,4,3
+T00142,Turtle Bay,Beginner,9,Peak,8,8,0,0,2024-03-15,2023-24 (half),3,2024-03,1,1
+T00143,Seagrass Flats,Beginner,11,Peak,9,9,0,0,2024-03-16,2023-24 (half),3,2024-03,2,2
+T00144,Manta Alley,Advanced,9,Peak,8,7,1,0,2024-03-16,2023-24 (half),3,2024-03,2,1
+T00145,Sunken Barge,Intermediate,8,Peak,7,6,1,0,2024-03-17,2023-24 (half),3,2024-03,2,1
+T00146,Manta Alley,Advanced,9,Peak,7,6,1,0,2024-03-17,2023-24 (half),3,2024-03,3,2
+T00147,Blue Hollow,Intermediate,10,Peak,9,9,0,0,2024-03-18,2023-24 (half),3,2024-03,1,1
+T00148,Barracuda Point,Advanced,11,Peak,8,8,0,0,2024-03-18,2023-24 (half),3,2024-03,3,3
+T00149,Anchor Point,Intermediate,9,Peak,8,6,1,1,2024-03-19,2023-24 (half),3,2024-03,3,1
+T00150,Sunken Barge,Intermediate,12,Peak,10,8,1,1,2024-03-19,2023-24 (half),3,2024-03,4,2
+T00151,Anchor Point,Intermediate,10,Peak,8,8,0,0,2024-03-20,2023-24 (half),3,2024-03,2,2
+T00152,The Wall,Advanced,11,Peak,9,7,2,0,2024-03-20,2023-24 (half),3,2024-03,4,2
+T00153,Nemo Garden,Beginner,10,Peak,9,9,0,0,2024-03-21,2023-24 (half),3,2024-03,1,1
+T00154,Blue Hollow,Intermediate,10,Peak,7,5,1,1,2024-03-21,2023-24 (half),3,2024-03,5,3
+T00155,Lighthouse Reef,Intermediate,10,Peak,8,7,0,1,2024-03-22,2023-24 (half),3,2024-03,3,2
+T00156,Manta Alley,Advanced,9,Peak,7,5,2,0,2024-03-22,2023-24 (half),3,2024-03,4,2
+T00157,Sunken Barge,Intermediate,10,Peak,7,6,1,0,2024-03-23,2023-24 (half),3,2024-03,4,3
+T00158,Manta Alley,Advanced,10,Peak,7,7,0,0,2024-03-24,2023-24 (half),3,2024-03,3,3
+T00159,Lighthouse Reef,Intermediate,8,Peak,6,5,1,0,2024-03-24,2023-24 (half),3,2024-03,3,2
+T00160,Blue Hollow,Intermediate,11,Peak,9,7,2,0,2024-03-25,2023-24 (half),3,2024-03,4,2
+T00161,Pinnacle Rock,Intermediate,10,Peak,9,8,1,0,2024-03-25,2023-24 (half),3,2024-03,2,1
+T00162,Shark Bank,Advanced,9,Peak,6,5,1,0,2024-03-26,2023-24 (half),3,2024-03,4,3
+T00163,Lighthouse Reef,Intermediate,8,Peak,7,7,0,0,2024-03-27,2023-24 (half),3,2024-03,1,1
+T00164,Anchor Point,Intermediate,11,Peak,8,8,0,0,2024-03-27,2023-24 (half),3,2024-03,3,3
+T00165,Manta Alley,Advanced,11,Peak,8,7,0,1,2024-03-28,2023-24 (half),3,2024-03,4,3
+T00166,Drift Corner,Advanced,12,Peak,9,6,3,0,2024-03-29,2023-24 (half),3,2024-03,6,3
+T00167,Lighthouse Reef,Intermediate,12,Peak,10,9,1,0,2024-03-29,2023-24 (half),3,2024-03,3,2
+T00168,The Wall,Advanced,12,Peak,9,8,1,0,2024-03-30,2023-24 (half),3,2024-03,4,3
+T00169,Nemo Garden,Beginner,9,Peak,8,6,2,0,2024-03-30,2023-24 (half),3,2024-03,3,1
+T00170,Nemo Garden,Beginner,9,Peak,6,6,0,0,2024-03-31,2023-24 (half),3,2024-03,3,3
+T00171,Coral Ridge,Beginner,8,Peak,7,7,0,0,2024-03-31,2023-24 (half),3,2024-03,1,1
+T00172,Manta Alley,Advanced,11,Shoulder,9,8,0,1,2024-04-01,2023-24 (half),4,2024-04,3,2
+T00173,Shark Bank,Advanced,9,Shoulder,8,7,0,1,2024-04-02,2023-24 (half),4,2024-04,2,1
+T00174,Coral Ridge,Beginner,12,Shoulder,9,8,1,0,2024-04-02,2023-24 (half),4,2024-04,4,3
+T00175,Seagrass Flats,Beginner,11,Shoulder,9,8,1,0,2024-04-03,2023-24 (half),4,2024-04,3,2
+T00176,Sunken Barge,Intermediate,11,Shoulder,10,9,1,0,2024-04-04,2023-24 (half),4,2024-04,2,1
+T00177,Shark Bank,Advanced,10,Shoulder,7,7,0,0,2024-04-05,2023-24 (half),4,2024-04,3,3
+T00178,Shark Bank,Advanced,8,Shoulder,6,6,0,0,2024-04-06,2023-24 (half),4,2024-04,2,2
+T00179,Manta Alley,Advanced,8,Shoulder,6,5,0,1,2024-04-07,2023-24 (half),4,2024-04,3,2
+T00180,Seagrass Flats,Beginner,11,Shoulder,8,7,1,0,2024-04-08,2023-24 (half),4,2024-04,4,3
+T00181,Seagrass Flats,Beginner,8,Shoulder,7,6,1,0,2024-04-09,2023-24 (half),4,2024-04,2,1
+T00182,Pinnacle Rock,Intermediate,11,Shoulder,9,8,0,1,2024-04-10,2023-24 (half),4,2024-04,3,2
+T00183,Manta Alley,Advanced,10,Shoulder,7,7,0,0,2024-04-11,2023-24 (half),4,2024-04,3,3
+T00184,Coral Ridge,Beginner,8,Shoulder,5,5,0,0,2024-04-11,2023-24 (half),4,2024-04,3,3
+T00185,The Wall,Advanced,8,Shoulder,6,6,0,0,2024-04-12,2023-24 (half),4,2024-04,2,2
+T00186,Sunken Barge,Intermediate,12,Shoulder,9,9,0,0,2024-04-13,2023-24 (half),4,2024-04,3,3
+T00187,Seagrass Flats,Beginner,12,Shoulder,8,8,0,0,2024-04-14,2023-24 (half),4,2024-04,4,4
+T00188,Nemo Garden,Beginner,8,Shoulder,6,5,0,1,2024-04-15,2023-24 (half),4,2024-04,3,2
+T00189,Manta Alley,Advanced,11,Shoulder,10,8,2,0,2024-04-16,2023-24 (half),4,2024-04,3,1
+T00190,Manta Alley,Advanced,9,Shoulder,7,6,1,0,2024-04-17,2023-24 (half),4,2024-04,3,2
+T00191,Anchor Point,Intermediate,10,Shoulder,7,6,1,0,2024-04-18,2023-24 (half),4,2024-04,4,3
+T00192,The Wall,Advanced,9,Shoulder,7,6,1,0,2024-04-18,2023-24 (half),4,2024-04,3,2
+T00193,Drift Corner,Advanced,11,Shoulder,9,8,1,0,2024-04-19,2023-24 (half),4,2024-04,3,2
+T00194,Drift Corner,Advanced,11,Shoulder,8,7,1,0,2024-04-19,2023-24 (half),4,2024-04,4,3
+T00195,Barracuda Point,Advanced,8,Shoulder,7,7,0,0,2024-04-20,2023-24 (half),4,2024-04,1,1
+T00196,Seagrass Flats,Beginner,9,Shoulder,6,6,0,0,2024-04-20,2023-24 (half),4,2024-04,3,3
+T00197,Coral Ridge,Beginner,10,Shoulder,8,7,1,0,2024-04-21,2023-24 (half),4,2024-04,3,2
+T00198,Sunken Barge,Intermediate,10,Shoulder,7,7,0,0,2024-04-22,2023-24 (half),4,2024-04,3,3
+T00199,Lighthouse Reef,Intermediate,12,Shoulder,11,10,1,0,2024-04-23,2023-24 (half),4,2024-04,2,1
+T00200,Coral Ridge,Beginner,10,Shoulder,7,7,0,0,2024-04-24,2023-24 (half),4,2024-04,3,3
+T00201,Manta Alley,Advanced,9,Shoulder,6,5,0,1,2024-04-25,2023-24 (half),4,2024-04,4,3
+T00202,Turtle Bay,Beginner,11,Shoulder,10,3,7,0,2024-04-26,2023-24 (half),4,2024-04,8,1
+T00203,Lighthouse Reef,Intermediate,9,Shoulder,8,6,2,0,2024-04-26,2023-24 (half),4,2024-04,3,1
+T00204,Manta Alley,Advanced,10,Shoulder,7,1,5,1,2024-04-27,2023-24 (half),4,2024-04,9,3
+T00205,Lighthouse Reef,Intermediate,10,Shoulder,7,7,0,0,2024-04-28,2023-24 (half),4,2024-04,3,3
+T00206,Nemo Garden,Beginner,9,Shoulder,6,4,2,0,2024-04-29,2023-24 (half),4,2024-04,5,3
+T00207,Sunken Barge,Intermediate,12,Shoulder,10,10,0,0,2024-04-30,2023-24 (half),4,2024-04,2,2
+T00208,Manta Alley,Advanced,12,Shoulder,9,8,1,0,2024-05-01,2023-24 (half),5,2024-05,4,3
+T00209,Shark Bank,Advanced,12,Shoulder,10,10,0,0,2024-05-02,2023-24 (half),5,2024-05,2,2
+T00210,Drift Corner,Advanced,9,Shoulder,7,6,0,1,2024-05-03,2023-24 (half),5,2024-05,3,2
+T00211,The Wall,Advanced,8,Shoulder,6,4,2,0,2024-05-04,2023-24 (half),5,2024-05,4,2
+T00212,Anchor Point,Intermediate,8,Shoulder,6,5,1,0,2024-05-05,2023-24 (half),5,2024-05,3,2
+T00213,Turtle Bay,Beginner,8,Shoulder,6,6,0,0,2024-05-06,2023-24 (half),5,2024-05,2,2
+T00214,Blue Hollow,Intermediate,9,Shoulder,7,3,4,0,2024-05-07,2023-24 (half),5,2024-05,6,2
+T00215,Seagrass Flats,Beginner,9,Shoulder,6,3,2,1,2024-05-08,2023-24 (half),5,2024-05,6,3
+T00216,Blue Hollow,Intermediate,11,Shoulder,9,9,0,0,2024-05-09,2023-24 (half),5,2024-05,2,2
+T00217,Nemo Garden,Beginner,12,Shoulder,10,9,0,1,2024-05-10,2023-24 (half),5,2024-05,3,2
+T00218,Sunken Barge,Intermediate,8,Shoulder,7,6,1,0,2024-05-11,2023-24 (half),5,2024-05,2,1
+T00219,Sunken Barge,Intermediate,12,Shoulder,9,1,8,0,2024-05-12,2023-24 (half),5,2024-05,11,3
+T00220,Sunken Barge,Intermediate,10,Shoulder,8,5,3,0,2024-05-13,2023-24 (half),5,2024-05,5,2
+T00221,Pinnacle Rock,Intermediate,10,Shoulder,7,7,0,0,2024-05-14,2023-24 (half),5,2024-05,3,3
+T00222,Manta Alley,Advanced,9,Shoulder,6,3,3,0,2024-05-15,2023-24 (half),5,2024-05,6,3
+T00223,Coral Ridge,Beginner,11,Shoulder,9,9,0,0,2024-05-16,2023-24 (half),5,2024-05,2,2
+T00224,Turtle Bay,Beginner,12,Shoulder,10,9,1,0,2024-05-17,2023-24 (half),5,2024-05,3,2
+T00225,Turtle Bay,Beginner,11,Shoulder,8,6,1,1,2024-05-18,2023-24 (half),5,2024-05,5,3
+T00226,Shark Bank,Advanced,9,Shoulder,7,6,1,0,2024-05-19,2023-24 (half),5,2024-05,3,2
+T00227,Manta Alley,Advanced,11,Shoulder,9,7,0,2,2024-05-20,2023-24 (half),5,2024-05,4,2
+T00228,Pinnacle Rock,Intermediate,11,Shoulder,8,6,2,0,2024-05-21,2023-24 (half),5,2024-05,5,3
+T00229,Pinnacle Rock,Intermediate,11,Shoulder,9,7,2,0,2024-05-22,2023-24 (half),5,2024-05,4,2
+T00230,Barracuda Point,Advanced,12,Shoulder,10,8,0,2,2024-05-23,2023-24 (half),5,2024-05,4,2
+T00231,Drift Corner,Advanced,10,Shoulder,7,7,0,0,2024-05-24,2023-24 (half),5,2024-05,3,3
+T00232,Pinnacle Rock,Intermediate,12,Shoulder,8,8,0,0,2024-05-25,2023-24 (half),5,2024-05,4,4
+T00233,Drift Corner,Advanced,8,Shoulder,5,5,0,0,2024-05-26,2023-24 (half),5,2024-05,3,3
+T00234,Lighthouse Reef,Intermediate,11,Shoulder,8,8,0,0,2024-05-27,2023-24 (half),5,2024-05,3,3
+T00235,Blue Hollow,Intermediate,11,Shoulder,8,8,0,0,2024-05-28,2023-24 (half),5,2024-05,3,3
+T00236,Drift Corner,Advanced,9,Shoulder,7,6,1,0,2024-05-29,2023-24 (half),5,2024-05,3,2
+T00237,Anchor Point,Intermediate,9,Shoulder,8,7,0,1,2024-05-30,2023-24 (half),5,2024-05,2,1
+T00238,Manta Alley,Advanced,8,Shoulder,7,6,1,0,2024-05-31,2023-24 (half),5,2024-05,2,1
+T00239,Barracuda Point,Advanced,11,Monsoon-Closed,5,0,5,0,2024-06-01,2024-25,6,2024-06,11,6
+T00240,Turtle Bay,Beginner,8,Monsoon-Closed,2,1,1,0,2024-06-05,2024-25,6,2024-06,7,6
+T00241,Coral Ridge,Beginner,11,Monsoon-Closed,2,2,0,0,2024-06-10,2024-25,6,2024-06,9,9
+T00242,Lighthouse Reef,Intermediate,9,Monsoon-Closed,4,1,3,0,2024-06-15,2024-25,6,2024-06,8,5
+T00243,The Wall,Advanced,10,Monsoon-Closed,4,1,2,1,2024-09-18,2024-25,9,2024-09,9,6
+T00244,Seagrass Flats,Beginner,12,Monsoon-Closed,5,1,4,0,2024-09-19,2024-25,9,2024-09,11,7
+T00245,Lighthouse Reef,Intermediate,10,Monsoon-Closed,3,0,3,0,2024-09-20,2024-25,9,2024-09,10,7
+T00246,The Wall,Advanced,9,Monsoon-Closed,4,2,2,0,2024-09-21,2024-25,9,2024-09,7,5
+T00247,Pinnacle Rock,Intermediate,11,Monsoon-Closed,4,1,3,0,2024-09-29,2024-25,9,2024-09,10,7
+T00248,Pinnacle Rock,Intermediate,9,Monsoon-Closed,5,1,4,0,2024-09-30,2024-25,9,2024-09,8,4
+T00249,Sunken Barge,Intermediate,9,Shoulder,6,5,1,0,2024-10-01,2024-25,10,2024-10,4,3
+T00250,Lighthouse Reef,Intermediate,9,Shoulder,6,5,0,1,2024-10-02,2024-25,10,2024-10,4,3
+T00251,Coral Ridge,Beginner,12,Shoulder,9,6,3,0,2024-10-03,2024-25,10,2024-10,6,3
+T00252,Pinnacle Rock,Intermediate,12,Shoulder,10,8,2,0,2024-10-04,2024-25,10,2024-10,4,2
+T00253,Lighthouse Reef,Intermediate,9,Shoulder,6,2,4,0,2024-10-05,2024-25,10,2024-10,7,3
+T00254,Sunken Barge,Intermediate,10,Shoulder,8,4,4,0,2024-10-06,2024-25,10,2024-10,6,2
+T00255,Turtle Bay,Beginner,12,Shoulder,8,5,3,0,2024-10-06,2024-25,10,2024-10,7,4
+T00256,Nemo Garden,Beginner,8,Shoulder,6,4,1,1,2024-10-07,2024-25,10,2024-10,4,2
+T00257,Barracuda Point,Advanced,12,Shoulder,9,5,3,1,2024-10-08,2024-25,10,2024-10,7,3
+T00258,Drift Corner,Advanced,8,Shoulder,7,6,1,0,2024-10-09,2024-25,10,2024-10,2,1
+T00259,Shark Bank,Advanced,12,Shoulder,10,10,0,0,2024-10-10,2024-25,10,2024-10,2,2
+T00260,Blue Hollow,Intermediate,9,Shoulder,7,6,1,0,2024-10-11,2024-25,10,2024-10,3,2
+T00261,Anchor Point,Intermediate,10,Shoulder,9,7,1,1,2024-10-12,2024-25,10,2024-10,3,1
+T00262,Nemo Garden,Beginner,8,Shoulder,6,5,1,0,2024-10-13,2024-25,10,2024-10,3,2
+T00263,Manta Alley,Advanced,11,Shoulder,9,6,2,1,2024-10-13,2024-25,10,2024-10,5,2
+T00264,Manta Alley,Advanced,12,Shoulder,9,7,2,0,2024-10-14,2024-25,10,2024-10,5,3
+T00265,Pinnacle Rock,Intermediate,9,Shoulder,7,5,0,2,2024-10-15,2024-25,10,2024-10,4,2
+T00266,Shark Bank,Advanced,10,Shoulder,7,6,1,0,2024-10-16,2024-25,10,2024-10,4,3
+T00267,Blue Hollow,Intermediate,10,Shoulder,9,9,0,0,2024-10-17,2024-25,10,2024-10,1,1
+T00268,Anchor Point,Intermediate,12,Shoulder,8,7,1,0,2024-10-18,2024-25,10,2024-10,5,4
+T00269,Shark Bank,Advanced,11,Shoulder,8,7,1,0,2024-10-19,2024-25,10,2024-10,4,3
+T00270,Nemo Garden,Beginner,10,Shoulder,8,5,3,0,2024-10-20,2024-25,10,2024-10,5,2
+T00271,Coral Ridge,Beginner,12,Shoulder,9,5,4,0,2024-10-21,2024-25,10,2024-10,7,3
+T00272,Manta Alley,Advanced,9,Shoulder,8,6,1,1,2024-10-22,2024-25,10,2024-10,3,1
+T00273,Blue Hollow,Intermediate,12,Shoulder,8,3,5,0,2024-10-23,2024-25,10,2024-10,9,4
+T00274,The Wall,Advanced,11,Shoulder,9,5,3,1,2024-10-23,2024-25,10,2024-10,6,2
+T00275,Nemo Garden,Beginner,10,Shoulder,8,7,1,0,2024-10-24,2024-25,10,2024-10,3,2
+T00276,The Wall,Advanced,9,Shoulder,8,7,0,1,2024-10-25,2024-25,10,2024-10,2,1
+T00277,Barracuda Point,Advanced,10,Shoulder,8,6,1,1,2024-10-26,2024-25,10,2024-10,4,2
+T00278,Manta Alley,Advanced,11,Shoulder,9,7,1,1,2024-10-27,2024-25,10,2024-10,4,2
+T00279,Manta Alley,Advanced,10,Shoulder,9,1,8,0,2024-10-28,2024-25,10,2024-10,9,1
+T00280,Manta Alley,Advanced,12,Shoulder,8,7,0,1,2024-10-29,2024-25,10,2024-10,5,4
+T00281,Blue Hollow,Intermediate,8,Shoulder,6,4,1,1,2024-10-30,2024-25,10,2024-10,4,2
+T00282,Drift Corner,Advanced,8,Shoulder,7,4,3,0,2024-10-31,2024-25,10,2024-10,4,1
+T00283,Barracuda Point,Advanced,8,Shoulder,6,4,2,0,2024-11-01,2024-25,11,2024-11,4,2
+T00284,Drift Corner,Advanced,9,Shoulder,6,5,1,0,2024-11-02,2024-25,11,2024-11,4,3
+T00285,Nemo Garden,Beginner,12,Shoulder,9,7,1,1,2024-11-03,2024-25,11,2024-11,5,3
+T00286,Sunken Barge,Intermediate,10,Shoulder,7,7,0,0,2024-11-03,2024-25,11,2024-11,3,3
+T00287,Coral Ridge,Beginner,12,Shoulder,10,8,2,0,2024-11-03,2024-25,11,2024-11,4,2
+T00288,The Wall,Advanced,11,Shoulder,9,9,0,0,2024-11-04,2024-25,11,2024-11,2,2
+T00289,Coral Ridge,Beginner,8,Shoulder,7,7,0,0,2024-11-05,2024-25,11,2024-11,1,1
+T00290,Pinnacle Rock,Intermediate,8,Shoulder,6,6,0,0,2024-11-06,2024-25,11,2024-11,2,2
+T00291,Manta Alley,Advanced,10,Shoulder,7,6,1,0,2024-11-07,2024-25,11,2024-11,4,3
+T00292,Blue Hollow,Intermediate,10,Shoulder,8,8,0,0,2024-11-07,2024-25,11,2024-11,2,2
+T00293,Drift Corner,Advanced,11,Shoulder,8,5,1,2,2024-11-08,2024-25,11,2024-11,6,3
+T00294,Shark Bank,Advanced,9,Shoulder,6,5,1,0,2024-11-08,2024-25,11,2024-11,4,3
+T00295,Seagrass Flats,Beginner,9,Shoulder,7,5,2,0,2024-11-09,2024-25,11,2024-11,4,2
+T00296,Nemo Garden,Beginner,12,Shoulder,9,9,0,0,2024-11-09,2024-25,11,2024-11,3,3
+T00297,Blue Hollow,Intermediate,10,Shoulder,8,5,3,0,2024-11-09,2024-25,11,2024-11,5,2
+T00298,Pinnacle Rock,Intermediate,8,Shoulder,6,4,2,0,2024-11-10,2024-25,11,2024-11,4,2
+T00299,Pinnacle Rock,Intermediate,11,Shoulder,8,7,1,0,2024-11-11,2024-25,11,2024-11,4,3
+T00300,Manta Alley,Advanced,9,Shoulder,8,6,1,1,2024-11-12,2024-25,11,2024-11,3,1
+T00301,Drift Corner,Advanced,8,Shoulder,6,6,0,0,2024-11-13,2024-25,11,2024-11,2,2
+T00302,Barracuda Point,Advanced,8,Shoulder,6,6,0,0,2024-11-13,2024-25,11,2024-11,2,2
+T00303,Pinnacle Rock,Intermediate,11,Shoulder,10,9,0,1,2024-11-14,2024-25,11,2024-11,2,1
+T00304,Blue Hollow,Intermediate,11,Shoulder,8,7,0,1,2024-11-14,2024-25,11,2024-11,4,3
+T00305,Coral Ridge,Beginner,9,Shoulder,7,5,2,0,2024-11-15,2024-25,11,2024-11,4,2
+T00306,Turtle Bay,Beginner,11,Shoulder,9,4,4,1,2024-11-15,2024-25,11,2024-11,7,2
+T00307,Anchor Point,Intermediate,12,Shoulder,9,6,3,0,2024-11-16,2024-25,11,2024-11,6,3
+T00308,Blue Hollow,Intermediate,8,Shoulder,7,4,3,0,2024-11-17,2024-25,11,2024-11,4,1
+T00309,Drift Corner,Advanced,12,Shoulder,10,5,5,0,2024-11-18,2024-25,11,2024-11,7,2
+T00310,Sunken Barge,Intermediate,10,Shoulder,8,4,4,0,2024-11-18,2024-25,11,2024-11,6,2
+T00311,Turtle Bay,Beginner,10,Shoulder,8,0,8,0,2024-11-19,2024-25,11,2024-11,10,2
+T00312,Blue Hollow,Intermediate,12,Shoulder,9,2,7,0,2024-11-19,2024-25,11,2024-11,10,3
+T00313,Seagrass Flats,Beginner,10,Shoulder,7,0,7,0,2024-11-20,2024-25,11,2024-11,10,3
+T00314,Nemo Garden,Beginner,12,Shoulder,9,5,4,0,2024-11-21,2024-25,11,2024-11,7,3
+T00315,Seagrass Flats,Beginner,11,Shoulder,8,6,2,0,2024-11-21,2024-25,11,2024-11,5,3
+T00316,Lighthouse Reef,Intermediate,9,Shoulder,7,4,2,1,2024-11-22,2024-25,11,2024-11,5,2
+T00317,Drift Corner,Advanced,11,Shoulder,9,9,0,0,2024-11-23,2024-25,11,2024-11,2,2
+T00318,Pinnacle Rock,Intermediate,9,Shoulder,7,6,1,0,2024-11-24,2024-25,11,2024-11,3,2
+T00319,Manta Alley,Advanced,8,Shoulder,7,5,2,0,2024-11-25,2024-25,11,2024-11,3,1
+T00320,Anchor Point,Intermediate,8,Shoulder,6,5,1,0,2024-11-26,2024-25,11,2024-11,3,2
+T00321,Nemo Garden,Beginner,8,Shoulder,7,7,0,0,2024-11-27,2024-25,11,2024-11,1,1
+T00322,Anchor Point,Intermediate,12,Shoulder,10,10,0,0,2024-11-27,2024-25,11,2024-11,2,2
+T00323,The Wall,Advanced,11,Shoulder,9,9,0,0,2024-11-28,2024-25,11,2024-11,2,2
+T00324,Anchor Point,Intermediate,8,Shoulder,7,7,0,0,2024-11-29,2024-25,11,2024-11,1,1
+T00325,Sunken Barge,Intermediate,11,Shoulder,9,8,0,1,2024-11-30,2024-25,11,2024-11,3,2
+T00326,Pinnacle Rock,Intermediate,11,Peak,7,5,2,0,2024-12-01,2024-25,12,2024-12,6,4
+T00327,Seagrass Flats,Beginner,12,Peak,8,5,3,0,2024-12-01,2024-25,12,2024-12,7,4
+T00328,Turtle Bay,Beginner,12,Peak,9,5,3,1,2024-12-02,2024-25,12,2024-12,7,3
+T00329,Lighthouse Reef,Intermediate,9,Peak,6,6,0,0,2024-12-02,2024-25,12,2024-12,3,3
+T00330,Turtle Bay,Beginner,10,Peak,8,7,1,0,2024-12-03,2024-25,12,2024-12,3,2
+T00331,Manta Alley,Advanced,9,Peak,6,5,1,0,2024-12-04,2024-25,12,2024-12,4,3
+T00332,Manta Alley,Advanced,11,Peak,8,5,3,0,2024-12-04,2024-25,12,2024-12,6,3
+T00333,Turtle Bay,Beginner,8,Peak,6,4,2,0,2024-12-05,2024-25,12,2024-12,4,2
+T00334,Coral Ridge,Beginner,10,Peak,8,5,2,1,2024-12-05,2024-25,12,2024-12,5,2
+T00335,Shark Bank,Advanced,10,Peak,8,4,4,0,2024-12-06,2024-25,12,2024-12,6,2
+T00336,Turtle Bay,Beginner,9,Peak,7,4,3,0,2024-12-06,2024-25,12,2024-12,5,2
+T00337,Blue Hollow,Intermediate,12,Peak,10,5,4,1,2024-12-07,2024-25,12,2024-12,7,2
+T00338,Blue Hollow,Intermediate,11,Peak,9,5,4,0,2024-12-07,2024-25,12,2024-12,6,2
+T00339,Blue Hollow,Intermediate,8,Peak,6,4,1,1,2024-12-08,2024-25,12,2024-12,4,2
+T00340,The Wall,Advanced,12,Peak,10,6,4,0,2024-12-08,2024-25,12,2024-12,6,2
+T00341,Shark Bank,Advanced,10,Peak,8,6,2,0,2024-12-08,2024-25,12,2024-12,4,2
+T00342,Coral Ridge,Beginner,10,Peak,7,6,1,0,2024-12-09,2024-25,12,2024-12,4,3
+T00343,Shark Bank,Advanced,8,Peak,7,6,1,0,2024-12-10,2024-25,12,2024-12,2,1
+T00344,Manta Alley,Advanced,12,Peak,10,6,3,1,2024-12-10,2024-25,12,2024-12,6,2
+T00345,Nemo Garden,Beginner,12,Peak,10,7,1,2,2024-12-11,2024-25,12,2024-12,5,2
+T00346,Barracuda Point,Advanced,11,Peak,8,6,1,1,2024-12-12,2024-25,12,2024-12,5,3
+T00347,Seagrass Flats,Beginner,9,Peak,6,4,1,1,2024-12-12,2024-25,12,2024-12,5,3
+T00348,Lighthouse Reef,Intermediate,11,Peak,10,9,1,0,2024-12-13,2024-25,12,2024-12,2,1
+T00349,Seagrass Flats,Beginner,8,Peak,5,5,0,0,2024-12-13,2024-25,12,2024-12,3,3
+T00350,Lighthouse Reef,Intermediate,11,Peak,9,6,2,1,2024-12-14,2024-25,12,2024-12,5,2
+T00351,Shark Bank,Advanced,8,Peak,7,5,2,0,2024-12-14,2024-25,12,2024-12,3,1
+T00352,Manta Alley,Advanced,11,Peak,9,7,1,1,2024-12-15,2024-25,12,2024-12,4,2
+T00353,The Wall,Advanced,12,Peak,10,7,3,0,2024-12-15,2024-25,12,2024-12,5,2
+T00354,Turtle Bay,Beginner,9,Peak,7,6,1,0,2024-12-16,2024-25,12,2024-12,3,2
+T00355,Lighthouse Reef,Intermediate,8,Peak,6,5,0,1,2024-12-16,2024-25,12,2024-12,3,2
+T00356,Anchor Point,Intermediate,12,Peak,9,7,1,1,2024-12-17,2024-25,12,2024-12,5,3
+T00357,Drift Corner,Advanced,10,Peak,9,7,1,1,2024-12-18,2024-25,12,2024-12,3,1
+T00358,Sunken Barge,Intermediate,10,Peak,8,5,3,0,2024-12-18,2024-25,12,2024-12,5,2
+T00359,Drift Corner,Advanced,12,Peak,10,8,2,0,2024-12-19,2024-25,12,2024-12,4,2
+T00360,Seagrass Flats,Beginner,10,Peak,9,7,1,1,2024-12-19,2024-25,12,2024-12,3,1
+T00361,Manta Alley,Advanced,9,Peak,7,4,3,0,2024-12-20,2024-25,12,2024-12,5,2
+T00362,Sunken Barge,Intermediate,10,Peak,9,8,1,0,2024-12-20,2024-25,12,2024-12,2,1
+T00363,Anchor Point,Intermediate,10,Peak,8,7,1,0,2024-12-21,2024-25,12,2024-12,3,2
+T00364,Manta Alley,Advanced,11,Peak,8,4,2,2,2024-12-21,2024-25,12,2024-12,7,3
+T00365,Anchor Point,Intermediate,11,Peak,9,3,5,1,2024-12-22,2024-25,12,2024-12,8,2
+T00366,Shark Bank,Advanced,11,Peak,9,8,1,0,2024-12-23,2024-25,12,2024-12,3,2
+T00367,Anchor Point,Intermediate,8,Peak,7,7,0,0,2024-12-23,2024-25,12,2024-12,1,1
+T00368,Nemo Garden,Beginner,12,Peak,10,8,1,1,2024-12-24,2024-25,12,2024-12,4,2
+T00369,Seagrass Flats,Beginner,12,Peak,10,8,2,0,2024-12-25,2024-25,12,2024-12,4,2
+T00370,Manta Alley,Advanced,11,Peak,8,5,2,1,2024-12-26,2024-25,12,2024-12,6,3
+T00371,Manta Alley,Advanced,9,Peak,7,6,1,0,2024-12-26,2024-25,12,2024-12,3,2
+T00372,Lighthouse Reef,Intermediate,8,Peak,7,7,0,0,2024-12-27,2024-25,12,2024-12,1,1
+T00373,Drift Corner,Advanced,11,Peak,8,6,1,1,2024-12-27,2024-25,12,2024-12,5,3
+T00374,Lighthouse Reef,Intermediate,9,Peak,7,6,0,1,2024-12-28,2024-25,12,2024-12,3,2
+T00375,Lighthouse Reef,Intermediate,9,Peak,7,6,1,0,2024-12-28,2024-25,12,2024-12,3,2
+T00376,Manta Alley,Advanced,11,Peak,8,5,3,0,2024-12-28,2024-25,12,2024-12,6,3
+T00377,The Wall,Advanced,11,Peak,9,8,1,0,2024-12-29,2024-25,12,2024-12,3,2
+T00378,The Wall,Advanced,11,Peak,8,8,0,0,2024-12-29,2024-25,12,2024-12,3,3
+T00379,Drift Corner,Advanced,11,Peak,8,8,0,0,2024-12-30,2024-25,12,2024-12,3,3
+T00380,Blue Hollow,Intermediate,8,Peak,6,6,0,0,2024-12-30,2024-25,12,2024-12,2,2
+T00381,Anchor Point,Intermediate,12,Peak,10,10,0,0,2024-12-31,2024-25,12,2024-12,2,2
+T00382,Turtle Bay,Beginner,8,Peak,7,7,0,0,2025-01-01,2024-25,1,2025-01,1,1
+T00383,Shark Bank,Advanced,9,Peak,6,5,0,1,2025-01-01,2024-25,1,2025-01,4,3
+T00384,Anchor Point,Intermediate,9,Peak,7,7,0,0,2025-01-02,2024-25,1,2025-01,2,2
+T00385,Barracuda Point,Advanced,12,Peak,10,8,2,0,2025-01-02,2024-25,1,2025-01,4,2
+T00386,Barracuda Point,Advanced,11,Peak,9,8,1,0,2025-01-03,2024-25,1,2025-01,3,2
+T00387,Shark Bank,Advanced,10,Peak,8,8,0,0,2025-01-03,2024-25,1,2025-01,2,2
+T00388,Coral Ridge,Beginner,8,Peak,5,5,0,0,2025-01-04,2024-25,1,2025-01,3,3
+T00389,Blue Hollow,Intermediate,12,Peak,10,9,1,0,2025-01-05,2024-25,1,2025-01,3,2
+T00390,The Wall,Advanced,12,Peak,8,7,0,1,2025-01-05,2024-25,1,2025-01,5,4
+T00391,Anchor Point,Intermediate,11,Peak,8,4,4,0,2025-01-06,2024-25,1,2025-01,7,3
+T00392,Sunken Barge,Intermediate,12,Peak,10,7,3,0,2025-01-06,2024-25,1,2025-01,5,2
+T00393,Seagrass Flats,Beginner,10,Peak,7,6,0,1,2025-01-07,2024-25,1,2025-01,4,3
+T00394,Coral Ridge,Beginner,11,Peak,7,5,2,0,2025-01-07,2024-25,1,2025-01,6,4
+T00395,Pinnacle Rock,Intermediate,8,Peak,6,6,0,0,2025-01-08,2024-25,1,2025-01,2,2
+T00396,Turtle Bay,Beginner,9,Peak,7,4,2,1,2025-01-08,2024-25,1,2025-01,5,2
+T00397,Anchor Point,Intermediate,11,Peak,9,9,0,0,2025-01-09,2024-25,1,2025-01,2,2
+T00398,Shark Bank,Advanced,9,Peak,8,5,3,0,2025-01-09,2024-25,1,2025-01,4,1
+T00399,Anchor Point,Intermediate,11,Peak,7,6,0,1,2025-01-10,2024-25,1,2025-01,5,4
+T00400,Turtle Bay,Beginner,11,Peak,8,5,2,1,2025-01-10,2024-25,1,2025-01,6,3
+T00401,Turtle Bay,Beginner,10,Peak,8,7,1,0,2025-01-11,2024-25,1,2025-01,3,2
+T00402,Coral Ridge,Beginner,8,Peak,7,5,2,0,2025-01-11,2024-25,1,2025-01,3,1
+T00403,Turtle Bay,Beginner,9,Peak,7,7,0,0,2025-01-12,2024-25,1,2025-01,2,2
+T00404,Manta Alley,Advanced,9,Peak,7,7,0,0,2025-01-12,2024-25,1,2025-01,2,2
+T00405,Blue Hollow,Intermediate,9,Peak,6,4,1,1,2025-01-13,2024-25,1,2025-01,5,3
+T00406,Anchor Point,Intermediate,12,Peak,10,8,1,1,2025-01-13,2024-25,1,2025-01,4,2
+T00407,Sunken Barge,Intermediate,9,Peak,7,5,2,0,2025-01-14,2024-25,1,2025-01,4,2
+T00408,Shark Bank,Advanced,11,Peak,8,7,1,0,2025-01-14,2024-25,1,2025-01,4,3
+T00409,Seagrass Flats,Beginner,11,Peak,8,5,2,1,2025-01-15,2024-25,1,2025-01,6,3
+T00410,Pinnacle Rock,Intermediate,8,Peak,6,6,0,0,2025-01-15,2024-25,1,2025-01,2,2
+T00411,Nemo Garden,Beginner,11,Peak,7,6,1,0,2025-01-16,2024-25,1,2025-01,5,4
+T00412,The Wall,Advanced,11,Peak,9,7,1,1,2025-01-16,2024-25,1,2025-01,4,2
+T00413,Manta Alley,Advanced,9,Peak,6,4,2,0,2025-01-17,2024-25,1,2025-01,5,3
+T00414,Nemo Garden,Beginner,10,Peak,8,7,0,1,2025-01-17,2024-25,1,2025-01,3,2
+T00415,Turtle Bay,Beginner,12,Peak,8,7,0,1,2025-01-18,2024-25,1,2025-01,5,4
+T00416,Turtle Bay,Beginner,12,Peak,10,7,1,2,2025-01-18,2024-25,1,2025-01,5,2
+T00417,Sunken Barge,Intermediate,8,Peak,5,5,0,0,2025-01-19,2024-25,1,2025-01,3,3
+T00418,Lighthouse Reef,Intermediate,11,Peak,8,5,1,2,2025-01-19,2024-25,1,2025-01,6,3
+T00419,Barracuda Point,Advanced,10,Peak,7,5,0,2,2025-01-20,2024-25,1,2025-01,5,3
+T00420,The Wall,Advanced,11,Peak,9,9,0,0,2025-01-20,2024-25,1,2025-01,2,2
+T00421,The Wall,Advanced,8,Peak,7,6,0,1,2025-01-21,2024-25,1,2025-01,2,1
+T00422,Anchor Point,Intermediate,10,Peak,8,7,1,0,2025-01-21,2024-25,1,2025-01,3,2
+T00423,The Wall,Advanced,9,Peak,7,5,1,1,2025-01-22,2024-25,1,2025-01,4,2
+T00424,Drift Corner,Advanced,10,Peak,8,6,2,0,2025-01-22,2024-25,1,2025-01,4,2
+T00425,The Wall,Advanced,8,Peak,6,5,0,1,2025-01-23,2024-25,1,2025-01,3,2
+T00426,Anchor Point,Intermediate,8,Peak,7,4,1,2,2025-01-24,2024-25,1,2025-01,4,1
+T00427,Nemo Garden,Beginner,10,Peak,8,7,1,0,2025-01-24,2024-25,1,2025-01,3,2
+T00428,Seagrass Flats,Beginner,12,Peak,9,9,0,0,2025-01-25,2024-25,1,2025-01,3,3
+T00429,Pinnacle Rock,Intermediate,11,Peak,9,5,1,3,2025-01-25,2024-25,1,2025-01,6,2
+T00430,Pinnacle Rock,Intermediate,9,Peak,6,4,2,0,2025-01-26,2024-25,1,2025-01,5,3
+T00431,Sunken Barge,Intermediate,12,Peak,8,7,1,0,2025-01-26,2024-25,1,2025-01,5,4
+T00432,Barracuda Point,Advanced,9,Peak,7,5,0,2,2025-01-27,2024-25,1,2025-01,4,2
+T00433,Blue Hollow,Intermediate,9,Peak,7,3,2,2,2025-01-27,2024-25,1,2025-01,6,2
+T00434,Seagrass Flats,Beginner,9,Peak,7,6,1,0,2025-01-28,2024-25,1,2025-01,3,2
+T00435,Anchor Point,Intermediate,11,Peak,8,8,0,0,2025-01-28,2024-25,1,2025-01,3,3
+T00436,Drift Corner,Advanced,10,Peak,7,7,0,0,2025-01-29,2024-25,1,2025-01,3,3
+T00437,Coral Ridge,Beginner,11,Peak,9,7,1,1,2025-01-29,2024-25,1,2025-01,4,2
+T00438,Drift Corner,Advanced,11,Peak,8,8,0,0,2025-01-30,2024-25,1,2025-01,3,3
+T00439,Blue Hollow,Intermediate,12,Peak,9,7,2,0,2025-01-30,2024-25,1,2025-01,5,3
+T00440,Pinnacle Rock,Intermediate,11,Peak,9,9,0,0,2025-01-31,2024-25,1,2025-01,2,2
+T00441,Pinnacle Rock,Intermediate,11,Peak,8,6,2,0,2025-01-31,2024-25,1,2025-01,5,3
+T00442,Coral Ridge,Beginner,9,Peak,7,6,1,0,2025-02-01,2024-25,2,2025-02,3,2
+T00443,Lighthouse Reef,Intermediate,8,Peak,7,6,1,0,2025-02-01,2024-25,2,2025-02,2,1
+T00444,Lighthouse Reef,Intermediate,9,Peak,6,5,0,1,2025-02-01,2024-25,2,2025-02,4,3
+T00445,Sunken Barge,Intermediate,12,Peak,9,7,0,2,2025-02-02,2024-25,2,2025-02,5,3
+T00446,Manta Alley,Advanced,11,Peak,9,9,0,0,2025-02-02,2024-25,2,2025-02,2,2
+T00447,Blue Hollow,Intermediate,12,Peak,10,8,2,0,2025-02-02,2024-25,2,2025-02,4,2
+T00448,Turtle Bay,Beginner,10,Peak,8,8,0,0,2025-02-03,2024-25,2,2025-02,2,2
+T00449,Shark Bank,Advanced,12,Peak,9,7,1,1,2025-02-03,2024-25,2,2025-02,5,3
+T00450,Anchor Point,Intermediate,12,Peak,8,7,0,1,2025-02-04,2024-25,2,2025-02,5,4
+T00451,Coral Ridge,Beginner,11,Peak,9,9,0,0,2025-02-05,2024-25,2,2025-02,2,2
+T00452,Pinnacle Rock,Intermediate,8,Peak,6,6,0,0,2025-02-06,2024-25,2,2025-02,2,2
+T00453,Manta Alley,Advanced,9,Peak,8,7,1,0,2025-02-06,2024-25,2,2025-02,2,1
+T00454,Coral Ridge,Beginner,11,Peak,8,6,0,2,2025-02-07,2024-25,2,2025-02,5,3
+T00455,Lighthouse Reef,Intermediate,10,Peak,7,6,1,0,2025-02-07,2024-25,2,2025-02,4,3
+T00456,Drift Corner,Advanced,8,Peak,7,7,0,0,2025-02-08,2024-25,2,2025-02,1,1
+T00457,Shark Bank,Advanced,9,Peak,6,5,0,1,2025-02-08,2024-25,2,2025-02,4,3
+T00458,Manta Alley,Advanced,10,Peak,8,6,1,1,2025-02-09,2024-25,2,2025-02,4,2
+T00459,Drift Corner,Advanced,12,Peak,9,5,1,3,2025-02-09,2024-25,2,2025-02,7,3
+T00460,Seagrass Flats,Beginner,12,Peak,10,10,0,0,2025-02-10,2024-25,2,2025-02,2,2
+T00461,Seagrass Flats,Beginner,9,Peak,7,7,0,0,2025-02-10,2024-25,2,2025-02,2,2
+T00462,Shark Bank,Advanced,8,Peak,7,7,0,0,2025-02-11,2024-25,2,2025-02,1,1
+T00463,Blue Hollow,Intermediate,10,Peak,7,6,1,0,2025-02-12,2024-25,2,2025-02,4,3
+T00464,The Wall,Advanced,12,Peak,9,8,1,0,2025-02-12,2024-25,2,2025-02,4,3
+T00465,Manta Alley,Advanced,10,Peak,7,7,0,0,2025-02-13,2024-25,2,2025-02,3,3
+T00466,Lighthouse Reef,Intermediate,12,Peak,10,8,1,1,2025-02-13,2024-25,2,2025-02,4,2
+T00467,Drift Corner,Advanced,12,Peak,8,6,1,1,2025-02-14,2024-25,2,2025-02,6,4
+T00468,Barracuda Point,Advanced,8,Peak,6,5,0,1,2025-02-14,2024-25,2,2025-02,3,2
+T00469,Pinnacle Rock,Intermediate,8,Peak,6,6,0,0,2025-02-15,2024-25,2,2025-02,2,2
+T00470,Lighthouse Reef,Intermediate,9,Peak,8,8,0,0,2025-02-15,2024-25,2,2025-02,1,1
+T00471,Seagrass Flats,Beginner,10,Peak,7,7,0,0,2025-02-16,2024-25,2,2025-02,3,3
+T00472,Drift Corner,Advanced,9,Peak,8,6,2,0,2025-02-16,2024-25,2,2025-02,3,1
+T00473,Shark Bank,Advanced,11,Peak,8,7,1,0,2025-02-16,2024-25,2,2025-02,4,3
+T00474,The Wall,Advanced,10,Peak,8,7,0,1,2025-02-17,2024-25,2,2025-02,3,2
+T00475,Barracuda Point,Advanced,11,Peak,8,7,1,0,2025-02-17,2024-25,2,2025-02,4,3
+T00476,Turtle Bay,Beginner,8,Peak,6,5,1,0,2025-02-18,2024-25,2,2025-02,3,2
+T00477,Pinnacle Rock,Intermediate,12,Peak,10,5,2,3,2025-02-18,2024-25,2,2025-02,7,2
+T00478,Manta Alley,Advanced,10,Peak,8,7,1,0,2025-02-19,2024-25,2,2025-02,3,2
+T00479,Sunken Barge,Intermediate,11,Peak,8,8,0,0,2025-02-19,2024-25,2,2025-02,3,3
+T00480,Coral Ridge,Beginner,8,Peak,6,3,3,0,2025-02-20,2024-25,2,2025-02,5,2
+T00481,Manta Alley,Advanced,11,Peak,8,7,1,0,2025-02-20,2024-25,2,2025-02,4,3
+T00482,Manta Alley,Advanced,10,Peak,9,9,0,0,2025-02-21,2024-25,2,2025-02,1,1
+T00483,Drift Corner,Advanced,8,Peak,5,3,0,2,2025-02-21,2024-25,2,2025-02,5,3
+T00484,Pinnacle Rock,Intermediate,9,Peak,6,5,0,1,2025-02-22,2024-25,2,2025-02,4,3
+T00485,Lighthouse Reef,Intermediate,10,Peak,7,3,3,1,2025-02-23,2024-25,2,2025-02,7,3
+T00486,Blue Hollow,Intermediate,12,Peak,9,7,2,0,2025-02-23,2024-25,2,2025-02,5,3
+T00487,Drift Corner,Advanced,11,Peak,7,3,3,1,2025-02-24,2024-25,2,2025-02,8,4
+T00488,Shark Bank,Advanced,10,Peak,8,3,5,0,2025-02-24,2024-25,2,2025-02,7,2
+T00489,Shark Bank,Advanced,8,Peak,6,4,2,0,2025-02-25,2024-25,2,2025-02,4,2
+T00490,Barracuda Point,Advanced,11,Peak,9,8,1,0,2025-02-26,2024-25,2,2025-02,3,2
+T00491,Coral Ridge,Beginner,8,Peak,6,5,1,0,2025-02-26,2024-25,2,2025-02,3,2
+T00492,Seagrass Flats,Beginner,11,Peak,8,6,1,1,2025-02-27,2024-25,2,2025-02,5,3
+T00493,Pinnacle Rock,Intermediate,9,Peak,8,8,0,0,2025-02-28,2024-25,2,2025-02,1,1
+T00494,Manta Alley,Advanced,9,Peak,6,6,0,0,2025-02-28,2024-25,2,2025-02,3,3
+T00495,Drift Corner,Advanced,10,Peak,7,5,1,1,2025-03-01,2024-25,3,2025-03,5,3
+T00496,Turtle Bay,Beginner,10,Peak,7,5,2,0,2025-03-02,2024-25,3,2025-03,5,3
+T00497,Barracuda Point,Advanced,9,Peak,6,5,0,1,2025-03-02,2024-25,3,2025-03,4,3
+T00498,Barracuda Point,Advanced,10,Peak,9,8,1,0,2025-03-03,2024-25,3,2025-03,2,1
+T00499,Manta Alley,Advanced,9,Peak,7,6,1,0,2025-03-03,2024-25,3,2025-03,3,2
+T00500,Turtle Bay,Beginner,8,Peak,6,5,1,0,2025-03-04,2024-25,3,2025-03,3,2
+T00501,Coral Ridge,Beginner,9,Peak,6,4,2,0,2025-03-04,2024-25,3,2025-03,5,3
+T00502,Seagrass Flats,Beginner,12,Peak,9,8,1,0,2025-03-05,2024-25,3,2025-03,4,3
+T00503,Nemo Garden,Beginner,12,Peak,10,5,4,1,2025-03-05,2024-25,3,2025-03,7,2
+T00504,Coral Ridge,Beginner,8,Peak,6,5,1,0,2025-03-06,2024-25,3,2025-03,3,2
+T00505,Drift Corner,Advanced,8,Peak,7,6,0,1,2025-03-07,2024-25,3,2025-03,2,1
+T00506,Seagrass Flats,Beginner,11,Peak,8,7,1,0,2025-03-08,2024-25,3,2025-03,4,3
+T00507,Manta Alley,Advanced,8,Peak,7,4,2,1,2025-03-09,2024-25,3,2025-03,4,1
+T00508,Turtle Bay,Beginner,10,Peak,8,7,0,1,2025-03-09,2024-25,3,2025-03,3,2
+T00509,Lighthouse Reef,Intermediate,9,Peak,7,5,2,0,2025-03-10,2024-25,3,2025-03,4,2
+T00510,Pinnacle Rock,Intermediate,9,Peak,6,5,1,0,2025-03-10,2024-25,3,2025-03,4,3
+T00511,Barracuda Point,Advanced,9,Peak,7,7,0,0,2025-03-11,2024-25,3,2025-03,2,2
+T00512,The Wall,Advanced,8,Peak,6,5,1,0,2025-03-12,2024-25,3,2025-03,3,2
+T00513,The Wall,Advanced,9,Peak,6,5,1,0,2025-03-12,2024-25,3,2025-03,4,3
+T00514,Manta Alley,Advanced,9,Peak,6,6,0,0,2025-03-13,2024-25,3,2025-03,3,3
+T00515,Barracuda Point,Advanced,9,Peak,6,5,1,0,2025-03-13,2024-25,3,2025-03,4,3
+T00516,The Wall,Advanced,11,Peak,9,9,0,0,2025-03-14,2024-25,3,2025-03,2,2
+T00517,Turtle Bay,Beginner,9,Peak,7,7,0,0,2025-03-15,2024-25,3,2025-03,2,2
+T00518,Shark Bank,Advanced,8,Peak,6,5,1,0,2025-03-15,2024-25,3,2025-03,3,2
+T00519,Pinnacle Rock,Intermediate,10,Peak,7,4,1,2,2025-03-16,2024-25,3,2025-03,6,3
+T00520,Nemo Garden,Beginner,10,Peak,8,7,0,1,2025-03-17,2024-25,3,2025-03,3,2
+T00521,Nemo Garden,Beginner,12,Peak,8,6,2,0,2025-03-18,2024-25,3,2025-03,6,4
+T00522,Manta Alley,Advanced,12,Peak,10,7,2,1,2025-03-19,2024-25,3,2025-03,5,2
+T00523,Manta Alley,Advanced,8,Peak,6,4,1,1,2025-03-20,2024-25,3,2025-03,4,2
+T00524,Drift Corner,Advanced,10,Peak,8,7,1,0,2025-03-20,2024-25,3,2025-03,3,2
+T00525,The Wall,Advanced,12,Peak,10,9,0,1,2025-03-21,2024-25,3,2025-03,3,2
+T00526,Nemo Garden,Beginner,11,Peak,9,8,1,0,2025-03-21,2024-25,3,2025-03,3,2
+T00527,Shark Bank,Advanced,9,Peak,7,4,1,2,2025-03-22,2024-25,3,2025-03,5,2
+T00528,Sunken Barge,Intermediate,11,Peak,8,4,2,2,2025-03-22,2024-25,3,2025-03,7,3
+T00529,Turtle Bay,Beginner,9,Peak,7,6,1,0,2025-03-22,2024-25,3,2025-03,3,2
+T00530,Blue Hollow,Intermediate,8,Peak,6,6,0,0,2025-03-23,2024-25,3,2025-03,2,2
+T00531,Anchor Point,Intermediate,10,Peak,8,7,1,0,2025-03-23,2024-25,3,2025-03,3,2
+T00532,Drift Corner,Advanced,12,Peak,8,8,0,0,2025-03-24,2024-25,3,2025-03,4,4
+T00533,Pinnacle Rock,Intermediate,10,Peak,7,7,0,0,2025-03-24,2024-25,3,2025-03,3,3
+T00534,Seagrass Flats,Beginner,11,Peak,9,6,3,0,2025-03-25,2024-25,3,2025-03,5,2
+T00535,Shark Bank,Advanced,8,Peak,6,4,1,1,2025-03-25,2024-25,3,2025-03,4,2
+T00536,Turtle Bay,Beginner,8,Peak,6,6,0,0,2025-03-26,2024-25,3,2025-03,2,2
+T00537,Lighthouse Reef,Intermediate,9,Peak,6,5,1,0,2025-03-26,2024-25,3,2025-03,4,3
+T00538,Coral Ridge,Beginner,11,Peak,8,6,1,1,2025-03-27,2024-25,3,2025-03,5,3
+T00539,Blue Hollow,Intermediate,10,Peak,8,8,0,0,2025-03-27,2024-25,3,2025-03,2,2
+T00540,Blue Hollow,Intermediate,11,Peak,9,9,0,0,2025-03-28,2024-25,3,2025-03,2,2
+T00541,Barracuda Point,Advanced,12,Peak,9,7,2,0,2025-03-29,2024-25,3,2025-03,5,3
+T00542,Blue Hollow,Intermediate,12,Peak,8,6,1,1,2025-03-29,2024-25,3,2025-03,6,4
+T00543,Turtle Bay,Beginner,12,Peak,10,9,1,0,2025-03-30,2024-25,3,2025-03,3,2
+T00544,Nemo Garden,Beginner,9,Peak,7,7,0,0,2025-03-30,2024-25,3,2025-03,2,2
+T00545,Blue Hollow,Intermediate,10,Peak,9,6,2,1,2025-03-30,2024-25,3,2025-03,4,1
+T00546,Barracuda Point,Advanced,8,Peak,7,5,2,0,2025-03-31,2024-25,3,2025-03,3,1
+T00547,Lighthouse Reef,Intermediate,11,Peak,8,4,4,0,2025-03-31,2024-25,3,2025-03,7,3
+T00548,Drift Corner,Advanced,9,Shoulder,8,2,4,2,2025-04-01,2024-25,4,2025-04,7,1
+T00549,Turtle Bay,Beginner,11,Shoulder,8,6,2,0,2025-04-02,2024-25,4,2025-04,5,3
+T00550,Turtle Bay,Beginner,11,Shoulder,9,9,0,0,2025-04-02,2024-25,4,2025-04,2,2
+T00551,Coral Ridge,Beginner,10,Shoulder,8,8,0,0,2025-04-03,2024-25,4,2025-04,2,2
+T00552,Barracuda Point,Advanced,9,Shoulder,7,5,1,1,2025-04-04,2024-25,4,2025-04,4,2
+T00553,Manta Alley,Advanced,8,Shoulder,5,5,0,0,2025-04-05,2024-25,4,2025-04,3,3
+T00554,Seagrass Flats,Beginner,11,Shoulder,8,7,0,1,2025-04-05,2024-25,4,2025-04,4,3
+T00555,Shark Bank,Advanced,10,Shoulder,7,3,4,0,2025-04-06,2024-25,4,2025-04,7,3
+T00556,Seagrass Flats,Beginner,10,Shoulder,8,6,2,0,2025-04-07,2024-25,4,2025-04,4,2
+T00557,Manta Alley,Advanced,8,Shoulder,6,2,4,0,2025-04-07,2024-25,4,2025-04,6,2
+T00558,Coral Ridge,Beginner,10,Shoulder,7,7,0,0,2025-04-08,2024-25,4,2025-04,3,3
+T00559,Lighthouse Reef,Intermediate,12,Shoulder,9,6,2,1,2025-04-09,2024-25,4,2025-04,6,3
+T00560,Manta Alley,Advanced,12,Shoulder,9,5,2,2,2025-04-10,2024-25,4,2025-04,7,3
+T00561,Barracuda Point,Advanced,8,Shoulder,6,4,1,1,2025-04-10,2024-25,4,2025-04,4,2
+T00562,Blue Hollow,Intermediate,10,Shoulder,9,7,2,0,2025-04-11,2024-25,4,2025-04,3,1
+T00563,Seagrass Flats,Beginner,10,Shoulder,7,4,2,1,2025-04-12,2024-25,4,2025-04,6,3
+T00564,Seagrass Flats,Beginner,10,Shoulder,9,8,1,0,2025-04-12,2024-25,4,2025-04,2,1
+T00565,Barracuda Point,Advanced,8,Shoulder,7,4,3,0,2025-04-13,2024-25,4,2025-04,4,1
+T00566,Blue Hollow,Intermediate,8,Shoulder,6,0,6,0,2025-04-14,2024-25,4,2025-04,8,2
+T00567,Coral Ridge,Beginner,8,Shoulder,6,2,4,0,2025-04-14,2024-25,4,2025-04,6,2
+T00568,Sunken Barge,Intermediate,10,Shoulder,8,5,3,0,2025-04-15,2024-25,4,2025-04,5,2
+T00569,Seagrass Flats,Beginner,9,Shoulder,7,7,0,0,2025-04-16,2024-25,4,2025-04,2,2
+T00570,Drift Corner,Advanced,8,Shoulder,6,6,0,0,2025-04-17,2024-25,4,2025-04,2,2
+T00571,Manta Alley,Advanced,11,Shoulder,8,6,1,1,2025-04-18,2024-25,4,2025-04,5,3
+T00572,Manta Alley,Advanced,10,Shoulder,7,6,1,0,2025-04-19,2024-25,4,2025-04,4,3
+T00573,Lighthouse Reef,Intermediate,8,Shoulder,6,6,0,0,2025-04-19,2024-25,4,2025-04,2,2
+T00574,Barracuda Point,Advanced,8,Shoulder,5,5,0,0,2025-04-20,2024-25,4,2025-04,3,3
+T00575,Seagrass Flats,Beginner,9,Shoulder,6,3,3,0,2025-04-20,2024-25,4,2025-04,6,3
+T00576,Coral Ridge,Beginner,11,Shoulder,8,8,0,0,2025-04-21,2024-25,4,2025-04,3,3
+T00577,Sunken Barge,Intermediate,10,Shoulder,7,4,2,1,2025-04-22,2024-25,4,2025-04,6,3
+T00578,Shark Bank,Advanced,10,Shoulder,7,6,0,1,2025-04-22,2024-25,4,2025-04,4,3
+T00579,Blue Hollow,Intermediate,11,Shoulder,9,8,1,0,2025-04-23,2024-25,4,2025-04,3,2
+T00580,Nemo Garden,Beginner,10,Shoulder,8,5,3,0,2025-04-24,2024-25,4,2025-04,5,2
+T00581,The Wall,Advanced,10,Shoulder,7,7,0,0,2025-04-24,2024-25,4,2025-04,3,3
+T00582,Nemo Garden,Beginner,11,Shoulder,8,5,2,1,2025-04-25,2024-25,4,2025-04,6,3
+T00583,Shark Bank,Advanced,9,Shoulder,7,5,1,1,2025-04-26,2024-25,4,2025-04,4,2
+T00584,Shark Bank,Advanced,9,Shoulder,6,6,0,0,2025-04-27,2024-25,4,2025-04,3,3
+T00585,Pinnacle Rock,Intermediate,8,Shoulder,6,4,2,0,2025-04-28,2024-25,4,2025-04,4,2
+T00586,Nemo Garden,Beginner,12,Shoulder,10,6,4,0,2025-04-28,2024-25,4,2025-04,6,2
+T00587,Drift Corner,Advanced,8,Shoulder,6,4,1,1,2025-04-29,2024-25,4,2025-04,4,2
+T00588,Coral Ridge,Beginner,11,Shoulder,8,6,2,0,2025-04-30,2024-25,4,2025-04,5,3
+T00589,Manta Alley,Advanced,10,Shoulder,7,7,0,0,2025-05-01,2024-25,5,2025-05,3,3
+T00590,Blue Hollow,Intermediate,9,Shoulder,8,8,0,0,2025-05-02,2024-25,5,2025-05,1,1
+T00591,Seagrass Flats,Beginner,10,Shoulder,7,3,4,0,2025-05-03,2024-25,5,2025-05,7,3
+T00592,Drift Corner,Advanced,12,Shoulder,10,2,8,0,2025-05-04,2024-25,5,2025-05,10,2
+T00593,Anchor Point,Intermediate,11,Shoulder,8,6,2,0,2025-05-05,2024-25,5,2025-05,5,3
+T00594,Turtle Bay,Beginner,12,Shoulder,8,7,1,0,2025-05-06,2024-25,5,2025-05,5,4
+T00595,Seagrass Flats,Beginner,11,Shoulder,8,4,4,0,2025-05-07,2024-25,5,2025-05,7,3
+T00596,The Wall,Advanced,8,Shoulder,6,3,2,1,2025-05-08,2024-25,5,2025-05,5,2
+T00597,Seagrass Flats,Beginner,9,Shoulder,6,4,2,0,2025-05-09,2024-25,5,2025-05,5,3
+T00598,Shark Bank,Advanced,11,Shoulder,8,8,0,0,2025-05-10,2024-25,5,2025-05,3,3
+T00599,Anchor Point,Intermediate,11,Shoulder,9,6,2,1,2025-05-11,2024-25,5,2025-05,5,2
+T00600,Turtle Bay,Beginner,9,Shoulder,6,3,3,0,2025-05-12,2024-25,5,2025-05,6,3
+T00601,Shark Bank,Advanced,12,Shoulder,10,1,9,0,2025-05-13,2024-25,5,2025-05,11,2
+T00602,Turtle Bay,Beginner,9,Shoulder,8,5,3,0,2025-05-14,2024-25,5,2025-05,4,1
+T00603,Anchor Point,Intermediate,11,Shoulder,9,9,0,0,2025-05-15,2024-25,5,2025-05,2,2
+T00604,Anchor Point,Intermediate,9,Shoulder,6,4,2,0,2025-05-16,2024-25,5,2025-05,5,3
+T00605,Drift Corner,Advanced,8,Shoulder,6,5,0,1,2025-05-17,2024-25,5,2025-05,3,2
+T00606,Lighthouse Reef,Intermediate,12,Shoulder,8,7,0,1,2025-05-18,2024-25,5,2025-05,5,4
+T00607,Drift Corner,Advanced,10,Shoulder,8,7,1,0,2025-05-19,2024-25,5,2025-05,3,2
+T00608,Manta Alley,Advanced,9,Shoulder,7,6,1,0,2025-05-20,2024-25,5,2025-05,3,2
+T00609,Pinnacle Rock,Intermediate,12,Shoulder,9,9,0,0,2025-05-21,2024-25,5,2025-05,3,3
+T00610,Lighthouse Reef,Intermediate,10,Shoulder,8,7,1,0,2025-05-22,2024-25,5,2025-05,3,2
+T00611,Seagrass Flats,Beginner,8,Shoulder,6,5,1,0,2025-05-23,2024-25,5,2025-05,3,2
+T00612,Blue Hollow,Intermediate,12,Shoulder,8,4,4,0,2025-05-24,2024-25,5,2025-05,8,4
+T00613,Shark Bank,Advanced,9,Shoulder,7,6,1,0,2025-05-25,2024-25,5,2025-05,3,2
+T00614,Coral Ridge,Beginner,9,Shoulder,7,6,1,0,2025-05-26,2024-25,5,2025-05,3,2
+T00615,Drift Corner,Advanced,11,Shoulder,9,3,5,1,2025-05-27,2024-25,5,2025-05,8,2
+T00616,Barracuda Point,Advanced,8,Shoulder,6,4,1,1,2025-05-28,2024-25,5,2025-05,4,2
+T00617,Lighthouse Reef,Intermediate,8,Shoulder,6,4,2,0,2025-05-29,2024-25,5,2025-05,4,2
+T00618,Turtle Bay,Beginner,9,Shoulder,8,6,1,1,2025-05-30,2024-25,5,2025-05,3,1
+T00619,Seagrass Flats,Beginner,8,Shoulder,6,4,2,0,2025-05-31,2024-25,5,2025-05,4,2
+T00620,Coral Ridge,Beginner,11,Monsoon-Closed,2,0,2,0,2025-06-03,2025-26,6,2025-06,11,9
+T00621,The Wall,Advanced,11,Monsoon-Closed,2,0,2,0,2025-06-04,2025-26,6,2025-06,11,9
+T00622,Barracuda Point,Advanced,11,Monsoon-Closed,3,0,3,0,2025-06-07,2025-26,6,2025-06,11,8
+T00623,Nemo Garden,Beginner,9,Monsoon-Closed,4,1,3,0,2025-06-08,2025-26,6,2025-06,8,5
+T00624,Sunken Barge,Intermediate,9,Monsoon-Closed,2,2,0,0,2025-06-09,2025-26,6,2025-06,7,7
+T00625,The Wall,Advanced,12,Monsoon-Closed,4,3,1,0,2025-06-10,2025-26,6,2025-06,9,8
+T00626,Lighthouse Reef,Intermediate,11,Monsoon-Closed,3,0,3,0,2025-06-11,2025-26,6,2025-06,11,8
+T00627,Lighthouse Reef,Intermediate,11,Monsoon-Closed,5,1,4,0,2025-06-14,2025-26,6,2025-06,10,6
+T00628,Nemo Garden,Beginner,12,Monsoon-Closed,3,0,3,0,2025-06-15,2025-26,6,2025-06,12,9
+T00629,Shark Bank,Advanced,12,Monsoon-Closed,4,3,1,0,2025-09-16,2025-26,9,2025-09,9,8
+T00630,Anchor Point,Intermediate,12,Monsoon-Closed,3,3,0,0,2025-09-26,2025-26,9,2025-09,9,9
+T00631,Shark Bank,Advanced,10,Monsoon-Closed,5,0,5,0,2025-09-27,2025-26,9,2025-09,10,5
+T00632,Sunken Barge,Intermediate,12,Monsoon-Closed,4,0,4,0,2025-09-28,2025-26,9,2025-09,12,8
+T00633,Seagrass Flats,Beginner,8,Shoulder,7,0,7,0,2025-10-01,2025-26,10,2025-10,8,1
+T00634,Nemo Garden,Beginner,10,Shoulder,7,1,6,0,2025-10-02,2025-26,10,2025-10,9,3
+T00635,Shark Bank,Advanced,8,Shoulder,7,4,3,0,2025-10-03,2025-26,10,2025-10,4,1
+T00636,The Wall,Advanced,11,Shoulder,9,5,3,1,2025-10-04,2025-26,10,2025-10,6,2
+T00637,Drift Corner,Advanced,9,Shoulder,7,7,0,0,2025-10-05,2025-26,10,2025-10,2,2
+T00638,The Wall,Advanced,10,Shoulder,8,6,0,2,2025-10-06,2025-26,10,2025-10,4,2
+T00639,Manta Alley,Advanced,10,Shoulder,8,4,3,1,2025-10-07,2025-26,10,2025-10,6,2
+T00640,Coral Ridge,Beginner,10,Shoulder,7,6,0,1,2025-10-08,2025-26,10,2025-10,4,3
+T00641,The Wall,Advanced,9,Shoulder,6,6,0,0,2025-10-09,2025-26,10,2025-10,3,3
+T00642,Nemo Garden,Beginner,11,Shoulder,8,6,2,0,2025-10-10,2025-26,10,2025-10,5,3
+T00643,Coral Ridge,Beginner,8,Shoulder,6,6,0,0,2025-10-11,2025-26,10,2025-10,2,2
+T00644,Coral Ridge,Beginner,9,Shoulder,8,8,0,0,2025-10-11,2025-26,10,2025-10,1,1
+T00645,Sunken Barge,Intermediate,8,Shoulder,7,4,2,1,2025-10-12,2025-26,10,2025-10,4,1
+T00646,Anchor Point,Intermediate,12,Shoulder,11,8,2,1,2025-10-12,2025-26,10,2025-10,4,1
+T00647,Seagrass Flats,Beginner,10,Shoulder,7,7,0,0,2025-10-13,2025-26,10,2025-10,3,3
+T00648,Shark Bank,Advanced,10,Shoulder,9,8,1,0,2025-10-14,2025-26,10,2025-10,2,1
+T00649,Seagrass Flats,Beginner,12,Shoulder,9,6,2,1,2025-10-15,2025-26,10,2025-10,6,3
+T00650,Seagrass Flats,Beginner,8,Shoulder,6,4,1,1,2025-10-16,2025-26,10,2025-10,4,2
+T00651,Drift Corner,Advanced,10,Shoulder,8,2,6,0,2025-10-17,2025-26,10,2025-10,8,2
+T00652,Barracuda Point,Advanced,11,Shoulder,8,3,5,0,2025-10-18,2025-26,10,2025-10,8,3
+T00653,Anchor Point,Intermediate,9,Shoulder,6,4,1,1,2025-10-19,2025-26,10,2025-10,5,3
+T00654,Manta Alley,Advanced,11,Shoulder,10,9,1,0,2025-10-20,2025-26,10,2025-10,2,1
+T00655,Sunken Barge,Intermediate,10,Shoulder,8,7,1,0,2025-10-21,2025-26,10,2025-10,3,2
+T00656,Blue Hollow,Intermediate,12,Shoulder,9,8,1,0,2025-10-22,2025-26,10,2025-10,4,3
+T00657,Nemo Garden,Beginner,12,Shoulder,9,4,2,3,2025-10-23,2025-26,10,2025-10,8,3
+T00658,Pinnacle Rock,Intermediate,10,Shoulder,9,9,0,0,2025-10-24,2025-26,10,2025-10,1,1
+T00659,Seagrass Flats,Beginner,8,Shoulder,6,4,2,0,2025-10-25,2025-26,10,2025-10,4,2
+T00660,Pinnacle Rock,Intermediate,12,Shoulder,11,7,1,3,2025-10-26,2025-26,10,2025-10,5,1
+T00661,The Wall,Advanced,10,Shoulder,8,8,0,0,2025-10-27,2025-26,10,2025-10,2,2
+T00662,The Wall,Advanced,9,Shoulder,8,6,1,1,2025-10-28,2025-26,10,2025-10,3,1
+T00663,Turtle Bay,Beginner,11,Shoulder,10,1,9,0,2025-10-29,2025-26,10,2025-10,10,1
+T00664,Manta Alley,Advanced,8,Shoulder,7,5,2,0,2025-10-30,2025-26,10,2025-10,3,1
+T00665,Anchor Point,Intermediate,9,Shoulder,6,6,0,0,2025-10-31,2025-26,10,2025-10,3,3
+T00666,Drift Corner,Advanced,10,Shoulder,8,8,0,0,2025-11-01,2025-26,11,2025-11,2,2
+T00667,Nemo Garden,Beginner,8,Shoulder,7,6,1,0,2025-11-02,2025-26,11,2025-11,2,1
+T00668,Shark Bank,Advanced,8,Shoulder,6,0,6,0,2025-11-03,2025-26,11,2025-11,8,2
+T00669,Coral Ridge,Beginner,11,Shoulder,9,0,9,0,2025-11-04,2025-26,11,2025-11,11,2
+T00670,Pinnacle Rock,Intermediate,9,Shoulder,7,6,1,0,2025-11-05,2025-26,11,2025-11,3,2
+T00671,Sunken Barge,Intermediate,11,Shoulder,9,5,1,3,2025-11-06,2025-26,11,2025-11,6,2
+T00672,Pinnacle Rock,Intermediate,8,Shoulder,7,4,1,2,2025-11-07,2025-26,11,2025-11,4,1
+T00673,The Wall,Advanced,9,Shoulder,7,5,1,1,2025-11-08,2025-26,11,2025-11,4,2
+T00674,Drift Corner,Advanced,8,Shoulder,7,6,1,0,2025-11-09,2025-26,11,2025-11,2,1
+T00675,Lighthouse Reef,Intermediate,8,Shoulder,7,6,0,1,2025-11-09,2025-26,11,2025-11,2,1
+T00676,Turtle Bay,Beginner,8,Shoulder,6,4,1,1,2025-11-10,2025-26,11,2025-11,4,2
+T00677,Pinnacle Rock,Intermediate,9,Shoulder,7,2,5,0,2025-11-11,2025-26,11,2025-11,7,2
+T00678,Blue Hollow,Intermediate,8,Shoulder,7,3,4,0,2025-11-12,2025-26,11,2025-11,5,1
+T00679,The Wall,Advanced,11,Shoulder,8,4,4,0,2025-11-13,2025-26,11,2025-11,7,3
+T00680,Pinnacle Rock,Intermediate,9,Shoulder,7,5,2,0,2025-11-14,2025-26,11,2025-11,4,2
+T00681,Coral Ridge,Beginner,8,Shoulder,6,5,1,0,2025-11-15,2025-26,11,2025-11,3,2
+T00682,Pinnacle Rock,Intermediate,12,Shoulder,10,1,9,0,2025-11-16,2025-26,11,2025-11,11,2
+T00683,Manta Alley,Advanced,12,Shoulder,10,4,6,0,2025-11-17,2025-26,11,2025-11,8,2
+T00684,Lighthouse Reef,Intermediate,10,Shoulder,9,6,3,0,2025-11-18,2025-26,11,2025-11,4,1
+T00685,Coral Ridge,Beginner,11,Shoulder,9,7,1,1,2025-11-19,2025-26,11,2025-11,4,2
+T00686,Drift Corner,Advanced,11,Shoulder,9,7,2,0,2025-11-20,2025-26,11,2025-11,4,2
+T00687,Anchor Point,Intermediate,8,Shoulder,6,6,0,0,2025-11-21,2025-26,11,2025-11,2,2
+T00688,Barracuda Point,Advanced,12,Shoulder,8,7,1,0,2025-11-22,2025-26,11,2025-11,5,4
+T00689,Nemo Garden,Beginner,9,Shoulder,7,5,1,1,2025-11-23,2025-26,11,2025-11,4,2
+T00690,Barracuda Point,Advanced,10,Shoulder,9,6,2,1,2025-11-23,2025-26,11,2025-11,4,1
+T00691,Sunken Barge,Intermediate,8,Shoulder,7,6,1,0,2025-11-24,2025-26,11,2025-11,2,1
+T00692,Pinnacle Rock,Intermediate,11,Shoulder,10,6,1,3,2025-11-25,2025-26,11,2025-11,5,1
+T00693,Barracuda Point,Advanced,10,Shoulder,7,6,1,0,2025-11-26,2025-26,11,2025-11,4,3
+T00694,Blue Hollow,Intermediate,11,Shoulder,10,8,1,1,2025-11-27,2025-26,11,2025-11,3,1
+T00695,Pinnacle Rock,Intermediate,10,Shoulder,8,5,2,1,2025-11-28,2025-26,11,2025-11,5,2
+T00696,Sunken Barge,Intermediate,11,Shoulder,10,8,2,0,2025-11-29,2025-26,11,2025-11,3,1
+T00697,Lighthouse Reef,Intermediate,9,Shoulder,7,4,2,1,2025-11-29,2025-26,11,2025-11,5,2
+T00698,Seagrass Flats,Beginner,8,Shoulder,7,4,3,0,2025-11-30,2025-26,11,2025-11,4,1
+T00699,Anchor Point,Intermediate,12,Peak,10,9,1,0,2025-12-01,2025-26,12,2025-12,3,2
+T00700,Pinnacle Rock,Intermediate,12,Peak,10,8,1,1,2025-12-01,2025-26,12,2025-12,4,2
+T00701,Coral Ridge,Beginner,11,Peak,8,7,1,0,2025-12-02,2025-26,12,2025-12,4,3
+T00702,Drift Corner,Advanced,12,Peak,9,6,3,0,2025-12-02,2025-26,12,2025-12,6,3
+T00703,Blue Hollow,Intermediate,11,Peak,9,8,0,1,2025-12-03,2025-26,12,2025-12,3,2
+T00704,Nemo Garden,Beginner,11,Peak,10,7,2,1,2025-12-04,2025-26,12,2025-12,4,1
+T00705,Pinnacle Rock,Intermediate,8,Peak,6,5,1,0,2025-12-05,2025-26,12,2025-12,3,2
+T00706,Blue Hollow,Intermediate,12,Peak,10,8,2,0,2025-12-05,2025-26,12,2025-12,4,2
+T00707,Barracuda Point,Advanced,12,Peak,9,6,3,0,2025-12-06,2025-26,12,2025-12,6,3
+T00708,Sunken Barge,Intermediate,9,Peak,8,8,0,0,2025-12-07,2025-26,12,2025-12,1,1
+T00709,Seagrass Flats,Beginner,9,Peak,7,6,1,0,2025-12-07,2025-26,12,2025-12,3,2
+T00710,Seagrass Flats,Beginner,8,Peak,7,6,1,0,2025-12-08,2025-26,12,2025-12,2,1
+T00711,Barracuda Point,Advanced,11,Peak,10,10,0,0,2025-12-09,2025-26,12,2025-12,1,1
+T00712,Drift Corner,Advanced,9,Peak,8,6,2,0,2025-12-10,2025-26,12,2025-12,3,1
+T00713,Drift Corner,Advanced,12,Peak,9,7,2,0,2025-12-10,2025-26,12,2025-12,5,3
+T00714,Manta Alley,Advanced,8,Peak,7,5,2,0,2025-12-11,2025-26,12,2025-12,3,1
+T00715,Turtle Bay,Beginner,11,Peak,10,8,2,0,2025-12-11,2025-26,12,2025-12,3,1
+T00716,Blue Hollow,Intermediate,10,Peak,7,6,1,0,2025-12-12,2025-26,12,2025-12,4,3
+T00717,Drift Corner,Advanced,8,Peak,7,4,2,1,2025-12-13,2025-26,12,2025-12,4,1
+T00718,Blue Hollow,Intermediate,11,Peak,10,7,3,0,2025-12-14,2025-26,12,2025-12,4,1
+T00719,Seagrass Flats,Beginner,9,Peak,7,4,2,1,2025-12-15,2025-26,12,2025-12,5,2
+T00720,The Wall,Advanced,12,Peak,8,6,2,0,2025-12-15,2025-26,12,2025-12,6,4
+T00721,Turtle Bay,Beginner,8,Peak,7,5,2,0,2025-12-16,2025-26,12,2025-12,3,1
+T00722,Turtle Bay,Beginner,10,Peak,8,7,1,0,2025-12-17,2025-26,12,2025-12,3,2
+T00723,Anchor Point,Intermediate,11,Peak,10,6,4,0,2025-12-18,2025-26,12,2025-12,5,1
+T00724,Barracuda Point,Advanced,11,Peak,8,4,2,2,2025-12-19,2025-26,12,2025-12,7,3
+T00725,The Wall,Advanced,12,Peak,11,9,2,0,2025-12-19,2025-26,12,2025-12,3,1
+T00726,Pinnacle Rock,Intermediate,9,Peak,8,6,2,0,2025-12-20,2025-26,12,2025-12,3,1
+T00727,The Wall,Advanced,12,Peak,10,9,1,0,2025-12-20,2025-26,12,2025-12,3,2
+T00728,Pinnacle Rock,Intermediate,10,Peak,9,8,1,0,2025-12-21,2025-26,12,2025-12,2,1
+T00729,Coral Ridge,Beginner,11,Peak,9,7,1,1,2025-12-22,2025-26,12,2025-12,4,2
+T00730,Anchor Point,Intermediate,8,Peak,7,2,5,0,2025-12-23,2025-26,12,2025-12,6,1
+T00731,Shark Bank,Advanced,10,Peak,9,8,0,1,2025-12-24,2025-26,12,2025-12,2,1
+T00732,Drift Corner,Advanced,11,Peak,8,6,1,1,2025-12-25,2025-26,12,2025-12,5,3
+T00733,Drift Corner,Advanced,8,Peak,7,5,2,0,2025-12-25,2025-26,12,2025-12,3,1
+T00734,Nemo Garden,Beginner,9,Peak,8,6,1,1,2025-12-26,2025-26,12,2025-12,3,1
+T00735,Shark Bank,Advanced,10,Peak,8,6,2,0,2025-12-27,2025-26,12,2025-12,4,2
+T00736,Lighthouse Reef,Intermediate,11,Peak,8,5,2,1,2025-12-27,2025-26,12,2025-12,6,3
+T00737,Sunken Barge,Intermediate,9,Peak,7,6,1,0,2025-12-28,2025-26,12,2025-12,3,2
+T00738,Drift Corner,Advanced,11,Peak,10,4,4,2,2025-12-28,2025-26,12,2025-12,7,1
+T00739,Shark Bank,Advanced,12,Peak,10,6,3,1,2025-12-29,2025-26,12,2025-12,6,2
+T00740,Drift Corner,Advanced,8,Peak,6,2,4,0,2025-12-30,2025-26,12,2025-12,6,2
+T00741,Seagrass Flats,Beginner,8,Peak,7,3,3,1,2025-12-31,2025-26,12,2025-12,5,1
+T00742,Blue Hollow,Intermediate,11,Peak,8,8,0,0,2026-01-01,2025-26,1,2026-01,3,3
+T00743,Seagrass Flats,Beginner,12,Peak,11,10,1,0,2026-01-01,2025-26,1,2026-01,2,1
+T00744,Coral Ridge,Beginner,9,Peak,7,7,0,0,2026-01-02,2025-26,1,2026-01,2,2
+T00745,Drift Corner,Advanced,8,Peak,6,5,0,1,2026-01-03,2025-26,1,2026-01,3,2
+T00746,Nemo Garden,Beginner,8,Peak,7,5,1,1,2026-01-03,2025-26,1,2026-01,3,1
+T00747,Manta Alley,Advanced,9,Peak,7,5,1,1,2026-01-04,2025-26,1,2026-01,4,2
+T00748,Drift Corner,Advanced,11,Peak,10,10,0,0,2026-01-05,2025-26,1,2026-01,1,1
+T00749,Blue Hollow,Intermediate,11,Peak,9,6,2,1,2026-01-05,2025-26,1,2026-01,5,2
+T00750,Turtle Bay,Beginner,8,Peak,7,7,0,0,2026-01-06,2025-26,1,2026-01,1,1
+T00751,Sunken Barge,Intermediate,12,Peak,11,9,2,0,2026-01-07,2025-26,1,2026-01,3,1
+T00752,Sunken Barge,Intermediate,9,Peak,8,5,3,0,2026-01-07,2025-26,1,2026-01,4,1
+T00753,Sunken Barge,Intermediate,12,Peak,11,5,6,0,2026-01-08,2025-26,1,2026-01,7,1
+T00754,Anchor Point,Intermediate,9,Peak,7,4,3,0,2026-01-09,2025-26,1,2026-01,5,2
+T00755,Drift Corner,Advanced,8,Peak,7,5,1,1,2026-01-10,2025-26,1,2026-01,3,1
+T00756,Seagrass Flats,Beginner,12,Peak,9,5,1,3,2026-01-11,2025-26,1,2026-01,7,3
+T00757,Shark Bank,Advanced,9,Peak,7,5,2,0,2026-01-11,2025-26,1,2026-01,4,2
+T00758,Barracuda Point,Advanced,9,Peak,7,7,0,0,2026-01-12,2025-26,1,2026-01,2,2
+T00759,Lighthouse Reef,Intermediate,11,Peak,10,9,1,0,2026-01-13,2025-26,1,2026-01,2,1
+T00760,Drift Corner,Advanced,8,Peak,7,4,3,0,2026-01-14,2025-26,1,2026-01,4,1
+T00761,Seagrass Flats,Beginner,9,Peak,8,7,1,0,2026-01-15,2025-26,1,2026-01,2,1
+T00762,Coral Ridge,Beginner,9,Peak,6,4,2,0,2026-01-16,2025-26,1,2026-01,5,3
+T00763,Lighthouse Reef,Intermediate,10,Peak,8,6,1,1,2026-01-17,2025-26,1,2026-01,4,2
+T00764,Pinnacle Rock,Intermediate,11,Peak,9,5,3,1,2026-01-17,2025-26,1,2026-01,6,2
+T00765,Nemo Garden,Beginner,11,Peak,9,3,6,0,2026-01-18,2025-26,1,2026-01,8,2
+T00766,Blue Hollow,Intermediate,12,Peak,10,7,1,2,2026-01-19,2025-26,1,2026-01,5,2
+T00767,Pinnacle Rock,Intermediate,12,Peak,10,7,3,0,2026-01-19,2025-26,1,2026-01,5,2
+T00768,Blue Hollow,Intermediate,10,Peak,8,2,6,0,2026-01-20,2025-26,1,2026-01,8,2
+T00769,Blue Hollow,Intermediate,12,Peak,9,3,6,0,2026-01-20,2025-26,1,2026-01,9,3
+T00770,Lighthouse Reef,Intermediate,8,Peak,7,7,0,0,2026-01-21,2025-26,1,2026-01,1,1
+T00771,Anchor Point,Intermediate,10,Peak,8,5,3,0,2026-01-22,2025-26,1,2026-01,5,2
+T00772,Drift Corner,Advanced,10,Peak,8,6,2,0,2026-01-23,2025-26,1,2026-01,4,2
+T00773,Barracuda Point,Advanced,10,Peak,7,4,2,1,2026-01-24,2025-26,1,2026-01,6,3
+T00774,Nemo Garden,Beginner,9,Peak,8,6,2,0,2026-01-24,2025-26,1,2026-01,3,1
+T00775,Coral Ridge,Beginner,12,Peak,10,9,1,0,2026-01-25,2025-26,1,2026-01,3,2
+T00776,Anchor Point,Intermediate,9,Peak,7,6,1,0,2026-01-26,2025-26,1,2026-01,3,2
+T00777,Manta Alley,Advanced,8,Peak,6,6,0,0,2026-01-26,2025-26,1,2026-01,2,2
+T00778,Lighthouse Reef,Intermediate,10,Peak,9,8,0,1,2026-01-27,2025-26,1,2026-01,2,1
+T00779,Pinnacle Rock,Intermediate,11,Peak,9,7,2,0,2026-01-28,2025-26,1,2026-01,4,2
+T00780,The Wall,Advanced,12,Peak,11,7,4,0,2026-01-29,2025-26,1,2026-01,5,1
+T00781,Anchor Point,Intermediate,9,Peak,8,7,1,0,2026-01-30,2025-26,1,2026-01,2,1
+T00782,Sunken Barge,Intermediate,10,Peak,8,8,0,0,2026-01-31,2025-26,1,2026-01,2,2
+T00783,Drift Corner,Advanced,12,Peak,10,1,8,1,2026-02-01,2025-26,2,2026-02,11,2
+T00784,Turtle Bay,Beginner,11,Peak,8,7,1,0,2026-02-02,2025-26,2,2026-02,4,3
+T00785,Seagrass Flats,Beginner,10,Peak,7,4,2,1,2026-02-02,2025-26,2,2026-02,6,3
+T00786,Blue Hollow,Intermediate,9,Peak,7,4,3,0,2026-02-03,2025-26,2,2026-02,5,2
+T00787,Anchor Point,Intermediate,8,Peak,7,5,2,0,2026-02-04,2025-26,2,2026-02,3,1
+T00788,Nemo Garden,Beginner,10,Peak,9,7,1,1,2026-02-05,2025-26,2,2026-02,3,1
+T00789,Pinnacle Rock,Intermediate,10,Peak,9,7,2,0,2026-02-05,2025-26,2,2026-02,3,1
+T00790,The Wall,Advanced,10,Peak,7,6,1,0,2026-02-06,2025-26,2,2026-02,4,3
+T00791,Sunken Barge,Intermediate,8,Peak,7,7,0,0,2026-02-06,2025-26,2,2026-02,1,1
+T00792,The Wall,Advanced,12,Peak,9,9,0,0,2026-02-07,2025-26,2,2026-02,3,3
+T00793,Nemo Garden,Beginner,12,Peak,10,8,2,0,2026-02-08,2025-26,2,2026-02,4,2
+T00794,Turtle Bay,Beginner,11,Peak,8,6,1,1,2026-02-08,2025-26,2,2026-02,5,3
+T00795,Pinnacle Rock,Intermediate,8,Peak,7,7,0,0,2026-02-09,2025-26,2,2026-02,1,1
+T00796,Seagrass Flats,Beginner,9,Peak,8,7,0,1,2026-02-10,2025-26,2,2026-02,2,1
+T00797,Anchor Point,Intermediate,11,Peak,8,4,3,1,2026-02-11,2025-26,2,2026-02,7,3
+T00798,Sunken Barge,Intermediate,9,Peak,8,7,1,0,2026-02-12,2025-26,2,2026-02,2,1
+T00799,Manta Alley,Advanced,9,Peak,6,4,2,0,2026-02-13,2025-26,2,2026-02,5,3
+T00800,Shark Bank,Advanced,8,Peak,6,5,1,0,2026-02-13,2025-26,2,2026-02,3,2
+T00801,Seagrass Flats,Beginner,10,Peak,9,6,1,2,2026-02-14,2025-26,2,2026-02,4,1
+T00802,Lighthouse Reef,Intermediate,9,Peak,8,6,1,1,2026-02-15,2025-26,2,2026-02,3,1
+T00803,Shark Bank,Advanced,9,Peak,7,6,1,0,2026-02-15,2025-26,2,2026-02,3,2
+T00804,Seagrass Flats,Beginner,11,Peak,8,5,2,1,2026-02-16,2025-26,2,2026-02,6,3
+T00805,Shark Bank,Advanced,8,Peak,7,7,0,0,2026-02-17,2025-26,2,2026-02,1,1
+T00806,Pinnacle Rock,Intermediate,11,Peak,9,9,0,0,2026-02-18,2025-26,2,2026-02,2,2
+T00807,Pinnacle Rock,Intermediate,11,Peak,8,7,1,0,2026-02-18,2025-26,2,2026-02,4,3
+T00808,Pinnacle Rock,Intermediate,8,Peak,6,4,1,1,2026-02-19,2025-26,2,2026-02,4,2
+T00809,Nemo Garden,Beginner,10,Peak,8,4,4,0,2026-02-20,2025-26,2,2026-02,6,2
+T00810,Coral Ridge,Beginner,10,Peak,9,3,6,0,2026-02-20,2025-26,2,2026-02,7,1
+T00811,Coral Ridge,Beginner,8,Peak,6,2,4,0,2026-02-21,2025-26,2,2026-02,6,2
+T00812,Manta Alley,Advanced,10,Peak,7,7,0,0,2026-02-22,2025-26,2,2026-02,3,3
+T00813,Turtle Bay,Beginner,11,Peak,9,7,2,0,2026-02-23,2025-26,2,2026-02,4,2
+T00814,Blue Hollow,Intermediate,12,Peak,10,8,2,0,2026-02-23,2025-26,2,2026-02,4,2
+T00815,Turtle Bay,Beginner,8,Peak,6,4,2,0,2026-02-24,2025-26,2,2026-02,4,2
+T00816,Lighthouse Reef,Intermediate,10,Peak,7,6,1,0,2026-02-24,2025-26,2,2026-02,4,3
+T00817,Blue Hollow,Intermediate,12,Peak,11,7,2,2,2026-02-25,2025-26,2,2026-02,5,1
+T00818,Pinnacle Rock,Intermediate,9,Peak,7,6,1,0,2026-02-26,2025-26,2,2026-02,3,2
+T00819,Sunken Barge,Intermediate,10,Peak,8,5,1,2,2026-02-27,2025-26,2,2026-02,5,2
+T00820,Shark Bank,Advanced,9,Peak,7,2,4,1,2026-02-27,2025-26,2,2026-02,7,2
+T00821,Shark Bank,Advanced,11,Peak,9,7,1,1,2026-02-28,2025-26,2,2026-02,4,2
+T00822,Coral Ridge,Beginner,9,Peak,8,6,2,0,2026-02-28,2025-26,2,2026-02,3,1
+T00823,Nemo Garden,Beginner,8,Peak,6,5,1,0,2026-03-01,2025-26,3,2026-03,3,2
+T00824,Seagrass Flats,Beginner,8,Peak,7,4,3,0,2026-03-02,2025-26,3,2026-03,4,1
+T00825,Barracuda Point,Advanced,8,Peak,7,6,1,0,2026-03-03,2025-26,3,2026-03,2,1
+T00826,Barracuda Point,Advanced,10,Peak,8,7,0,1,2026-03-04,2025-26,3,2026-03,3,2
+T00827,The Wall,Advanced,8,Peak,7,4,1,2,2026-03-05,2025-26,3,2026-03,4,1
+T00828,Coral Ridge,Beginner,8,Peak,6,6,0,0,2026-03-06,2025-26,3,2026-03,2,2
+T00829,Manta Alley,Advanced,8,Peak,6,4,2,0,2026-03-07,2025-26,3,2026-03,4,2
+T00830,Pinnacle Rock,Intermediate,11,Peak,9,7,0,2,2026-03-07,2025-26,3,2026-03,4,2
+T00831,Sunken Barge,Intermediate,9,Peak,8,6,2,0,2026-03-08,2025-26,3,2026-03,3,1
+T00832,Barracuda Point,Advanced,8,Peak,6,6,0,0,2026-03-09,2025-26,3,2026-03,2,2
+T00833,Lighthouse Reef,Intermediate,11,Peak,8,7,0,1,2026-03-09,2025-26,3,2026-03,4,3
+T00834,Barracuda Point,Advanced,12,Peak,11,10,0,1,2026-03-10,2025-26,3,2026-03,2,1
+T00835,The Wall,Advanced,9,Peak,6,6,0,0,2026-03-11,2025-26,3,2026-03,3,3
+T00836,Turtle Bay,Beginner,12,Peak,10,7,2,1,2026-03-12,2025-26,3,2026-03,5,2
+T00837,Turtle Bay,Beginner,10,Peak,8,8,0,0,2026-03-13,2025-26,3,2026-03,2,2
+T00838,Nemo Garden,Beginner,12,Peak,11,8,3,0,2026-03-14,2025-26,3,2026-03,4,1
+T00839,Nemo Garden,Beginner,10,Peak,7,5,1,1,2026-03-14,2025-26,3,2026-03,5,3
+T00840,Drift Corner,Advanced,12,Peak,10,7,2,1,2026-03-14,2025-26,3,2026-03,5,2
+T00841,Pinnacle Rock,Intermediate,10,Peak,8,6,0,2,2026-03-15,2025-26,3,2026-03,4,2
+T00842,Blue Hollow,Intermediate,11,Peak,9,8,0,1,2026-03-16,2025-26,3,2026-03,3,2
+T00843,Nemo Garden,Beginner,11,Peak,9,7,2,0,2026-03-16,2025-26,3,2026-03,4,2
+T00844,Coral Ridge,Beginner,8,Peak,7,4,3,0,2026-03-17,2025-26,3,2026-03,4,1
+T00845,Turtle Bay,Beginner,12,Peak,10,8,2,0,2026-03-18,2025-26,3,2026-03,4,2
+T00846,Seagrass Flats,Beginner,8,Peak,7,6,1,0,2026-03-19,2025-26,3,2026-03,2,1
+T00847,Turtle Bay,Beginner,8,Peak,7,4,3,0,2026-03-20,2025-26,3,2026-03,4,1
+T00848,Sunken Barge,Intermediate,10,Peak,7,7,0,0,2026-03-21,2025-26,3,2026-03,3,3
+T00849,Drift Corner,Advanced,9,Peak,8,6,1,1,2026-03-22,2025-26,3,2026-03,3,1
+T00850,Drift Corner,Advanced,8,Peak,7,5,2,0,2026-03-22,2025-26,3,2026-03,3,1
+T00851,Anchor Point,Intermediate,10,Peak,8,6,2,0,2026-03-23,2025-26,3,2026-03,4,2
+T00852,Turtle Bay,Beginner,8,Peak,7,5,2,0,2026-03-24,2025-26,3,2026-03,3,1
+T00853,Coral Ridge,Beginner,8,Peak,7,4,2,1,2026-03-25,2025-26,3,2026-03,4,1
+T00854,Barracuda Point,Advanced,9,Peak,7,0,7,0,2026-03-26,2025-26,3,2026-03,9,2
+T00855,Sunken Barge,Intermediate,12,Peak,10,9,1,0,2026-03-27,2025-26,3,2026-03,3,2
+T00856,Anchor Point,Intermediate,10,Peak,8,6,2,0,2026-03-28,2025-26,3,2026-03,4,2
+T00857,Sunken Barge,Intermediate,10,Peak,8,5,3,0,2026-03-29,2025-26,3,2026-03,5,2
+T00858,Drift Corner,Advanced,11,Peak,9,7,2,0,2026-03-29,2025-26,3,2026-03,4,2
+T00859,Sunken Barge,Intermediate,11,Peak,10,5,1,4,2026-03-30,2025-26,3,2026-03,6,1
+T00860,Shark Bank,Advanced,9,Peak,7,5,2,0,2026-03-31,2025-26,3,2026-03,4,2
+T00861,Manta Alley,Advanced,8,Shoulder,7,5,2,0,2026-04-01,2025-26,4,2026-04,3,1
+T00862,Drift Corner,Advanced,9,Shoulder,8,7,1,0,2026-04-02,2025-26,4,2026-04,2,1
+T00863,The Wall,Advanced,11,Shoulder,9,3,6,0,2026-04-03,2025-26,4,2026-04,8,2
+T00864,Seagrass Flats,Beginner,12,Shoulder,10,3,6,1,2026-04-04,2025-26,4,2026-04,9,2
+T00865,Coral Ridge,Beginner,9,Shoulder,8,5,2,1,2026-04-05,2025-26,4,2026-04,4,1
+T00866,Sunken Barge,Intermediate,8,Shoulder,6,5,0,1,2026-04-06,2025-26,4,2026-04,3,2
+T00867,Sunken Barge,Intermediate,8,Shoulder,7,1,6,0,2026-04-07,2025-26,4,2026-04,7,1
+T00868,Barracuda Point,Advanced,10,Shoulder,8,0,8,0,2026-04-08,2025-26,4,2026-04,10,2
+T00869,Drift Corner,Advanced,12,Shoulder,9,7,1,1,2026-04-09,2025-26,4,2026-04,5,3
+T00870,The Wall,Advanced,12,Shoulder,10,8,2,0,2026-04-10,2025-26,4,2026-04,4,2
+T00871,Drift Corner,Advanced,10,Shoulder,7,6,1,0,2026-04-11,2025-26,4,2026-04,4,3
+T00872,The Wall,Advanced,8,Shoulder,7,5,1,1,2026-04-12,2025-26,4,2026-04,3,1
+T00873,Manta Alley,Advanced,9,Shoulder,7,6,1,0,2026-04-13,2025-26,4,2026-04,3,2
+T00874,Barracuda Point,Advanced,11,Shoulder,8,7,1,0,2026-04-14,2025-26,4,2026-04,4,3
+T00875,Drift Corner,Advanced,12,Shoulder,9,3,6,0,2026-04-15,2025-26,4,2026-04,9,3
+T00876,The Wall,Advanced,8,Shoulder,7,1,6,0,2026-04-16,2025-26,4,2026-04,7,1
+T00877,Seagrass Flats,Beginner,12,Shoulder,9,3,6,0,2026-04-17,2025-26,4,2026-04,9,3
+T00878,Drift Corner,Advanced,9,Shoulder,7,1,5,1,2026-04-18,2025-26,4,2026-04,8,2
+T00879,Nemo Garden,Beginner,10,Shoulder,7,4,3,0,2026-04-19,2025-26,4,2026-04,6,3
+T00880,Coral Ridge,Beginner,12,Shoulder,9,7,2,0,2026-04-20,2025-26,4,2026-04,5,3
+T00881,Barracuda Point,Advanced,11,Shoulder,9,4,5,0,2026-04-21,2025-26,4,2026-04,7,2
+T00882,Nemo Garden,Beginner,8,Shoulder,7,4,2,1,2026-04-22,2025-26,4,2026-04,4,1
+T00883,Shark Bank,Advanced,12,Shoulder,11,11,0,0,2026-04-23,2025-26,4,2026-04,1,1
+T00884,Drift Corner,Advanced,11,Shoulder,9,8,1,0,2026-04-24,2025-26,4,2026-04,3,2
+T00885,Sunken Barge,Intermediate,8,Shoulder,7,5,2,0,2026-04-25,2025-26,4,2026-04,3,1
+T00886,Turtle Bay,Beginner,11,Shoulder,9,4,1,4,2026-04-25,2025-26,4,2026-04,7,2
+T00887,Coral Ridge,Beginner,8,Shoulder,7,6,1,0,2026-04-26,2025-26,4,2026-04,2,1
+T00888,The Wall,Advanced,10,Shoulder,8,6,2,0,2026-04-27,2025-26,4,2026-04,4,2
+T00889,Blue Hollow,Intermediate,9,Shoulder,7,5,1,1,2026-04-28,2025-26,4,2026-04,4,2
+T00890,Sunken Barge,Intermediate,10,Shoulder,9,7,1,1,2026-04-29,2025-26,4,2026-04,3,1
+T00891,Coral Ridge,Beginner,9,Shoulder,8,5,3,0,2026-04-30,2025-26,4,2026-04,4,1
+T00892,Anchor Point,Intermediate,12,Shoulder,9,3,4,2,2026-05-01,2025-26,5,2026-05,9,3
+T00893,Manta Alley,Advanced,10,Shoulder,9,4,2,3,2026-05-02,2025-26,5,2026-05,6,1
+T00894,Shark Bank,Advanced,9,Shoulder,8,5,2,1,2026-05-03,2025-26,5,2026-05,4,1
+T00895,Anchor Point,Intermediate,10,Shoulder,7,3,3,1,2026-05-04,2025-26,5,2026-05,7,3
+T00896,Anchor Point,Intermediate,8,Shoulder,6,4,1,1,2026-05-05,2025-26,5,2026-05,4,2
+T00897,Seagrass Flats,Beginner,11,Shoulder,9,6,2,1,2026-05-06,2025-26,5,2026-05,5,2
+T00898,Manta Alley,Advanced,11,Shoulder,10,7,1,2,2026-05-07,2025-26,5,2026-05,4,1
+T00899,The Wall,Advanced,9,Shoulder,8,7,1,0,2026-05-08,2025-26,5,2026-05,2,1
+T00900,Pinnacle Rock,Intermediate,9,Shoulder,7,6,1,0,2026-05-09,2025-26,5,2026-05,3,2
+T00901,Manta Alley,Advanced,10,Shoulder,7,5,2,0,2026-05-10,2025-26,5,2026-05,5,3
+T00902,Pinnacle Rock,Intermediate,8,Shoulder,7,6,1,0,2026-05-11,2025-26,5,2026-05,2,1
+T00903,Drift Corner,Advanced,12,Shoulder,11,5,5,1,2026-05-12,2025-26,5,2026-05,7,1
+T00904,Sunken Barge,Intermediate,11,Shoulder,9,6,2,1,2026-05-13,2025-26,5,2026-05,5,2
+T00905,Blue Hollow,Intermediate,9,Shoulder,8,8,0,0,2026-05-14,2025-26,5,2026-05,1,1
+T00906,Coral Ridge,Beginner,12,Shoulder,10,1,9,0,2026-05-15,2025-26,5,2026-05,11,2
+T00907,Pinnacle Rock,Intermediate,12,Shoulder,9,2,7,0,2026-05-16,2025-26,5,2026-05,10,3
+T00908,Seagrass Flats,Beginner,12,Shoulder,10,1,9,0,2026-05-17,2025-26,5,2026-05,11,2
+T00909,Drift Corner,Advanced,9,Shoulder,8,7,1,0,2026-05-18,2025-26,5,2026-05,2,1
+T00910,Barracuda Point,Advanced,12,Shoulder,10,7,2,1,2026-05-19,2025-26,5,2026-05,5,2
+T00911,Anchor Point,Intermediate,12,Shoulder,11,8,1,2,2026-05-20,2025-26,5,2026-05,4,1
+T00912,Pinnacle Rock,Intermediate,12,Shoulder,10,7,2,1,2026-05-21,2025-26,5,2026-05,5,2
+T00913,Shark Bank,Advanced,9,Shoulder,7,5,2,0,2026-05-22,2025-26,5,2026-05,4,2
+T00914,Lighthouse Reef,Intermediate,11,Shoulder,10,2,8,0,2026-05-23,2025-26,5,2026-05,9,1
+T00915,The Wall,Advanced,12,Shoulder,11,4,5,2,2026-05-24,2025-26,5,2026-05,8,1
+T00916,Manta Alley,Advanced,12,Shoulder,9,8,0,1,2026-05-25,2025-26,5,2026-05,4,3
+T00917,Manta Alley,Advanced,12,Shoulder,11,8,3,0,2026-05-26,2025-26,5,2026-05,4,1
+T00918,Nemo Garden,Beginner,9,Shoulder,7,6,0,1,2026-05-27,2025-26,5,2026-05,3,2
+T00919,Lighthouse Reef,Intermediate,10,Shoulder,7,5,2,0,2026-05-28,2025-26,5,2026-05,5,3
+T00920,Seagrass Flats,Beginner,9,Shoulder,7,5,2,0,2026-05-29,2025-26,5,2026-05,4,2
+T00921,Anchor Point,Intermediate,8,Shoulder,7,7,0,0,2026-05-30,2025-26,5,2026-05,1,1
+T00922,The Wall,Advanced,12,Shoulder,9,6,3,0,2026-05-31,2025-26,5,2026-05,6,3

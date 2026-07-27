@@ -1,0 +1,67 @@
+kpi,scope,value,numerator,denominator,unit
+capacity_utilization,overall,0.595124593716143,5493.0,9230.0,ratio
+capacity_utilization,2023-24 (half),0.6831806827643631,,,ratio
+capacity_utilization,2024-25,0.5796111403047819,,,ratio
+capacity_utilization,2025-26,0.5446724023825281,,,ratio
+capacity_utilization,trading:Monsoon-Closed,0.09465020576131687,,,ratio
+capacity_utilization,trading:Peak,0.63714747619903,,,ratio
+capacity_utilization,trading:Shoulder,0.5622807017543859,,,ratio
+booking_conversion_rate,overall,0.512863070539419,5562.0,10845.0,ratio
+booking_conversion_rate,2023-24 (half),0.6117353308364545,1470.0,2403.0,ratio
+booking_conversion_rate,2024-25,0.5309133489461358,2267.0,4270.0,ratio
+booking_conversion_rate,2025-26,0.43744007670182167,1825.0,4172.0,ratio
+booking_conversion_rate_net,overall,0.3928999538958045,,,ratio
+cancellation_rate,overall,0.18588760284479153,1333.0,7171.0,ratio
+no_show_rate,overall,0.048110444847301634,345.0,7171.0,ratio
+cancellation_rate,2023-24 (half),0.0967741935483871,,,ratio
+no_show_rate,2023-24 (half),0.035430988894764676,,,ratio
+cancellation_rate,2024-25,0.18515950069348128,,,ratio
+no_show_rate,2024-25,0.049930651872399444,,,ratio
+cancellation_rate,2025-26,0.2570951585976628,,,ratio
+no_show_rate,2025-26,0.055926544240400666,,,ratio
+cancellation_rate,reason:Customer,0.061637149630456,,,ratio
+cancellation_rate,reason:Medical,0.021893738669641612,,,ratio
+cancellation_rate,reason:Unknown,0.027332310695858317,,,ratio
+cancellation_rate,reason:Weather,0.07502440384883559,,,ratio
+repeat_customer_rate,overall,0.15959963603275706,877.0,5495.0,ratio
+course_to_fundive_conversion,overall,0.21511627906976744,185.0,860.0,ratio
+course_to_fundive_conversion,2023-24 (half),0.39464882943143814,118.0,299.0,ratio
+course_to_fundive_conversion,2024-25,0.16101694915254236,57.0,354.0,ratio
+course_to_fundive_conversion,2025-26,0.04830917874396135,10.0,207.0,ratio
+course_to_fundive_conversion_90d,2023-24 (half),0.27759197324414714,83.0,299.0,ratio
+course_to_fundive_conversion_90d,2024-25,0.1016949152542373,36.0,354.0,ratio
+course_to_fundive_conversion_90d,2025-26,0.03731343283582089,5.0,134.0,ratio
+repeat_customer_rate,within:2023-24 (half),0.2738799661876585,,,ratio
+repeat_customer_rate,within:2024-25,0.13503649635036497,,,ratio
+repeat_customer_rate,within:2025-26,0.08031599736668861,,,ratio
+revenue_per_customer,overall,10000.063694267516,54950350.0,5495.0,INR
+revenue_per_dive,overall,4449.781358814479,54950350.0,12349.0,INR
+customer_ltv,overall,12623.558465426142,54950350.0,4353.0,INR
+total_revenue,overall,54950350.0,,,INR
+revenue_per_dive,2023-24 (half),4682.5071004389365,,,INR
+revenue_per_customer,2023-24 (half),15329.966187658496,,,INR
+total_revenue,2023-24 (half),18135350.0,,,INR
+revenue_per_dive,2024-25,4462.685519454472,,,INR
+revenue_per_customer,2024-25,11601.120959332638,,,INR
+total_revenue,2024-25,22250950.0,,,INR
+revenue_per_dive,2025-26,4173.080229226361,,,INR
+revenue_per_customer,2025-26,9587.919684002632,,,INR
+total_revenue,2025-26,14564050.0,,,INR
+seasonality_index,month:01,192.0763022743947,,,index
+seasonality_index,month:02,171.09317681584741,,,index
+seasonality_index,month:03,163.46294937637563,,,index
+seasonality_index,month:04,121.20322817314747,,,index
+seasonality_index,month:05,108.87747615553927,,,index
+seasonality_index,month:06,9.024211298606016,,,index
+seasonality_index,month:07,0.0,,,index
+seasonality_index,month:08,0.0,,,index
+seasonality_index,month:09,9.024211298606016,,,index
+seasonality_index,month:10,116.43433602347763,,,index
+seasonality_index,month:11,130.30080704328688,,,index
+seasonality_index,month:12,178.503301540719,,,index
+empty_seat_value,2025-26,13807830.825420015,,,INR
+utilization_gap_to_75_seats,2025-26,620.5,,,seats
+utilization_gap_to_75_value,2025-26,6226569.060445581,,,INR
+mean_revenue_per_seat,overall,10034.7607742878,,,INR
+non_weather_cancellations,overall,795.0,,,bookings
+non_weather_cancellation_value,overall,7977634.815558801,,,INR

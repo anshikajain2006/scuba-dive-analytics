@@ -1,0 +1,12 @@
+metric,value
+model,LogisticRegression (out-of-time split)
+train_rows,4775
+test_rows,2396
+train_cancel_rate,0.1502
+test_cancel_rate,0.2571
+auc_train,0.739
+auc_test,0.749
+auc_weather_only,0.725
+top3_decile_capture,0.581
+recall_at_top30pct,0.581
+precision_at_top30pct,0.498

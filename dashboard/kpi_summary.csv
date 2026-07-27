@@ -1,0 +1,67 @@
+kpi,scope,value,numerator,denominator,unit,display_value
+capacity_utilization,overall,0.595124593716143,5493.0,9230.0,ratio,59.5%
+capacity_utilization,2023-24 (half),0.6831806827643631,,,ratio,68.3%
+capacity_utilization,2024-25,0.5796111403047819,,,ratio,58.0%
+capacity_utilization,2025-26,0.5446724023825281,,,ratio,54.5%
+capacity_utilization,trading:Monsoon-Closed,0.0946502057613168,,,ratio,9.5%
+capacity_utilization,trading:Peak,0.63714747619903,,,ratio,63.7%
+capacity_utilization,trading:Shoulder,0.5622807017543859,,,ratio,56.2%
+booking_conversion_rate,overall,0.512863070539419,5562.0,10845.0,ratio,51.3%
+booking_conversion_rate,2023-24 (half),0.6117353308364545,1470.0,2403.0,ratio,61.2%
+booking_conversion_rate,2024-25,0.5309133489461358,2267.0,4270.0,ratio,53.1%
+booking_conversion_rate,2025-26,0.4374400767018216,1825.0,4172.0,ratio,43.7%
+booking_conversion_rate_net,overall,0.3928999538958045,,,ratio,39.3%
+cancellation_rate,overall,0.1858876028447915,1333.0,7171.0,ratio,18.6%
+no_show_rate,overall,0.0481104448473016,345.0,7171.0,ratio,4.8%
+cancellation_rate,2023-24 (half),0.0967741935483871,,,ratio,9.7%
+no_show_rate,2023-24 (half),0.0354309888947646,,,ratio,3.5%
+cancellation_rate,2024-25,0.1851595006934812,,,ratio,18.5%
+no_show_rate,2024-25,0.0499306518723994,,,ratio,5.0%
+cancellation_rate,2025-26,0.2570951585976628,,,ratio,25.7%
+no_show_rate,2025-26,0.0559265442404006,,,ratio,5.6%
+cancellation_rate,reason:Customer,0.061637149630456,,,ratio,6.2%
+cancellation_rate,reason:Medical,0.0218937386696416,,,ratio,2.2%
+cancellation_rate,reason:Unknown,0.0273323106958583,,,ratio,2.7%
+cancellation_rate,reason:Weather,0.0750244038488355,,,ratio,7.5%
+repeat_customer_rate,overall,0.159599636032757,877.0,5495.0,ratio,16.0%
+course_to_fundive_conversion,overall,0.2151162790697674,185.0,860.0,ratio,21.5%
+course_to_fundive_conversion,2023-24 (half),0.3946488294314381,118.0,299.0,ratio,39.5%
+course_to_fundive_conversion,2024-25,0.1610169491525423,57.0,354.0,ratio,16.1%
+course_to_fundive_conversion,2025-26,0.0483091787439613,10.0,207.0,ratio,4.8%
+course_to_fundive_conversion_90d,2023-24 (half),0.2775919732441471,83.0,299.0,ratio,27.8%
+course_to_fundive_conversion_90d,2024-25,0.1016949152542373,36.0,354.0,ratio,10.2%
+course_to_fundive_conversion_90d,2025-26,0.0373134328358208,5.0,134.0,ratio,3.7%
+repeat_customer_rate,within:2023-24 (half),0.2738799661876585,,,ratio,27.4%
+repeat_customer_rate,within:2024-25,0.1350364963503649,,,ratio,13.5%
+repeat_customer_rate,within:2025-26,0.0803159973666886,,,ratio,8.0%
+revenue_per_customer,overall,10000.063694267516,54950350.0,5495.0,INR,Rs 10000
+revenue_per_dive,overall,4449.781358814479,54950350.0,12349.0,INR,Rs 4450
+customer_ltv,overall,12623.558465426142,54950350.0,4353.0,INR,Rs 12624
+total_revenue,overall,54950350.0,,,INR,Rs 54950350
+revenue_per_dive,2023-24 (half),4682.5071004389365,,,INR,Rs 4683
+revenue_per_customer,2023-24 (half),15329.966187658496,,,INR,Rs 15330
+total_revenue,2023-24 (half),18135350.0,,,INR,Rs 18135350
+revenue_per_dive,2024-25,4462.685519454472,,,INR,Rs 4463
+revenue_per_customer,2024-25,11601.120959332638,,,INR,Rs 11601
+total_revenue,2024-25,22250950.0,,,INR,Rs 22250950
+revenue_per_dive,2025-26,4173.080229226361,,,INR,Rs 4173
+revenue_per_customer,2025-26,9587.919684002632,,,INR,Rs 9588
+total_revenue,2025-26,14564050.0,,,INR,Rs 14564050
+seasonality_index,month:01,192.0763022743947,,,index,192.1
+seasonality_index,month:02,171.0931768158474,,,index,171.1
+seasonality_index,month:03,163.46294937637563,,,index,163.5
+seasonality_index,month:04,121.20322817314748,,,index,121.2
+seasonality_index,month:05,108.87747615553928,,,index,108.9
+seasonality_index,month:06,9.024211298606016,,,index,9.0
+seasonality_index,month:07,0.0,,,index,0.0
+seasonality_index,month:08,0.0,,,index,0.0
+seasonality_index,month:09,9.024211298606016,,,index,9.0
+seasonality_index,month:10,116.43433602347764,,,index,116.4
+seasonality_index,month:11,130.30080704328688,,,index,130.3
+seasonality_index,month:12,178.503301540719,,,index,178.5
+empty_seat_value,2025-26,13807830.825420016,,,INR,Rs 13807831
+utilization_gap_to_75_seats,2025-26,620.5,,,seats,620.5
+utilization_gap_to_75_value,2025-26,6226569.060445581,,,INR,Rs 6226569
+mean_revenue_per_seat,overall,10034.7607742878,,,INR,Rs 10035
+non_weather_cancellations,overall,795.0,,,bookings,795.0
+non_weather_cancellation_value,overall,7977634.815558801,,,INR,Rs 7977635

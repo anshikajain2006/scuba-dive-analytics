@@ -1,0 +1,13 @@
+step,table,decision,rows_before,rows_after,delta
+C1,bookings,drop fully-duplicated rows (all cols identical),7199,7171,-28
+C2,bookings,parse 3 date formats (day-first honoured),7171,7171,0
+C3,bookings,derive lead_time_days; flag negatives (none expected),7171,7171,0
+C4,bookings,normalise 12 status spellings -> 3 canonical,7171,7171,0
+C5,bookings,normalise 14 dive_type spellings -> 3 products,7171,7171,0
+C6,bookings,"quarantine impossible prices (row kept, price nulled)",7171,7171,0
+C7,bookings,cancelled+null reason -> 'Unknown' (not imputed),7171,7171,0
+C8,customers,54 nationality strings -> 12 countries,5495,5495,0
+C9,customers,26 cert_level strings -> 5 ordered levels,5495,5495,0
+C10,customers,null ages outside 10-90 (not clipped),5495,5495,0
+C11,customers,"null acquisition_channel -> 'Unknown' (kept, not dropped)",5495,5495,0
+C12,all,referential integrity + capacity checks,7171,7171,0
