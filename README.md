@@ -1,6 +1,6 @@
 # Where a dive operator's revenue went
 
-**A diagnostic case study — SQL · Python · predictive model · Power BI**
+**A diagnostic case study — SQL · Python · predictive model · HTML dashboard**
 
 A mid-size PADI dive centre in Havelock (Andaman Islands) watched revenue fall by
 a third in a single season and did not know why. This repo diagnoses the cause on
@@ -342,7 +342,7 @@ jupyter lab notebooks/                # run 01 → 04 in order
 ### Summary framings
 
 **Data analyst** — Built an end-to-end dive-operator analytics pipeline (SQL,
-Python, Power BI) on ~7.2K bookings; isolated ₹79.8 L of cancellation loss that
+Python, HTML dashboard) on ~7.2K bookings; isolated ₹79.8 L of cancellation loss that
 weather does not explain and a ₹62.3 L capacity gap against 54.5% utilization, and
 shipped a cancellation-risk model (out-of-time AUC 0.749) that concentrates 58% of
 cancellations into 30% of bookings.
