@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dive Centre Revenue Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0a1628;
+    --panel: #11223a;
+    --panel-2: #172c49;
+    --line: #22395a;
+    --text: #e8eef6;
+    --muted: #8fa3bd;
+    --teal: #00b4d8;
+    --teal-soft: rgba(0, 180, 216, 0.14);
+    --amber: #f4a261;
+    --amber-soft: rgba(244, 162, 97, 0.14);
+    --slate: #5c7a99;
+    --good: #4cc9a0;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 24px 24px 48px; }
+
+  header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px; }
+  h1 { font-size: 22px; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 4px 0 0; }
+  .src {
+    font-size: 12px; color: var(--muted); border: 1px solid var(--line);
+    border-radius: 999px; padding: 4px 10px; white-space: nowrap;
+  }
+  .src b { color: var(--teal); font-weight: 600; }
+
+  nav { display: flex; gap: 4px; margin: 20px 0 20px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+  nav button {
+    background: none; border: 0; color: var(--muted); font: inherit; font-weight: 500;
+    padding: 10px 16px; cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap;
+  }
+  nav button:hover { color: var(--text); }
+  nav button[aria-selected="true"] { color: var(--teal); border-bottom-color: var(--teal); }
+  nav button:focus-visible { outline: 2px solid var(--teal); outline-offset: -2px; }
+
+  .page { display: none; }
+  .page.active { display: block; }
+
+  .callout {
+    background: var(--amber-soft); border-left: 3px solid var(--amber);
+    border-radius: 8px; padding: 14px 18px; margin-bottom: 20px; font-size: 16px; font-weight: 500;
+  }
+  .callout.teal { background: var(--teal-soft); border-left-color: var(--teal); }
+  .callout small { display: block; color: var(--muted); font-size: 13px; font-weight: 400; margin-top: 2px; }
+
+  .kpis { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px;
+  }
+  .kpi .val { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .kpi .lbl { color: var(--muted); font-size: 13px; margin-top: 2px; }
+  .kpi .scope { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .badge {
+    display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 999px;
+    margin-top: 8px; font-variant-numeric: tabular-nums;
+  }
+  .badge.bad { background: var(--amber-soft); color: var(--amber); }
+  .badge.good { background: rgba(76, 201, 160, 0.14); color: var(--good); }
+  .badge.neutral { background: var(--teal-soft); color: var(--teal); }
+
+  .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 16px; }
+  .chart h3 { margin: 0 0 2px; font-size: 15px; font-weight: 600; }
+  .chart p { margin: 0 0 12px; color: var(--muted); font-size: 12.5px; }
+  .canvas-box { position: relative; height: 280px; }
+
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 16px; }
+  .stat .val { font-size: 40px; font-weight: 700; color: var(--amber); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .stat .lbl { font-size: 15px; font-weight: 500; }
+  .stat .note { color: var(--muted); font-size: 12.5px; margin-top: 4px; }
+
+  .split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 4px; }
+  .split div { background: var(--panel-2); border-radius: 8px; padding: 12px 14px; font-size: 13px; color: var(--muted); }
+  .split strong { display: block; color: var(--text); font-size: 20px; font-variant-numeric: tabular-nums; }
+  .split .addr { outline: 1px solid var(--teal); }
+  .split .addr em { color: var(--teal); font-style: normal; font-weight: 600; }
+
+  .recs { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+  .rec { display: flex; flex-direction: column; gap: 10px; }
+  .rec .id { color: var(--teal); font-weight: 700; font-size: 13px; letter-spacing: 0.04em; }
+  .rec h3 { margin: 0; font-size: 17px; font-weight: 600; }
+  .rec .num { font-size: 26px; white-space: nowrap; font-weight: 700; color: var(--amber); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .rec .why { color: var(--muted); font-size: 13px; flex: 1; }
+  .effort { align-self: flex-start; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px; }
+  .effort.Low { background: rgba(76, 201, 160, 0.14); color: var(--good); }
+  .effort.Medium { background: var(--amber-soft); color: var(--amber); }
+
+  footer { color: var(--muted); font-size: 12px; margin-top: 32px; border-top: 1px solid var(--line); padding-top: 14px; }
+  footer code { color: var(--text); }
+
+  @media (max-width: 1100px) { .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 760px) {
+    .wrap { padding: 16px; }
+    .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid2, .stats { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <h1>Havelock Dive Centre: where the revenue went</h1>
+      <p class="sub">7,171 bookings · Jan 2024 to May 2026 · all currency INR · KPI names per PROJECT_BRIEF.md §3</p>
+    </div>
+    <span class="src" id="src">Loading data…</span>
+  </header>
+
+  <nav role="tablist" aria-label="Dashboard pages">
+    <button role="tab" aria-selected="true" data-page="overview">Overview</button>
+    <button role="tab" aria-selected="false" data-page="cancellations">Cancellations</button>
+    <button role="tab" aria-selected="false" data-page="leakage">Revenue leakage</button>
+    <button role="tab" aria-selected="false" data-page="recs">Recommendations</button>
+  </nav>
+
+  <!-- PAGE 1: OVERVIEW -->
+  <section class="page active" id="overview" role="tabpanel">
+    <div class="callout" id="headline">Revenue fell 34.5% while bookings fell only 16.9%
+      <small>2025-26 vs 2024-25. The shop is selling seats, and then many of them never become completed dives.</small>
+    </div>
+    <div class="kpis" id="kpis"></div>
+    <div class="grid2">
+      <div class="card chart">
+        <h3>Monthly revenue, 2024-25 vs 2025-26</h3>
+        <p>Completed bookings only, by dive month, in trading order (Oct → Sep).</p>
+        <div class="canvas-box"><canvas id="cRevTrend"></canvas></div>
+      </div>
+      <div class="card chart">
+        <h3>Bookings by status</h3>
+        <p>Completed bookings fell faster than total bookings.</p>
+        <div class="canvas-box"><canvas id="cStatus"></canvas></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 2: CANCELLATIONS -->
+  <section class="page" id="cancellations" role="tabpanel">
+    <div class="callout teal" id="modelCallout">Riskiest 30% of bookings contain 58.1% of cancellations. Model AUC: 0.749
+      <small>Cancellation-risk logistic regression, out-of-time test on 2025-26 (358 of 616 cancellations in the top 3 deciles).</small>
+    </div>
+    <div class="grid2">
+      <div class="card chart">
+        <h3><code>cancellation_rate</code> by acquisition channel</h3>
+        <p>All seasons. OTA cancels at about twice the walk-in rate.</p>
+        <div class="canvas-box"><canvas id="cCancChannel"></canvas></div>
+      </div>
+      <div class="card chart">
+        <h3>Cancellations by logged reason</h3>
+        <p id="reasonNote">Weather is the largest single reason, but most cancellations are not caused by weather.</p>
+        <div class="canvas-box"><canvas id="cReason"></canvas></div>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="card chart">
+        <h3>Cancellations with no recorded reason</h3>
+        <p>Share of each season's cancellations logged as <code>Unknown</code>.</p>
+        <div class="canvas-box"><canvas id="cUnknown"></canvas></div>
+      </div>
+      <div class="card chart">
+        <h3>Weather predicts cancellations, but does not explain most of them</h3>
+        <p>Bad weather makes a booking about 4× more likely to cancel. But most cancellations happen on diveable days.</p>
+        <div class="split">
+          <div>Rough / Closed days<strong>54.7%</strong>cancel · 14.0% of bookings · 41.1% of cancellations</div>
+          <div class="addr">Calm / Moderate days<strong>12.7%</strong>cancel · 86.0% of bookings · 58.9% of cancellations · <em>addressable</em></div>
+        </div>
+        <p style="margin-top:14px">795 cancellations, worth ₹79,77,635, are not attributed to weather. Source: FINDINGS §2②, <code>sql/06</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 3: REVENUE LEAKAGE -->
+  <section class="page" id="leakage" role="tabpanel">
+    <div class="stats">
+      <div class="card stat">
+        <div class="val" id="lostSeats">750</div>
+        <div class="lbl">booked seats lost in 2025-26</div>
+        <div class="note" id="lostSeatsNote">Cancellations + no-shows. A further 626 seats were never sold.</div>
+      </div>
+      <div class="card stat">
+        <div class="val" id="unkRev">9.3%</div>
+        <div class="lbl">of revenue has no channel attached</div>
+        <div class="note" id="unkRevNote">₹50,96,000 from customers whose <code>acquisition_channel</code> was never captured.</div>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="card chart">
+        <h3>OTA share of bookings</h3>
+        <p>The fastest-growing channel is also the worst-performing one.</p>
+        <div class="canvas-box"><canvas id="cOtaShare"></canvas></div>
+      </div>
+      <div class="card chart">
+        <h3>Average booking price by channel</h3>
+        <p id="priceNote">OTA books 26% cheaper than walk-in.</p>
+        <div class="canvas-box"><canvas id="cPrice"></canvas></div>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="card chart">
+        <h3>Graduates who came back for a fun dive</h3>
+        <p><code>course_to_fundive_conversion</code> by course season. The 90-day window corrects for newer cohorts having had less time to return.</p>
+        <div class="canvas-box"><canvas id="cGrad"></canvas></div>
+      </div>
+      <div class="card chart">
+        <h3>Revenue by channel</h3>
+        <p>Completed-booking revenue, all seasons. <code>Unknown</code> = channel not captured at booking.</p>
+        <div class="canvas-box"><canvas id="cRevChannel"></canvas></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 4: RECOMMENDATIONS -->
+  <section class="page" id="recs" role="tabpanel">
+    <div class="callout teal">Five fixes, each tied to a measured number
+      <small>Full detail: docs/BRD.md, docs/MEMO.md, docs/TRACEABILITY_MATRIX.md.</small>
+    </div>
+    <div class="recs" id="recCards"></div>
+  </section>
+
+  <footer>
+    Synthetic data: trends were deliberately planted (<code>data/generate_data.py</code>, assumption A10).
+    Revenue counts Completed bookings only. <code>capacity_utilization</code> uses capacity at trip grain (<code>fact_trips</code>).
+    2023-24 is a half season (Jan–May 2024). Evidence for every figure: <code>docs/FINDINGS.md</code>.
+  </footer>
+</div>
+
+<script>
+/* ---------------------------------------------------------------------------
+ * FALLBACK — hardcoded figures from docs/FINDINGS.md (and DASHBOARD_SPEC.md),
+ * cross-checked against the CSVs in this folder.
+ *
+ * Used in two cases:
+ *  1. Browsers block fetch() on file:// URLs (Chrome, Edge). When the page is
+ *     opened by double-clicking, the CSVs cannot be read, so the whole
+ *     dashboard renders from this snapshot. Served over http (e.g.
+ *     `python -m http.server` in this folder) it computes live from the CSVs.
+ *  2. Any single computed value that comes out missing or non-finite falls back
+ *     to its entry here, so the page never shows NaN or undefined.
+ * ------------------------------------------------------------------------- */
+const FALLBACK = {
+  revenue:  { "2024-25": 22250950, "2025-26": 14564050 },            // FINDINGS §2①
+  bookings: { "2024-25": 2884, "2025-26": 2396 },                     // FINDINGS §2①
+  cancRate: { "2024-25": 0.185, "2025-26": 0.257 },                   // FINDINGS §1
+  utilization: 0.595,                                                 // FINDINGS §1, spec sanity check
+  utilBySeason: { "2024-25": 0.580, "2025-26": 0.545 },               // FINDINGS §1
+  // Monthly revenue by dive month, Oct..Sep (computed from fact_bookings.csv)
+  revTrend: {
+    "2024-25": [1832750, 2607450, 3383200, 3772500, 3511450, 3129350, 2216050, 1686850, 49150, 0, 0, 62200],
+    "2025-26": [1661000, 1407850, 2330500, 2326600, 1803300, 2128600, 1352400, 1437800, 74800, 0, 0, 41200]
+  },
+  status: {   // booking counts by status (fact_bookings.csv)
+    "2024-25": { Completed: 2206, Cancelled: 534, "No-show": 144 },
+    "2025-26": { Completed: 1646, Cancelled: 616, "No-show": 134 }
+  },
+  channels: [ // FINDINGS §2③ for OTA / Walk-in / Referral; others from fact_bookings.csv
+    { ch: "OTA",           canc: 0.278, price: 8167,  rev: 7235300 },
+    { ch: "Hotel Partner", canc: 0.206, price: 9707,  rev: 4832750 },
+    { ch: "Unknown",       canc: 0.186, price: 10245, rev: 5096000 },
+    { ch: "Instagram",     canc: 0.178, price: 10492, rev: 6220600 },
+    { ch: "Website",       canc: 0.172, price: 10402, rev: 10263400 },
+    { ch: "Referral",      canc: 0.139, price: 10046, rev: 7261400 },
+    { ch: "Walk-in",       canc: 0.138, price: 11090, rev: 14040900 }
+  ],
+  reasons: { Weather: 538, Customer: 442, Unknown: 196, Medical: 157 }, // cleaning audit + sql/02
+  unknownReasonShare: { "2023-24 (half)": 0.077, "2024-25": 0.114, "2025-26": 0.196 }, // FINDINGS §2⑤
+  otaShare: { "2023-24 (half)": 0.085, "2024-25": 0.178, "2025-26": 0.294 },           // FINDINGS §2③
+  grad: {     // FINDINGS §2④
+    all: { "2023-24 (half)": 0.395, "2024-25": 0.161, "2025-26": 0.048 },
+    d90: { "2023-24 (half)": 0.278, "2024-25": 0.102, "2025-26": 0.037 }
+  },
+  lostSeats2526: 750, neverSold2526: 626,                             // FINDINGS §2①
+  unknownRevShare: 0.093, unknownRev: 5096000                         // FINDINGS §2⑤
+};
+
+const SEASONS = ["2023-24 (half)", "2024-25", "2025-26"];
+const TRADING_MONTHS = [10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const MONTH_LABELS = ["Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"];
+
+/* ---------- helpers ---------- */
+const ok = v => typeof v === "number" && isFinite(v);
+const pick = (v, fb) => ok(v) ? v : fb;
+const inr = new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 });
+const fmtINR = v => "₹" + inr.format(Math.round(v));
+const fmtCr = v => "₹" + (v / 1e7).toFixed(2) + " Cr";
+const fmtPct = (v, d = 1) => (v * 100).toFixed(d) + "%";
+
+// Simple split-based CSV parser. The exports contain no quoted fields
+// (verified: no '"' characters in any dashboard CSV), so splitting on commas is safe.
+function parseCSV(text) {
+  const lines = text.trim().split(/\r?\n/);
+  const head = lines[0].split(",");
+  return lines.slice(1).map(line => {
+    const cells = line.split(",");
+    const row = {};
+    head.forEach((h, i) => { row[h] = cells[i] === undefined ? "" : cells[i]; });
+    return row;
+  });
+}
+const num = s => (s === "" || s == null) ? NaN : Number(s);
+
+async function loadCSV(name) {
+  const res = await fetch(name);
+  if (!res.ok) throw new Error(name + " " + res.status);
+  return parseCSV(await res.text());
+}
+
+/* ---------- compute from CSVs, falling back per value ---------- */
+function compute(bookings, trips, kpis) {
+  const F = FALLBACK;
+  const M = JSON.parse(JSON.stringify(F));
+
+  const bySeason = s => bookings.filter(b => b.season_year === s);
+  ["2024-25", "2025-26"].forEach(s => {
+    const rows = bySeason(s);
+    const rev = rows.reduce((a, b) => a + (num(b.revenue_inr) || 0), 0);
+    const canc = rows.filter(b => b.is_cancelled === "1").length;
+    M.revenue[s] = pick(rows.length ? rev : NaN, F.revenue[s]);
+    M.bookings[s] = pick(rows.length || NaN, F.bookings[s]);
+    M.cancRate[s] = pick(canc / rows.length, F.cancRate[s]);
+    M.status[s] = {
+      Completed: pick(rows.filter(b => b.status === "Completed").length || NaN, F.status[s].Completed),
+      Cancelled: pick(canc || NaN, F.status[s].Cancelled),
+      "No-show": pick(rows.filter(b => b.status === "No-show").length || NaN, F.status[s]["No-show"])
+    };
+    M.revTrend[s] = TRADING_MONTHS.map((m, i) => {
+      const v = rows.filter(b => num(b.dive_month) === m).reduce((a, b) => a + (num(b.revenue_inr) || 0), 0);
+      return pick(v, F.revTrend[s][i]);
+    });
+  });
+
+  // capacity_utilization at TRIP grain: completed seats / boat capacity, both from fact_trips.
+  const cap = trips.reduce((a, t) => a + num(t.boat_capacity), 0);
+  const done = trips.reduce((a, t) => a + num(t.completed_seats), 0);
+  M.utilization = pick(done / cap, F.utilization);
+  ["2024-25", "2025-26"].forEach(s => {
+    const ts = trips.filter(t => t.season_year === s);
+    M.utilBySeason[s] = pick(ts.reduce((a, t) => a + num(t.completed_seats), 0) / ts.reduce((a, t) => a + num(t.boat_capacity), 0), F.utilBySeason[s]);
+  });
+  const t26 = trips.filter(t => t.season_year === "2025-26");
+  M.lostSeats2526 = pick(t26.reduce((a, t) => a + num(t.cancelled_seats) + num(t.no_show_seats), 0) || NaN, F.lostSeats2526);
+  M.neverSold2526 = pick(t26.reduce((a, t) => a + num(t.never_sold_seats), 0) || NaN, F.neverSold2526);
+
+  // Channels
+  const totalRev = bookings.reduce((a, b) => a + (num(b.revenue_inr) || 0), 0);
+  M.channels = F.channels.map(fc => {
+    const rows = bookings.filter(b => b.acquisition_channel === fc.ch);
+    const prices = rows.map(b => num(b.price_inr)).filter(ok);
+    return {
+      ch: fc.ch,
+      canc: pick(rows.filter(b => b.is_cancelled === "1").length / rows.length, fc.canc),
+      price: pick(prices.reduce((a, p) => a + p, 0) / prices.length, fc.price),
+      rev: pick(rows.length ? rows.reduce((a, b) => a + (num(b.revenue_inr) || 0), 0) : NaN, fc.rev)
+    };
+  });
+  const unk = M.channels.find(c => c.ch === "Unknown");
+  M.unknownRev = unk.rev;
+  M.unknownRevShare = pick(unk.rev / totalRev, F.unknownRevShare);
+
+  // Reasons and the Unknown-reason trend
+  const cancelled = bookings.filter(b => b.is_cancelled === "1");
+  Object.keys(F.reasons).forEach(r => {
+    M.reasons[r] = pick(cancelled.filter(b => b.cancellation_reason === r).length || NaN, F.reasons[r]);
+  });
+  SEASONS.forEach(s => {
+    const c = cancelled.filter(b => b.season_year === s);
+    M.unknownReasonShare[s] = pick(c.filter(b => b.cancellation_reason === "Unknown").length / c.length, F.unknownReasonShare[s]);
+    const rows = bySeason(s);
+    M.otaShare[s] = pick(rows.filter(b => b.acquisition_channel === "OTA").length / rows.length, F.otaShare[s]);
+  });
+
+  // Graduate return rates come pre-computed in kpi_summary.csv (90-day variant
+  // needs the observability window, which is not in the star-schema exports).
+  SEASONS.forEach(s => {
+    const a = kpis.find(k => k.kpi === "course_to_fundive_conversion" && k.scope === s);
+    const d = kpis.find(k => k.kpi === "course_to_fundive_conversion_90d" && k.scope === s);
+    M.grad.all[s] = pick(a ? num(a.value) : NaN, F.grad.all[s]);
+    M.grad.d90[s] = pick(d ? num(d.value) : NaN, F.grad.d90[s]);
+  });
+  return M;
+}
+
+/* ---------- chart defaults ---------- */
+const C = { teal: "#00b4d8", amber: "#f4a261", slate: "#5c7a99", grid: "rgba(143,163,189,0.12)", text: "#8fa3bd", green: "#4cc9a0" };
+function setupChartDefaults() {
+  Chart.defaults.color = C.text;
+  Chart.defaults.font.family = "Inter, system-ui, sans-serif";
+  Chart.defaults.font.size = 12;
+  Chart.defaults.borderColor = C.grid;
+  Chart.defaults.plugins.legend.labels.boxWidth = 12;
+  Chart.defaults.plugins.legend.labels.boxHeight = 12;
+  Chart.defaults.maintainAspectRatio = false;
+}
+const pctAxis = max => ({ beginAtZero: true, max, ticks: { callback: v => Math.round(v * 100) + "%" }, grid: { color: C.grid } });
+const noGrid = { grid: { display: false } };
+const pctTip = { callbacks: { label: c => `${c.dataset.label ? c.dataset.label + ": " : ""}${fmtPct(c.parsed.y ?? c.parsed.x ?? c.parsed)}` } };
+
+/* ---------- render ---------- */
+function render(M, live) {
+  document.getElementById("src").innerHTML = live
+    ? "Data: <b>live from CSVs</b>"
+    : "Data: <b>embedded snapshot</b> (CSV fetch unavailable on file://)";
+
+  // Headline is recomputed so it stays consistent with the data shown.
+  const revChg = M.revenue["2025-26"] / M.revenue["2024-25"] - 1;
+  const bkChg = M.bookings["2025-26"] / M.bookings["2024-25"] - 1;
+  document.getElementById("headline").firstChild.textContent =
+    `Revenue fell ${fmtPct(-revChg)} while bookings fell only ${fmtPct(-bkChg)} `;
+
+  // KPI cards
+  const arpb = s => M.revenue[s] / M.bookings[s];
+  const cards = [
+    { scope: "2025-26", val: fmtCr(M.revenue["2025-26"]), lbl: "Total revenue", badge: `${fmtPct(revChg)} YoY`, cls: "bad" },
+    { scope: "2025-26", val: inr.format(M.bookings["2025-26"]), lbl: "Bookings", badge: `${fmtPct(bkChg)} YoY`, cls: "bad" },
+    { scope: "2025-26", val: fmtPct(M.cancRate["2025-26"]), lbl: "cancellation_rate", badge: `+${((M.cancRate["2025-26"] - M.cancRate["2024-25"]) * 100).toFixed(1)}pp YoY`, cls: "bad" },
+    { scope: "All seasons", val: fmtPct(M.utilization), lbl: "capacity_utilization", badge: `2025-26: ${fmtPct(M.utilBySeason["2025-26"])}`, cls: "neutral" },
+    { scope: "2025-26", val: fmtINR(arpb("2025-26")), lbl: "Avg revenue per booking", badge: `${fmtPct(arpb("2025-26") / arpb("2024-25") - 1)} YoY`, cls: "bad" }
+  ];
+  document.getElementById("kpis").innerHTML = cards.map(c => `
+    <div class="card kpi">
+      <div class="scope">${c.scope}</div>
+      <div class="val">${c.val}</div>
+      <div class="lbl">${c.lbl}</div>
+      <span class="badge ${c.cls}">${c.badge}</span>
+    </div>`).join("");
+
+  // Revenue trend
+  new Chart(document.getElementById("cRevTrend"), {
+    type: "line",
+    data: { labels: MONTH_LABELS, datasets: [
+      { label: "2024-25", data: M.revTrend["2024-25"], borderColor: C.slate, backgroundColor: C.slate, tension: 0.3, pointRadius: 3 },
+      { label: "2025-26", data: M.revTrend["2025-26"], borderColor: C.teal, backgroundColor: C.teal, tension: 0.3, pointRadius: 3, borderWidth: 2.5 }
+    ]},
+    options: {
+      interaction: { mode: "index", intersect: false },
+      scales: { x: noGrid, y: { beginAtZero: true, ticks: { callback: v => "₹" + (v / 1e5).toFixed(0) + " L" } } },
+      plugins: { tooltip: { callbacks: { label: c => `${c.dataset.label}: ${fmtINR(c.parsed.y)}` } } }
+    }
+  });
+
+  // Status
+  const statuses = ["Completed", "Cancelled", "No-show"];
+  new Chart(document.getElementById("cStatus"), {
+    type: "bar",
+    data: { labels: statuses, datasets: [
+      { label: "2024-25", data: statuses.map(s => M.status["2024-25"][s]), backgroundColor: C.slate, borderRadius: 4 },
+      { label: "2025-26", data: statuses.map(s => M.status["2025-26"][s]), backgroundColor: [C.teal, C.amber, C.amber], borderRadius: 4 }
+    ]},
+    options: { scales: { x: noGrid, y: { beginAtZero: true } },
+      plugins: { legend: { labels: { generateLabels: () => [
+        { text: "2024-25", fillStyle: C.slate, strokeStyle: C.slate, fontColor: C.text },
+        { text: "2025-26", fillStyle: C.teal, strokeStyle: C.teal, fontColor: C.text }
+      ] } } } }
+  });
+
+  // Cancellation rate by channel
+  const byCanc = [...M.channels].sort((a, b) => b.canc - a.canc);
+  new Chart(document.getElementById("cCancChannel"), {
+    type: "bar",
+    data: { labels: byCanc.map(c => c.ch), datasets: [{ data: byCanc.map(c => c.canc),
+      backgroundColor: byCanc.map(c => c.ch === "OTA" ? C.amber : c.ch === "Unknown" ? C.slate : C.teal), borderRadius: 4 }] },
+    options: { indexAxis: "y", scales: { x: pctAxis(0.35), y: noGrid },
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => fmtPct(c.parsed.x) } } } }
+  });
+
+  // Reason donut
+  const rTot = Object.values(M.reasons).reduce((a, b) => a + b, 0);
+  const nonWeather = 1 - M.reasons.Weather / rTot;
+  document.getElementById("reasonNote").textContent =
+    `Weather is the largest single reason (${fmtPct(M.reasons.Weather / rTot)}), but ${fmtPct(nonWeather)} of cancellations are not weather-related.`;
+  new Chart(document.getElementById("cReason"), {
+    type: "doughnut",
+    data: { labels: ["Weather", "Customer", "Medical", "Unknown (not captured)"],
+      datasets: [{ data: [M.reasons.Weather, M.reasons.Customer, M.reasons.Medical, M.reasons.Unknown],
+        backgroundColor: [C.slate, C.teal, C.green, C.amber], borderColor: "#11223a", borderWidth: 2 }] },
+    options: { cutout: "62%", plugins: { legend: { position: "right" },
+      tooltip: { callbacks: { label: c => `${c.label}: ${inr.format(c.parsed)} (${fmtPct(c.parsed / rTot)})` } } } }
+  });
+
+  // Unknown reason trend
+  new Chart(document.getElementById("cUnknown"), {
+    type: "line",
+    data: { labels: SEASONS, datasets: [{ label: "Unknown reason", data: SEASONS.map(s => M.unknownReasonShare[s]),
+      borderColor: C.amber, backgroundColor: C.amber, pointRadius: 5, borderWidth: 2.5 }] },
+    options: { scales: { x: noGrid, y: pctAxis(0.25) }, plugins: { legend: { display: false }, tooltip: pctTip } }
+  });
+
+  // Leakage stats
+  document.getElementById("lostSeats").textContent = inr.format(M.lostSeats2526);
+  document.getElementById("lostSeatsNote").textContent =
+    `Cancellations + no-shows on 2025-26 departures. A further ${inr.format(M.neverSold2526)} seats were never sold.`;
+  document.getElementById("unkRev").textContent = fmtPct(M.unknownRevShare);
+  document.getElementById("unkRevNote").innerHTML =
+    `${fmtINR(M.unknownRev)} from customers whose <code>acquisition_channel</code> was never captured.`;
+
+  // OTA share
+  new Chart(document.getElementById("cOtaShare"), {
+    type: "line",
+    data: { labels: SEASONS, datasets: [{ label: "OTA share", data: SEASONS.map(s => M.otaShare[s]),
+      borderColor: C.amber, backgroundColor: "rgba(244,162,97,0.15)", fill: true, pointRadius: 5, borderWidth: 2.5 }] },
+    options: { scales: { x: noGrid, y: pctAxis(0.35) }, plugins: { legend: { display: false }, tooltip: pctTip } }
+  });
+
+  // Avg price by channel
+  const byPrice = [...M.channels].sort((a, b) => b.price - a.price);
+  const walk = M.channels.find(c => c.ch === "Walk-in"), ota = M.channels.find(c => c.ch === "OTA");
+  document.getElementById("priceNote").textContent =
+    `OTA books ${fmtPct(1 - ota.price / walk.price, 0)} cheaper than walk-in (${fmtINR(ota.price)} vs ${fmtINR(walk.price)}).`;
+  new Chart(document.getElementById("cPrice"), {
+    type: "bar",
+    data: { labels: byPrice.map(c => c.ch === "OTA" ? `OTA ⚠ ${fmtPct(1 - ota.price / walk.price, 0)} cheaper` : c.ch), datasets: [{ data: byPrice.map(c => c.price),
+      backgroundColor: byPrice.map(c => c.ch === "OTA" ? C.amber : c.ch === "Unknown" ? C.slate : C.teal), borderRadius: 4 }] },
+    options: { scales: { x: noGrid, y: { beginAtZero: true, ticks: { callback: v => "₹" + inr.format(v) } } },
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => fmtINR(c.parsed.y) } } } }
+  });
+
+  // Graduate return
+  new Chart(document.getElementById("cGrad"), {
+    type: "bar",
+    data: { labels: SEASONS, datasets: [
+      { label: "All time since course", data: SEASONS.map(s => M.grad.all[s]), backgroundColor: C.teal, borderRadius: 4 },
+      { label: "Within 90 days (like-for-like)", data: SEASONS.map(s => M.grad.d90[s]), backgroundColor: C.slate, borderRadius: 4 }
+    ]},
+    options: { scales: { x: noGrid, y: pctAxis(0.45) }, plugins: { tooltip: pctTip } }
+  });
+
+  // Revenue by channel
+  const byRev = [...M.channels].sort((a, b) => b.rev - a.rev);
+  new Chart(document.getElementById("cRevChannel"), {
+    type: "bar",
+    data: { labels: byRev.map(c => c.ch), datasets: [{ data: byRev.map(c => c.rev),
+      backgroundColor: byRev.map(c => c.ch === "Unknown" ? C.amber : c.ch === "OTA" ? C.slate : C.teal), borderRadius: 4 }] },
+    options: { indexAxis: "y", scales: { x: { beginAtZero: true, ticks: { callback: v => "₹" + (v / 1e5).toFixed(0) + " L" } }, y: noGrid },
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => fmtINR(c.parsed.x) } } } }
+  });
+
+  // Recommendations (effort levels as set by the project owner)
+  const recs = [
+    { id: "R1", title: "Confirmation calls for high-risk bookings", num: "58.1%",
+      why: "of cancellations sit in the riskiest 30% of bookings. Call them 48 hours before the dive to confirm or reschedule.", effort: "Low" },
+    { id: "R2", title: "Deposits on OTA bookings", num: fmtPct(ota.canc),
+      why: `OTA cancellation rate, vs ${fmtPct(walk.canc)} walk-in. OTA bookings bring 26% less revenue each and their customers are worth 33% less over their lifetime (₹9,533 vs ₹14,197).`, effort: "Medium" },
+    { id: "R3", title: "Graduate re-engagement at day 30–45", num: `${fmtPct(M.grad.all["2023-24 (half)"])} → ${fmtPct(M.grad.all["2025-26"])}`,
+      why: "Graduates returning for a fun dive. 69% of returners come back within 90 days, with a median of 49 days.", effort: "Low" },
+    { id: "R4", title: "Mandatory reason + channel fields", num: fmtPct(M.unknownReasonShare["2025-26"]),
+      why: `of 2025-26 cancellations have no reason, and ${fmtPct(M.unknownRevShare)} of revenue has no channel attached. Without these fields, R1–R3 cannot be measured.`, effort: "Low" },
+    { id: "R5", title: "Demand-aligned trip scheduling", num: inr.format(M.lostSeats2526),
+      why: `booked seats lost in 2025-26. capacity_utilization is ${fmtPct(M.utilization)} overall and ${fmtPct(M.utilBySeason["2025-26"])} in 2025-26, against a 75% target.`, effort: "Medium" }
+  ];
+  document.getElementById("recCards").innerHTML = recs.map(r => `
+    <div class="card rec">
+      <div class="id">${r.id}</div>
+      <h3>${r.title}</h3>
+      <div class="num">${r.num}</div>
+      <div class="why">${r.why}</div>
+      <span class="effort ${r.effort}">Effort: ${r.effort}</span>
+    </div>`).join("");
+}
+
+/* ---------- tabs (also deep-linkable: index.html#cancellations) ---------- */
+function showPage(id) {
+  document.querySelectorAll("nav button").forEach(b => b.setAttribute("aria-selected", b.dataset.page === id ? "true" : "false"));
+  document.querySelectorAll(".page").forEach(p => p.classList.toggle("active", p.id === id));
+}
+document.querySelectorAll("nav button").forEach(btn => {
+  btn.addEventListener("click", () => { showPage(btn.dataset.page); history.replaceState(null, "", "#" + btn.dataset.page); });
+});
+if (document.getElementById(location.hash.slice(1))?.classList.contains("page")) showPage(location.hash.slice(1));
+
+/* ---------- boot ---------- */
+(async function () {
+  if (typeof Chart === "undefined") {
+    document.getElementById("src").textContent = "Chart library failed to load (offline?). Figures in docs/FINDINGS.md.";
+    return;
+  }
+  setupChartDefaults();
+  let M = FALLBACK, live = false;
+  try {
+    const [bookings, trips, kpis] = await Promise.all([
+      loadCSV("fact_bookings.csv"), loadCSV("fact_trips.csv"), loadCSV("kpi_summary.csv")
+    ]);
+    M = compute(bookings, trips, kpis);
+    live = true;
+  } catch (e) {
+    console.info("CSV load unavailable, using embedded FINDINGS snapshot:", e.message);
+  }
+  render(M, live);
+})();
+</script>
+</body>
+</html>

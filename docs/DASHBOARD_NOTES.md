@@ -5,6 +5,8 @@ Phase 4 build.
 
 ## Status
 
+> **Update:** an HTML dashboard now replaces the Power BI deliverable. See the note at the end of this file.
+
 **The Power BI dashboard has not been built yet.** The export files and the full
 build spec are ready. The build is owned by **Anshhika** (PROJECT_BRIEF.md §5).
 The complete specification, covering the data model, DAX measures, visuals and
@@ -78,3 +80,5 @@ The values below come from `kpi_summary.csv` and match [`FINDINGS.md`](FINDINGS.
 When the `.pbix` is built, replace "link to follow" with the published report URL
 (or the path to the `.pbix` in `dashboard/`), add 1–2 screenshots to `dashboard/`,
 and tick the checklist in DASHBOARD_SPEC §7.
+
+HTML dashboard built at dashboard/index.html. Self-contained, no Power BI required. Opens locally in any browser.

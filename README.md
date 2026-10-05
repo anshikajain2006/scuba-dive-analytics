@@ -288,7 +288,7 @@ capacity at *trip* grain. Sum `boat_capacity` off the booking rows instead and e
 boat's capacity gets multiplied by the seats sold on it — the KPI reads roughly 10%
 instead of 59.5%. Capacity lives in `fact_trips` for exactly this reason.
 
-_Built in Power BI by Anshhika (Phase 4) — link to follow._
+`dashboard/index.html` — open in any browser, no server needed.
 
 ---
 
