@@ -116,17 +116,17 @@ does not cover.
 OTA share of bookings: **8.5% → 17.8% → 29.4%**. It is now the second-largest
 channel and the worst-performing one on every dimension measured.
 
-| Channel | Bookings | Avg price | `cancellation_rate` | `no_show_rate` | Seats lost | `customer_ltv` |
+| Channel | Bookings | Avg price | `cancellation_rate` | `no_show_rate` | Seats lost | Lifetime revenue / diving customer |
 |---|---|---|---|---|---|---|
 | **OTA** | 1,377 | **₹8,167** | **27.8%** | **7.5%** | **486** | **₹9,533** |
 | Walk-in | 1,541 | ₹11,090 | 13.8% | 3.5% | 266 | ₹14,197 |
 | Referral | 891 | ₹10,046 | 13.9% | 4.5% | 164 | ₹13,060 |
 
 OTA books **26% cheaper** than walk-in, cancels at **twice** the rate, no-shows at
-more than twice, converts inquiries worst of any channel (47.9% vs 54.4% for Hotel
-Partner), and produces customers worth **33% less over their lifetime**. It is the
-only channel below ₹12,000 LTV; the other six cluster in a tight ₹12,173–₹14,197
-band.
+more than twice, turns the fewest inquiries into completed dives (30.9% vs 43.6%
+for Referral), and produces customers worth **33% less over their lifetime**. It is
+the only channel below ₹12,000 lifetime revenue per diving customer; the other six
+cluster in a tight ₹12,173–₹14,197 band.
 
 The shop has swapped its highest-value channel mix for its lowest-value one. That
 is why `revenue_per_dive` fell from ₹4,683 to ₹4,173 **without a single price
@@ -223,11 +223,11 @@ requires no pricing or product change.
 ### R2 — Attach a deposit to OTA bookings, or renegotiate the channel
 
 **Evidence:** OTA cancels at **27.8% vs 13.8% walk-in**, no-shows at 7.5% vs 3.5%,
-lost **486 seats**, books 26% cheaper (₹8,167 vs ₹11,090), and yields **₹9,533 LTV
-against ₹14,197**. Its share tripled, 8.5% → 29.4%.
+lost **486 seats**, books 26% cheaper (₹8,167 vs ₹11,090), and yields **₹9,533 lifetime
+revenue per diving customer against ₹14,197**. Its share tripled, 8.5% → 29.4%.
 **Action:** require a deposit on OTA specifically, or renegotiate commission to
 reflect the true fulfilment cost. Redirect acquisition effort to Referral and
-Walk-in (13.9% / 13.8% cancellation, ₹13,060 / ₹14,197 LTV).
+Walk-in (13.9% / 13.8% cancellation, ₹13,060 / ₹14,197 per diving customer).
 **Caveat:** OTA is now 29.4% of volume. Suppress it without replacing the volume
 and utilization falls further — this is a *re-pricing* move, not a shutdown.
 
@@ -260,18 +260,18 @@ of ₹10,035. *(75% is the brief's stated target, not a forecast from this analy
 
 ### What these numbers assume
 
-Four caveats carried forward from [`docs/FINDINGS.md`](docs/FINDINGS.md), all of
-which change the figures above if resolved differently:
+Four definitional decisions, recorded in [`docs/BRD.md`](docs/BRD.md) §6:
 
-1. **`booking_conversion_rate` numerator** — read as *inquiry produced a booking*
-   (**51.3%**). Net of later cancellation it is **39.3%**, and 2025-26 falls to
-   30.1%. Phase 5 must pick one.
-2. **No deposit model is specified in the brief**, so cancelled bookings are valued
-   at zero revenue. If the shop already takes deposits, every loss figure is an
-   overstatement.
-3. **`revenue_per_customer` and `customer_ltv`** are the same calculation as
-   literally defined in §3; the denominators used here are documented in FINDINGS.
-4. **"Shoulder" months are an assumption** — §4 leaves them undefined. Affects the
+1. **`booking_conversion_rate` counts an inquiry only if it became a completed
+   dive** — **39.3%** overall, 30.1% in 2025-26. The alternate definition (any
+   booking, including later-cancelled ones) reads 51.3% and is kept for reference.
+2. **No deposit policy exists today.** Cancelled bookings are valued at ₹0, and R2
+   assumes 0% recovery on them in the current state.
+3. **`revenue_per_customer` and `customer_ltv` report the same ₹10,000.** Under the
+   brief's definitions they are equivalent calculations; a true LTV model would
+   need cohort-level retention data not available here. Channel comparisons use
+   lifetime revenue per diving customer instead.
+4. **Trading seasons:** Peak = Dec–Mar · Shoulder = Apr–Jun + Sep–Nov · Monsoon-Closed (off-peak) = Jul–Aug. Affects the
    trading-season cut only, not any headline KPI.
 
 ## 5. Dashboard
@@ -316,14 +316,14 @@ with per-season splits in [`docs/FINDINGS.md`](docs/FINDINGS.md) §1.
 | KPI | Overall | 2024-25 | 2025-26 |
 |---|---|---|---|
 | `capacity_utilization` | 59.5% | 58.0% | **54.5%** |
-| `booking_conversion_rate` | 51.3% | 53.1% | **43.7%** |
+| `booking_conversion_rate` | 39.3% | 40.6% | **30.1%** |
 | `cancellation_rate` | 18.6% | 18.5% | **25.7%** |
 | `no_show_rate` | 4.8% | 5.0% | **5.6%** |
 | `repeat_customer_rate` | 16.0% | — | — |
 | `course_to_fundive_conversion` | 21.5% | 16.1% | **4.8%** |
 | `revenue_per_customer` | ₹10,000 | ₹11,601 | **₹9,588** |
 | `revenue_per_dive` | ₹4,450 | ₹4,463 | **₹4,173** |
-| `customer_ltv` | ₹12,624 | — | — |
+| `customer_ltv` | ₹10,000 | — | — |
 | `seasonality_index` | Jan 192 · Dec 179 · Jul–Aug 0 | | |
 
 Currency is INR throughout. 2023-24 is a **half** season (Jan–May 2024): rates are

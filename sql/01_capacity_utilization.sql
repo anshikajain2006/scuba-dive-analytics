@@ -43,12 +43,20 @@ FROM trip_seats
 GROUP BY season_year
 ORDER BY season_year;
 
--- Q3. By trading season (Peak / Shoulder / Monsoon-Closed).
+-- Q3. By trading season. Assumption A-OQ4 (docs/BRD.md section 6), assigned
+--     from the dive month: Peak Dec-Mar, Shoulder Apr-Jun + Sep-Nov,
+--     Monsoon-Closed (off-peak) Jul-Aug. trips.season keeps the generator's
+--     own weather-regime label and is not used here.
 WITH trip_seats AS (
-    SELECT t.trip_id, t.boat_capacity, t.season,
+    SELECT t.trip_id, t.boat_capacity,
+           CASE WHEN CAST(strftime('%m', MIN(b.dive_date)) AS INTEGER) IN (12, 1, 2, 3)
+                     THEN 'Peak'
+                WHEN CAST(strftime('%m', MIN(b.dive_date)) AS INTEGER) IN (7, 8)
+                     THEN 'Monsoon-Closed'
+                ELSE 'Shoulder' END AS season,
            SUM(CASE WHEN b.status = 'Completed' THEN 1 ELSE 0 END) AS completed_seats
     FROM trips t JOIN bookings b ON b.trip_id = t.trip_id
-    GROUP BY t.trip_id, t.boat_capacity, t.season
+    GROUP BY t.trip_id, t.boat_capacity
 )
 SELECT season,
        COUNT(*) AS trips,

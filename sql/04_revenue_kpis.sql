@@ -10,7 +10,7 @@
 
 -- Q1. revenue_per_customer and revenue_per_dive, overall then by season.
 --     revenue_per_customer uses ALL customers on file (acquisition-efficiency
---     view); customer_ltv in 03_ uses only customers who actually dived.
+--     view). customer_ltv in 03_ is the same calculation (A-OQ3, docs/BRD.md).
 SELECT 'ALL' AS season_year,
        ROUND(SUM(revenue_inr), 0) AS total_revenue_inr,
        (SELECT COUNT(*) FROM customers) AS customers,

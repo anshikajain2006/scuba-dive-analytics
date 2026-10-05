@@ -55,23 +55,24 @@ The values below come from `kpi_summary.csv` and match [`FINDINGS.md`](FINDINGS.
 | KPI | Overall (no filter) | 2024-25 | 2025-26 |
 |---|---|---|---|
 | `capacity_utilization` | 59.5% | 58.0% | 54.5% |
-| `booking_conversion_rate` | 51.3% ⚠ | 53.1% | 43.7% |
+| `booking_conversion_rate` | 39.3% | 40.6% | 30.1% |
 | `cancellation_rate` | 18.6% | 18.5% | 25.7% |
 | `no_show_rate` | 4.8% | 5.0% | 5.6% |
 | `repeat_customer_rate` | 16.0% | 13.5%¹ | 8.0%¹ |
 | `course_to_fundive_conversion` | 21.5% | 16.1% | 4.8% |
-| `revenue_per_customer` | ₹10,000 ⚠ | ₹11,601 | ₹9,588 |
+| `revenue_per_customer` | ₹10,000 | ₹11,601 | ₹9,588 |
 | `revenue_per_dive` | ₹4,450 | ₹4,463 | ₹4,173 |
-| `customer_ltv` | ₹12,624 ⚠ | — | — |
+| `customer_ltv` | ₹10,000 | — | — |
 | `seasonality_index` | Jan 192 · Feb 171 · Mar 163 · Apr 121 · May 109 · Jun 9 · Jul 0 · Aug 0 · Sep 9 · Oct 116 · Nov 130 · Dec 179 | | |
 | Total revenue | ₹5,49,50,350 | ₹2,22,50,950 | ₹1,45,64,050 |
 
 ¹ Within-season variant (FINDINGS §1, footnote 1).
 
-⚠ **Open definitions ([`BRD.md`](BRD.md) §6), to resolve before the cards are final:**
-- **OQ-1.** `booking_conversion_rate` is shown as *inquiry produced a booking*. The
-  "net of cancellations" alternative (39.3% overall) is in `kpi_summary.csv` as
-  `booking_conversion_rate_net`.
-- **OQ-3.** `revenue_per_customer` and `customer_ltv` use different denominators
-  (5,495 vs 4,353 customers). Caption both cards with their denominator.
-- **OQ-4.** The `season` slicer's Peak/Shoulder split is an assumption.
+**Definitions ([`BRD.md`](BRD.md) §6):**
+- **A-OQ1.** `booking_conversion_rate` counts an inquiry only if it became a
+  completed dive (`fact_inquiries.is_converted`). The alternate definition (all
+  bookings, 51.3%) is `is_converted_any_booking` and
+  `booking_conversion_rate_all_bookings` in `kpi_summary.csv`.
+- **A-OQ3.** `revenue_per_customer` and `customer_ltv` are the same calculation
+  and both read ₹10,000.
+- **A-OQ4.** The `season` slicer uses Peak = Dec–Mar · Shoulder = Apr–Jun + Sep–Nov · Monsoon-Closed (off-peak) = Jul–Aug.

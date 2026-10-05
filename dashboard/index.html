@@ -556,7 +556,7 @@ function render(M, live) {
     { id: "R1", title: "Confirmation calls for high-risk bookings", num: "58.1%",
       why: "of cancellations sit in the riskiest 30% of bookings. Call them 48 hours before the dive to confirm or reschedule.", effort: "Low" },
     { id: "R2", title: "Deposits on OTA bookings", num: fmtPct(ota.canc),
-      why: `OTA cancellation rate, vs ${fmtPct(walk.canc)} walk-in. OTA bookings bring 26% less revenue each and their customers are worth 33% less over their lifetime (₹9,533 vs ₹14,197).`, effort: "Medium" },
+      why: `OTA cancellation rate, vs ${fmtPct(walk.canc)} walk-in. OTA bookings bring 26% less revenue each and their customers spend 33% less over their lifetime (₹9,533 vs ₹14,197 per diving customer).`, effort: "Medium" },
     { id: "R3", title: "Graduate re-engagement at day 30–45", num: `${fmtPct(M.grad.all["2023-24 (half)"])} → ${fmtPct(M.grad.all["2025-26"])}`,
       why: "Graduates returning for a fun dive. 69% of returners come back within 90 days, with a median of 49 days.", effort: "Low" },
     { id: "R4", title: "Mandatory reason + channel fields", num: fmtPct(M.unknownReasonShare["2025-26"]),

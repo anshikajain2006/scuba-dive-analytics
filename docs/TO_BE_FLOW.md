@@ -108,7 +108,6 @@ flowchart TD
 | **R4** | Mandatory `acquisition_channel` and `cancellation_reason`, plus price validation | F5 | 19.6% of cancellations have no reason. ₹50,96,000 has no channel (FINDINGS §2⑤) | A record cannot be saved with these fields blank |
 | **R5** | Departures planned against demand. Under-filled boats consolidated | F1 | `capacity_utilization` 54.5%. 626 seats never sold. Jan index 192 vs Jul–Aug 0 (FINDINGS §1, §2①) | Weekly review. Consolidate at 48 h |
 
-> **Open items carried from [`BRD.md`](BRD.md) §6.** If the shop already takes
-> deposits (**OQ-2**), the R2 gate means *enforcing the deposit on OTA* rather than
-> introducing one. The Peak/Shoulder split R5 plans against (**OQ-4**) is an
-> assumption until the owner confirms it.
+> **Assumptions from [`BRD.md`](BRD.md) §6.** No deposit policy exists today
+> (**A-OQ2**), so the R2 gate *introduces* one. R5 plans against the A-OQ4 trading
+> seasons: Peak = Dec–Mar · Shoulder = Apr–Jun + Sep–Nov · Monsoon-Closed (off-peak) = Jul–Aug.

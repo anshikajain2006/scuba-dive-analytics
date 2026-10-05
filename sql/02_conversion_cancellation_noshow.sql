@@ -4,45 +4,54 @@
 --
 -- booking_conversion_rate is defined in the brief as "Confirmed bookings /
 -- inquiries", but bookings.status has no 'Confirmed' value (only Completed /
--- Cancelled / No-show). Read here as: an inquiry converted if it produced a
--- booking. Q2 gives the stricter "net of later cancellation" variant if that
--- was the intent - see ASSUMPTION A6 in data/generate_data.py.
+-- Cancelled / No-show). Resolved (docs/BRD.md section 6, A-OQ1): an inquiry
+-- converts only if it produced a booking that COMPLETED. Q2 gives the alternate
+-- definition (any booking, including ones later cancelled) for reference.
 --
 -- SQLite has no ROLLUP, so overall rows are UNION ALL'd in explicitly.
 -- =====================================================================
 
--- Q1. booking_conversion_rate, overall then by season.
+-- Q1. booking_conversion_rate (inquiry -> COMPLETED booking), overall then by season.
+WITH iq AS (
+    SELECT i.season_year,
+           CASE WHEN b.status = 'Completed' THEN 1 ELSE 0 END AS converted_completed
+    FROM inquiries i
+    LEFT JOIN bookings b ON b.booking_id = i.converted_booking_id
+)
 SELECT 'ALL' AS season_year,
        COUNT(*) AS inquiries,
-       SUM(converted) AS converted,
-       ROUND(1.0 * SUM(converted) / COUNT(*), 4) AS booking_conversion_rate
-FROM inquiries
+       SUM(converted_completed) AS converted,
+       ROUND(1.0 * SUM(converted_completed) / COUNT(*), 4) AS booking_conversion_rate
+FROM iq
 UNION ALL
-SELECT season_year, COUNT(*), SUM(converted),
-       ROUND(1.0 * SUM(converted) / COUNT(*), 4)
-FROM inquiries
+SELECT season_year, COUNT(*), SUM(converted_completed),
+       ROUND(1.0 * SUM(converted_completed) / COUNT(*), 4)
+FROM iq
 GROUP BY season_year
 ORDER BY season_year;
 
--- Q2. Strict variant: the inquiry converted AND the booking actually completed.
+-- Q2. Alternate definition (all bookings): the inquiry produced ANY booking,
+--     including ones later cancelled or no-showed. Reference only.
 SELECT i.season_year,
        COUNT(*) AS inquiries,
-       ROUND(1.0 * SUM(CASE WHEN i.converted_booking_id IS NOT NULL
-                            THEN 1 ELSE 0 END) / COUNT(*), 4) AS booking_conversion_rate,
        ROUND(1.0 * SUM(CASE WHEN b.status = 'Completed'
-                            THEN 1 ELSE 0 END) / COUNT(*), 4) AS conversion_rate_net
+                            THEN 1 ELSE 0 END) / COUNT(*), 4) AS booking_conversion_rate,
+       ROUND(1.0 * SUM(CASE WHEN i.converted_booking_id IS NOT NULL
+                            THEN 1 ELSE 0 END) / COUNT(*), 4) AS conversion_rate_all_bookings
 FROM inquiries i
 LEFT JOIN bookings b ON b.booking_id = i.converted_booking_id
 GROUP BY i.season_year
 ORDER BY i.season_year;
 
 -- Q3. booking_conversion_rate by channel - which sources send tyre-kickers.
-SELECT channel,
+SELECT i.channel,
        COUNT(*) AS inquiries,
-       SUM(converted) AS converted,
-       ROUND(1.0 * SUM(converted) / COUNT(*), 4) AS booking_conversion_rate
-FROM inquiries
-GROUP BY channel
+       SUM(CASE WHEN b.status = 'Completed' THEN 1 ELSE 0 END) AS converted,
+       ROUND(1.0 * SUM(CASE WHEN b.status = 'Completed' THEN 1 ELSE 0 END)
+             / COUNT(*), 4) AS booking_conversion_rate
+FROM inquiries i
+LEFT JOIN bookings b ON b.booking_id = i.converted_booking_id
+GROUP BY i.channel
 ORDER BY booking_conversion_rate ASC;
 
 -- Q4. cancellation_rate and no_show_rate, overall then by season.

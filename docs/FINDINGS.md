@@ -22,7 +22,7 @@ without a query behind it.
    across all three seasons; *volumes* are not. Every trend claim below is made
    on the two full seasons, 2024-25 vs 2025-26.
 2. **Revenue counts Completed bookings only.** Cancelled and no-show bookings
-   earn nothing (the brief specifies no deposit model). The 23 bookings with
+   earn nothing (assumed: no deposit policy exists today — see Decisions, A-OQ2). The 23 bookings with
    impossible prices are excluded from revenue but still counted in every volume
    and rate KPI — see [Data quality](#data-quality-what-was-fixed-and-what-cannot-be).
 
@@ -35,20 +35,31 @@ without a query behind it.
 | KPI | Overall | 2023-24 (half) | 2024-25 | 2025-26 | Direction |
 |---|---|---|---|---|---|
 | `capacity_utilization` | **59.5%** | 68.3% | 58.0% | **54.5%** | ▼ falling |
-| `booking_conversion_rate` | **51.3%** | 61.2% | 53.1% | **43.7%** | ▼ falling |
+| `booking_conversion_rate`² | **39.3%** | 52.9% | 40.6% | **30.1%** | ▼ falling |
 | `cancellation_rate` | **18.6%** | 9.7% | 18.5% | **25.7%** | ▲ rising (bad) |
 | `no_show_rate` | **4.8%** | 3.5% | 5.0% | **5.6%** | ▲ rising (bad) |
 | `repeat_customer_rate` | **16.0%** | 27.4%¹ | 13.5%¹ | 8.0%¹ | ▼ falling |
 | `course_to_fundive_conversion` | **21.5%** | 39.5% | 16.1% | **4.8%** | ▼ collapsing |
 | `revenue_per_customer` | **₹10,000** | ₹15,330 | ₹11,601 | **₹9,588** | ▼ falling |
 | `revenue_per_dive` | **₹4,450** | ₹4,683 | ₹4,463 | **₹4,173** | ▼ falling |
-| `customer_ltv` | **₹12,624** | — | — | — | — |
+| `customer_ltv`³ | **₹10,000** | — | — | — | — |
 | `seasonality_index` | see below | | | | |
 
 ¹ Per-season figures for `repeat_customer_rate` are the *within-season* variant
 (customers diving more than once inside that season). The headline 16.0% is the
 brief's definition: 877 of 5,495 customers have more than one completed booking,
 across the whole period.
+
+² **Definition:** `booking_conversion_rate` = inquiries that became a
+**completed** dive ÷ all inquiries. The business cares about inquiries that turn
+into dives, not inquiries that turned into any booking. *Alternate definition
+(all bookings), which counts a later-cancelled booking as a conversion:* 51.3%
+overall · 61.2% · 53.1% · 43.7%.
+
+³ Under the brief's definitions `revenue_per_customer` and `customer_ltv` are
+equivalent calculations (total revenue ÷ all 5,495 customers), so both report
+₹10,000. A true LTV model would require cohort-level retention data not
+available in this dataset.
 
 **`seasonality_index`** (mean = 100, across all twelve calendar months):
 
@@ -61,13 +72,10 @@ shutdown. Calendar coverage is uneven (Jan–May occur three times in the window
 Oct–Dec twice), so the index uses *mean bookings per occurrence* of each month,
 not raw totals.
 
-**Denominator note:** `revenue_per_customer` divides by all 5,495 customers on
-file (acquisition-efficiency view); `customer_ltv` averages lifetime revenue
-across the 4,366 customers who completed at least one dive (value-of-a-diver
-view). As literally defined in §3 these two KPIs are the same calculation — the
-split keeps both meaningful. 13 customers are excluded from `customer_ltv`
-because their only completed booking had a quarantined price, making their
-lifetime value unknown rather than zero.
+**Channel comparisons use lifetime revenue per *diving* customer** (customers
+with at least one completed dive, `sql/03 Q6`), not `customer_ltv`. Across all
+4,366 diving customers that average is ₹12,624. It is context for comparing
+channels, not a §3 KPI.
 
 ---
 
@@ -125,17 +133,18 @@ OTA share of bookings: **8.5% → 17.8% → 29.4%** across the three seasons. It
 now the second-largest channel, and it is the worst-performing one on every
 dimension:
 
-| Channel | Bookings | Avg price | `cancellation_rate` | `no_show_rate` | Seats lost | `customer_ltv` |
+| Channel | Bookings | Avg price | `cancellation_rate` | `no_show_rate` | Seats lost | Lifetime revenue / diving customer |
 |---|---|---|---|---|---|---|
 | **OTA** | 1,377 | **₹8,167** | **27.8%** | **7.5%** | **486** | **₹9,533** |
 | Walk-in | 1,541 | ₹11,090 | 13.8% | 3.5% | 266 | ₹14,197 |
 | Referral | 891 | ₹10,046 | 13.9% | 4.5% | 164 | ₹13,060 |
 
 OTA books at a **26% lower price** than walk-in, cancels at **twice** the rate,
-no-shows at more than twice, converts inquiries worst of any channel (47.9% vs
-54.4% for Hotel Partner), and produces customers worth **₹9,533 lifetime against
-₹14,197 for a walk-in — 33% less**. It is the only channel whose LTV falls below
-₹12,000; the other six sit in a tight ₹12,173–₹14,197 band.
+no-shows at more than twice, converts inquiries into completed dives worst of
+any channel (`booking_conversion_rate` 30.9% vs 43.6% for Referral, `sql/02 Q3`),
+and produces customers worth **₹9,533 lifetime against ₹14,197 for a walk-in —
+33% less**. It is the only channel whose lifetime revenue per diving customer
+falls below ₹12,000; the other six sit in a tight ₹12,173–₹14,197 band.
 
 The shop has replaced its highest-value channel mix with its lowest-value one —
 which is why `revenue_per_dive` fell from ₹4,683 to ₹4,173 even though the price
@@ -266,20 +275,20 @@ manufacture the exact quantities insight ⑤ is about. They are carried as
 
 ---
 
-## Open questions for Phase 5
+## Decisions on the Phase 3 open questions
 
-1. **`booking_conversion_rate` numerator.** §3 says "confirmed bookings", but
-   `status` has no `Confirmed` value. Read here as *inquiry produced a booking*
-   (51.3% overall). If it should exclude bookings that later cancelled, the
-   figure is **39.3%** — and the 2025-26 number falls to 30.1%. Both are computed
-   in `sql/02 Q2`; Phase 5 must pick one and use it consistently.
-2. **`revenue_per_customer` vs `customer_ltv`** are the same calculation as
-   literally defined. The denominators used here are documented above; confirm
-   the intent before quoting both in the memo.
-3. **No deposit or cancellation-fee model** is specified in the brief, so
-   cancelled bookings are valued at zero revenue. If the shop takes deposits,
-   every loss figure here is an overstatement and needs re-running.
-4. **"Shoulder" months are an assumption.** §4 defines Peak as Oct–May and
-   Monsoon-Closed as Jun–Sep, which leaves Shoulder with no months. Peak was
-   split as Dec–Mar (Peak) / Oct–Nov + Apr–May (Shoulder). This affects only the
-   trading-season cut, not any headline KPI.
+All four are resolved and recorded in [`BRD.md`](BRD.md) §6.
+
+1. **A-OQ1 · `booking_conversion_rate` = inquiries that became a completed
+   dive** — **39.3%** overall, 30.1% in 2025-26 (`sql/02 Q1`). The alternate
+   definition (all bookings, 51.3%) is kept in `sql/02 Q2` for reference only.
+2. **A-OQ2 · No deposit policy exists in the current state.** Cancelled and
+   no-show bookings are valued at ₹0, and R2 impact figures assume 0% recovery
+   on cancelled bookings.
+3. **A-OQ3 · `revenue_per_customer` = `customer_ltv` = ₹10,000.** Under the
+   brief's definitions these are equivalent calculations. A true LTV model would
+   require cohort-level retention data not available in this dataset.
+4. **A-OQ4 · Trading seasons:** Peak = Dec–Mar · Shoulder = Apr–Jun + Sep–Nov · Monsoon-Closed (off-peak) = Jul–Aug.
+   Assigned from the dive month in the reporting layer only. On this cut,
+   `capacity_utilization` is 63.7% in Peak and 53.1% in Shoulder; no trips sail
+   in Jul–Aug. No headline KPI changes.

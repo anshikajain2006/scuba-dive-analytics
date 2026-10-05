@@ -41,11 +41,8 @@ Last season 750 people booked a seat and never dived.
 Lifting seat fill from 54.5% to 75% would mean 620 more completed dives, about
 **₹62.3 lakh** a season.
 
-**Before acting, please confirm three things.** (1) Do you already take deposits?
-If you do, our loss figures are too high, and R2 becomes enforcing the deposit
-rather than introducing one. (2) Should "conversion rate" count bookings that later
-cancelled? Today it reads 43.7% with them and 30.1% without. (3) Which months do you
-consider "shoulder" season?
+**What these figures assume.** You take no deposits today. A "conversion" means
+an inquiry that became a completed dive: 39% overall, and only 30% last season.
 
 **Next step:** start with R4 and R3 this month, since both are low effort. Then
 pilot R1 for four weeks and compare cancellation rates against last season on the

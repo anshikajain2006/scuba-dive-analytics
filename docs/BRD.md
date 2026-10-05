@@ -94,7 +94,7 @@ Priority is MoSCoW. Every BR traces to a finding and user story in
 | **BR-01** | Score every upcoming booking with the cancellation-risk model. Each day, give the front desk a list of bookings in **risk deciles 1–3** whose dive is **48 hours away**, so staff can call to confirm or offer to reschedule | R1 | Must | Top 3 deciles = 58.1% of cancellations, precision 49.8% (FINDINGS §3) |
 | **BR-02** | Log the outcome of every confirmation call (confirmed / rescheduled / cancelled / unreachable) so recovered seats can be counted | R1 | Must | Needed to measure R1 against the ₹79,77,635 pool |
 | **BR-03** | Require a deposit on every OTA booking before the seat is confirmed. If the OTA will not collect deposits, renegotiate commission to cover the cost of lost seats | R2 | Must | OTA `cancellation_rate` 27.8%, `no_show_rate` 7.5%, 486 seats lost (FINDINGS §2③) |
-| **BR-04** | Report revenue, `cancellation_rate`, `no_show_rate` and `customer_ltv` by acquisition channel every season, to support channel negotiations | R2 | Should | OTA `customer_ltv` ₹9,533 vs ₹14,197 walk-in |
+| **BR-04** | Report revenue, `cancellation_rate`, `no_show_rate` and lifetime revenue per diving customer by acquisition channel every season, to support channel negotiations | R2 | Should | OTA lifetime revenue per diving customer ₹9,533 vs ₹14,197 walk-in |
 | **BR-05** | Send every newly certified diver a fun-dive offer **30–45 days after certification**, plus one reminder before day 90 | R3 | Must | 69% of returns within 90 days, median 49 (FINDINGS §2④) |
 | **BR-06** | The instructor records the graduate's certification date and contact consent at course completion, so the BR-05 trigger can fire | R3 | Must | Precondition for BR-05 |
 | **BR-07** | `cancellation_reason` is a **mandatory** field (Weather / Customer / Medical / Other + free text). A cancellation cannot be saved without it | R4 | Must | Unknown reasons 19.6% of 2025-26 cancellations (FINDINGS §2⑤) |
@@ -113,10 +113,12 @@ Priority is MoSCoW. Every BR traces to a finding and user story in
 | A3 | 2023-24 is a half season (Jan–May 2024). Trend claims compare 2024-25 with 2025-26 only | Constraint |
 | A4 | The model should be used to pick a high-risk **group** (deciles 1–3), not to quote a probability for one booking. Deciles 4–7 are not monotonic | Constraint (FINDINGS §3) |
 | A5 | Lead time is **not** a cancellation driver (16.6%–19.6% across buckets). No policy here relies on it | Constraint (FINDINGS §3) |
-| **OQ-1** | ⚠ **OPEN: `booking_conversion_rate` definition.** §3 says "confirmed bookings", but `status` has no `Confirmed` value. This BRD uses *inquiry produced a booking* (**51.3%** overall, 43.7% in 2025-26). Counting only bookings that did not later cancel gives **39.3%** (2025-26: 30.1%). The owner must choose one definition. | Unresolved |
-| **OQ-2** | ⚠ **OPEN: deposit model.** The brief does not say whether the shop already takes deposits. If it does, every loss figure is overstated, and BR-03 becomes "enforce the deposit on OTA" rather than "introduce" one. | Unresolved |
-| **OQ-3** | ⚠ **OPEN: `revenue_per_customer` vs `customer_ltv`.** As literally defined these are the same calculation. FINDINGS splits them by denominator: all 5,495 customers (₹10,000) vs the 4,353 with a valid completed booking (₹12,624). Confirm this split before quoting both. | Unresolved |
-| **OQ-4** | ⚠ **OPEN: Shoulder months.** §4 leaves "Shoulder" with no months. The assumption used here is Peak = Dec–Mar, Shoulder = Oct–Nov + Apr–May. This affects only the trading-season cut used by BR-11, not any headline KPI. | Unresolved |
+| **A-OQ1** | **`booking_conversion_rate` = inquiries that became a completed dive ÷ all inquiries.** §3 says "confirmed bookings", but `status` has no `Confirmed` value. The business cares about inquiries that become dives, so a booking that is later cancelled or no-shows does not count. **39.3%** overall, 30.1% in 2025-26 (`sql/02 Q1`).¹ | Decided |
+| **A-OQ2** | **Assumed no deposit policy exists in the current state. R2 impact figures assume 0% recovery on cancelled bookings.** BR-03 therefore *introduces* a deposit on the OTA path. | Decided |
+| **A-OQ3** | **`revenue_per_customer` and `customer_ltv` report the same number (₹10,000).** Under the brief's definitions these are equivalent calculations. A true LTV model would require cohort-level retention data not available in this dataset. Channel comparisons (₹9,533 OTA vs ₹14,197 walk-in) use lifetime revenue per diving customer instead. | Decided |
+| **A-OQ4** | **Trading seasons:** Peak = Dec–Mar · Shoulder = Apr–Jun + Sep–Nov · Monsoon-Closed (off-peak) = Jul–Aug. Assigned from the dive month in the reporting layer (dashboard slicer, BR-11 planning). Peak `capacity_utilization` 63.7%, Shoulder 53.1%. In this dataset June and September are almost closed (`seasonality_index` 9), so they pull the Shoulder figure down. | Decided |
+
+¹ Alternate definition (all bookings): 51.3% overall, 43.7% in 2025-26. It counts a cancelled booking as a conversion, so it is not used.
 
 ## 7. Out of scope
 
@@ -125,7 +127,7 @@ Priority is MoSCoW. Every BR traces to a finding and user story in
 - Marketing spend and new acquisition campaigns.
 - Choosing or building a booking-software vendor. These BRs are vendor-neutral.
 - Staffing, payroll and boat purchase or lease decisions.
-- Re-running the analysis on real operator data. This is a separate engagement, and it needs OQ-1 to OQ-4 resolved first.
+- Re-running the analysis on real operator data. This is a separate engagement, and it should re-check A-OQ1 to A-OQ4 against the real operator's policies.
 
 ## 8. Success metrics
 
@@ -136,14 +138,14 @@ data exists. Until then, success means the KPI moves in the direction shown.
 | KPI | Baseline 2025-26 | Target / direction | Moved mainly by |
 |---|---|---|---|
 | `capacity_utilization` | 54.5% | **75%** (brief §9) | R1, R2, R5 |
-| `booking_conversion_rate` | 43.7% (definition: OQ-1) | ▲ | R2, R4 |
+| `booking_conversion_rate` | 30.1% (completed dives, A-OQ1) | ▲ | R1, R2 |
 | `cancellation_rate` | 25.7% | ▼ | R1, R2 |
 | `no_show_rate` | 5.6% | ▼ | R1, R2 |
 | `repeat_customer_rate` | 16.0% overall | ▲ | R3 |
 | `course_to_fundive_conversion` | 4.8% (90-day: 3.7%) | ▲ | R3 |
 | `revenue_per_customer` | ₹9,588 | ▲ | R2, R3 |
 | `revenue_per_dive` | ₹4,173 | ▲ | R2 |
-| `customer_ltv` | ₹12,624 overall | ▲ | R2, R3 |
+| `customer_ltv` | ₹10,000 overall (= `revenue_per_customer`, A-OQ3) | ▲ | R2, R3 |
 | `seasonality_index` | Jan 192 · Jul–Aug 0 | Used to set the schedule (BR-11), not a target | R5 |
 
 Data-quality indicators (BR-10): `Unknown` share of cancellations, 19.6% today, and

@@ -69,14 +69,14 @@ rate measures are plain averages and cannot be mis-specified.
 | Measure | Definition | No-filter value |
 |---|---|---|
 | `capacity_utilization` | `SUM(fact_trips.completed_seats) / SUM(fact_trips.boat_capacity)` | 59.5% |
-| `booking_conversion_rate` | `SUM(fact_inquiries.is_converted) / COUNT(fact_inquiries)` | 51.3% |
+| `booking_conversion_rate` | `SUM(fact_inquiries.is_converted) / COUNT(fact_inquiries)` — inquiry became a **completed** dive | 39.3% |
 | `cancellation_rate` | `SUM(fact_bookings.is_cancelled) / COUNT(fact_bookings)` | 18.6% |
 | `no_show_rate` | `SUM(fact_bookings.is_no_show) / COUNT(fact_bookings)` | 4.8% |
 | `repeat_customer_rate` | `SUM(dim_customers.is_repeat_customer) / COUNT(dim_customers)` | 16.0% |
 | `course_to_fundive_conversion` | `SUM(dim_customers.course_then_fundive) / SUM(dim_customers.took_course)` | 21.5% |
 | `revenue_per_customer` | `SUM(fact_bookings.revenue_inr) / COUNT(dim_customers)` | ₹10,000 |
 | `revenue_per_dive` | `SUM(fact_bookings.revenue_inr) / SUM(fact_bookings.completed_dives)` | ₹4,450 |
-| `customer_ltv` | `AVG(dim_customers.lifetime_revenue_inr)`, blanks excluded | ₹12,624 |
+| `customer_ltv` | `SUM(fact_bookings.revenue_inr) / COUNT(dim_customers)` — same as `revenue_per_customer` under the brief's definitions | ₹10,000 |
 | `seasonality_index` | see §4 | Jan = 192 |
 
 `revenue_inr` is already blank on cancelled, no-show and price-quarantined rows,
@@ -94,11 +94,11 @@ a season-over-season delta versus 2024-25 as the comparison:
 ┌───────────────────┬───────────────────┬───────────────────┬───────────────────┬───────────────────┐
 │ capacity_         │ cancellation_rate │ no_show_rate      │ booking_          │ revenue_per_dive  │
 │ utilization       │                   │                   │ conversion_rate   │                   │
-│   54.5%   ▼ 3.5pp │   25.7%   ▲ 7.2pp │    5.6%   ▲ 0.6pp │   43.7%   ▼ 9.4pp │  ₹4,173   ▼ 6.5%  │
+│   54.5%   ▼ 3.5pp │   25.7%   ▲ 7.2pp │    5.6%   ▲ 0.6pp │   30.1%  ▼10.5pp │  ₹4,173   ▼ 6.5%  │
 ├───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┤
 │ repeat_customer_  │ course_to_fundive │ revenue_per_      │ customer_ltv      │ Total revenue     │
 │ rate              │ _conversion       │ customer          │                   │                   │
-│   16.0%           │    4.8%   ▼11.3pp │  ₹9,588   ▼17.4%  │ ₹12,624           │ ₹1.46 Cr ▼ 34.5%  │
+│   16.0%           │    4.8%   ▼11.3pp │  ₹9,588   ▼17.4%  │ ₹10,000           │ ₹1.46 Cr ▼ 34.5%  │
 └───────────────────┴───────────────────┴───────────────────┴───────────────────┴───────────────────┘
 ```
 
@@ -109,7 +109,7 @@ is good.
 **Season slicer** (required by brief §8). Two slicers, both from `dim_date`:
 
 * `season_year` — `2023-24 (half)` · `2024-25` · `2025-26`
-* `season` — `Peak` · `Shoulder` · `Monsoon-Closed`
+* `season` — `Peak` (Dec–Mar) · `Shoulder` (Apr–Jun + Sep–Nov) · `Monsoon-Closed` (Jul–Aug, off-peak)
 
 Default `season_year` to `2024-25` + `2025-26` (the two full seasons).
 **Put a caption under the slicer: "2023-24 is a half season (Jan–May 2024 only)

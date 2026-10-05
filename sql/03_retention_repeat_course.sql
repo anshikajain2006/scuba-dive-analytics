@@ -84,7 +84,10 @@ LEFT JOIN returned r ON r.customer_id = fc.customer_id
 GROUP BY fc.season_year
 ORDER BY fc.season_year;
 
--- Q5. customer_ltv = mean lifetime revenue per customer who completed >=1 dive.
+-- Q5. customer_ltv. Under the brief's definitions this is equivalent to
+--     revenue_per_customer: total revenue / all customers on file (docs/BRD.md
+--     section 6, A-OQ3). A true LTV model would need cohort-level retention data
+--     not available in this dataset. The diving-customer average is context only.
 --     revenue_inr is already null on cancelled/no-show/quarantined rows.
 WITH lifetime AS (
     SELECT customer_id, SUM(revenue_inr) AS lifetime_revenue
@@ -92,14 +95,15 @@ WITH lifetime AS (
     WHERE status = 'Completed'
     GROUP BY customer_id
 )
-SELECT COUNT(*)                              AS diving_customers,
-       ROUND(AVG(lifetime_revenue), 0)       AS customer_ltv,
-       ROUND(MIN(lifetime_revenue), 0)       AS min_ltv,
-       ROUND(MAX(lifetime_revenue), 0)       AS max_ltv
+SELECT (SELECT COUNT(*) FROM customers)                  AS customers,
+       ROUND((SELECT SUM(revenue_inr) FROM bookings)
+             / (SELECT COUNT(*) FROM customers), 0)       AS customer_ltv,
+       COUNT(*)                                           AS diving_customers,
+       ROUND(AVG(lifetime_revenue), 0)                    AS avg_revenue_per_diving_customer
 FROM lifetime;
 
--- Q6. LTV by first-touch acquisition channel - which channels buy customers
---     worth keeping.
+-- Q6. Lifetime revenue per diving customer, by first-touch acquisition
+--     channel - which channels buy customers worth keeping.
 WITH lifetime AS (
     SELECT b.customer_id, c.acquisition_channel,
            SUM(b.revenue_inr) AS lifetime_revenue,
@@ -111,8 +115,8 @@ WITH lifetime AS (
 )
 SELECT acquisition_channel,
        COUNT(*)                                   AS diving_customers,
-       ROUND(AVG(lifetime_revenue), 0)            AS customer_ltv,
+       ROUND(AVG(lifetime_revenue), 0)            AS revenue_per_diving_customer,
        ROUND(AVG(completed_bookings), 2)          AS avg_completed_bookings
 FROM lifetime
 GROUP BY acquisition_channel
-ORDER BY customer_ltv DESC;
+ORDER BY revenue_per_diving_customer DESC;

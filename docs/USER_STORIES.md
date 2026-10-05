@@ -48,12 +48,12 @@ I confirm, **so that** I know what I commit to and my seat is guaranteed once I 
 ### US-04 · Channel economics for OTA renegotiation (R2 · BR-04)
 
 **As a** Dive Centre Manager, **I want** revenue, `cancellation_rate`,
-`no_show_rate` and `customer_ltv` side by side for each acquisition channel, **so
+`no_show_rate` and lifetime revenue per diving customer side by side for each acquisition channel, **so
 that** I can renegotiate OTA terms using our own numbers.
 
 **Acceptance criteria**
 1. The view shows all six channels plus `Unknown`, filterable by `season_year`.
-2. With no filters, the OTA row reproduces FINDINGS §2③: 1,377 bookings, ₹8,167 average price, 27.8% cancellation, ₹9,533 `customer_ltv`.
+2. With no filters, the OTA row reproduces FINDINGS §2③: 1,377 bookings, ₹8,167 average price, 27.8% cancellation, ₹9,533 lifetime revenue per diving customer.
 3. The view can be exported to PDF or CSV to share with the OTA partner.
 
 ### US-05 · Fun-dive offer for new graduates (R3 · BR-05)
@@ -135,8 +135,8 @@ buddy pairs for the divers who will actually come.
 **As a** Walk-in Customer, **I want** to book without paying a deposit, **so that**
 I can book on the spot, as I do today.
 
-*Why:* walk-ins cancel at 13.8% and no-show at 3.5%, and their `customer_ltv` is
-the highest of any channel at ₹14,197. A deposit is not needed for them.
+*Why:* walk-ins cancel at 13.8% and no-show at 3.5%, and their lifetime revenue
+per diving customer is the highest of any channel at ₹14,197. A deposit is not needed for them.
 
 **Acceptance criteria**
 1. The deposit gate applies only to bookings whose channel is OTA.
