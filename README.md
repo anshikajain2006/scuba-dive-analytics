@@ -204,9 +204,10 @@ no one builds a policy on it.
 ## 4. Recommendations
 
 > **Provenance.** These are derived directly from the findings above and each cites
-> its number, per brief §7. The formal Phase 5 deliverables — recommendation memo,
-> To-Be process flow, user stories, RTM — are Phase 5 deliverables and are **not yet in
-> this repo**. Reconcile against them when they land.
+> its number, per brief §7. The formal BA deliverables are in [`docs/`](docs/):
+> [BRD](docs/BRD.md), [As-Is](docs/AS_IS_FLOW.md) and [To-Be](docs/TO_BE_FLOW.md)
+> flows, [user stories](docs/USER_STORIES.md), [RTM](docs/TRACEABILITY_MATRIX.md)
+> and the [owner memo](docs/MEMO.md).
 
 Ordered by value recoverable against effort to implement.
 
@@ -304,7 +305,7 @@ _Built in Power BI by Anshhika (Phase 4) — link to follow._
 ├── sql/                   # extraction queries, one file per KPI group
 ├── notebooks/             # 01 cleaning · 02 EDA+KPIs · 03 model · 04 export
 ├── dashboard/             # star-schema CSVs + DASHBOARD_SPEC.md
-└── docs/                  # FINDINGS.md (+ BRD, flows, user stories, RTM to follow)
+└── docs/                  # FINDINGS, BRD, As-Is/To-Be flows, user stories, RTM, memo
 ```
 
 ## The ten KPIs
