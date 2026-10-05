@@ -1,7 +1,7 @@
 # Dashboard specification
 
-**Phase 4.** Anshika Jain produced this spec and the export files; the dashboard
-itself is built in Power BI / Tableau by **Anshhika** (brief §5).
+**Phase 4.** Anshika Jain produced this spec, the export files and the dashboard
+itself: [`index.html`](index.html), a self-contained HTML page.
 
 KPI names are fixed by **PROJECT_BRIEF.md §3** and must appear on the canvas
 exactly as written — `capacity_utilization`, not "Capacity Utilisation %".
@@ -37,11 +37,11 @@ fact_trips    fact_bookings   fact_inquiries
 
 Relationships — all single-direction, many-to-one:
 
-* `fact_bookings[customer_id]` → `dim_customers[customer_id]`
-* `fact_bookings[trip_id]` → `fact_trips[trip_id]`
-* `fact_bookings[dive_date]` → `dim_date[date]`
-* `fact_trips[dive_date]` → `dim_date[date]`
-* `fact_inquiries[inquiry_date]` → `dim_date[date]`
+* `fact_bookings.customer_id` → `dim_customers.customer_id`
+* `fact_bookings.trip_id` → `fact_trips.trip_id`
+* `fact_bookings.dive_date` → `dim_date.date`
+* `fact_trips.dive_date` → `dim_date.date`
+* `fact_inquiries.inquiry_date` → `dim_date.date`
 
 Mark `dim_date` as the date table, keyed on `date`.
 
@@ -53,7 +53,7 @@ there multiplies each boat's capacity by the number of seats sold on it** and th
 KPI reads far too low. Always take the denominator from `fact_trips`:
 
 ```
-capacity_utilization = DIVIDE(SUM(fact_trips[completed_seats]), SUM(fact_trips[boat_capacity]))
+capacity_utilization = SUM(fact_trips.completed_seats) / SUM(fact_trips.boat_capacity)
 ```
 
 Sanity check after building: with no filters this must read **59.5%**. If it
@@ -68,15 +68,15 @@ rate measures are plain averages and cannot be mis-specified.
 
 | Measure | Definition | No-filter value |
 |---|---|---|
-| `capacity_utilization` | `DIVIDE(SUM(fact_trips[completed_seats]), SUM(fact_trips[boat_capacity]))` | 59.5% |
-| `booking_conversion_rate` | `DIVIDE(SUM(fact_inquiries[is_converted]), COUNTROWS(fact_inquiries))` | 51.3% |
-| `cancellation_rate` | `DIVIDE(SUM(fact_bookings[is_cancelled]), COUNTROWS(fact_bookings))` | 18.6% |
-| `no_show_rate` | `DIVIDE(SUM(fact_bookings[is_no_show]), COUNTROWS(fact_bookings))` | 4.8% |
-| `repeat_customer_rate` | `DIVIDE(SUM(dim_customers[is_repeat_customer]), COUNTROWS(dim_customers))` | 16.0% |
-| `course_to_fundive_conversion` | `DIVIDE(SUM(dim_customers[course_then_fundive]), SUM(dim_customers[took_course]))` | 21.5% |
-| `revenue_per_customer` | `DIVIDE(SUM(fact_bookings[revenue_inr]), COUNTROWS(dim_customers))` | ₹10,000 |
-| `revenue_per_dive` | `DIVIDE(SUM(fact_bookings[revenue_inr]), SUM(fact_bookings[completed_dives]))` | ₹4,450 |
-| `customer_ltv` | `AVERAGEX(FILTER(dim_customers, [lifetime_revenue_inr] <> BLANK()), [lifetime_revenue_inr])` | ₹12,624 |
+| `capacity_utilization` | `SUM(fact_trips.completed_seats) / SUM(fact_trips.boat_capacity)` | 59.5% |
+| `booking_conversion_rate` | `SUM(fact_inquiries.is_converted) / COUNT(fact_inquiries)` | 51.3% |
+| `cancellation_rate` | `SUM(fact_bookings.is_cancelled) / COUNT(fact_bookings)` | 18.6% |
+| `no_show_rate` | `SUM(fact_bookings.is_no_show) / COUNT(fact_bookings)` | 4.8% |
+| `repeat_customer_rate` | `SUM(dim_customers.is_repeat_customer) / COUNT(dim_customers)` | 16.0% |
+| `course_to_fundive_conversion` | `SUM(dim_customers.course_then_fundive) / SUM(dim_customers.took_course)` | 21.5% |
+| `revenue_per_customer` | `SUM(fact_bookings.revenue_inr) / COUNT(dim_customers)` | ₹10,000 |
+| `revenue_per_dive` | `SUM(fact_bookings.revenue_inr) / SUM(fact_bookings.completed_dives)` | ₹4,450 |
+| `customer_ltv` | `AVG(dim_customers.lifetime_revenue_inr)`, blanks excluded | ₹12,624 |
 | `seasonality_index` | see §4 | Jan = 192 |
 
 `revenue_inr` is already blank on cancelled, no-show and price-quarantined rows,
@@ -116,7 +116,7 @@ Default `season_year` to `2024-25` + `2025-26` (the two full seasons).
 — rates are comparable, volumes are not."** Without it someone will read the
 half season as a collapse in demand.
 
-**Trend line** — dual axis by `dim_date[year_month]`: bookings (columns) and
+**Trend line** — dual axis by `dim_date.year_month`: bookings (columns) and
 `capacity_utilization` (line, with a 75% target reference line).
 
 ---
@@ -130,7 +130,7 @@ Index over **all twelve** calendar months, with the two closed months (Jul, Aug)
 contributing 0, so it averages 100 across a full trading year. Calendar coverage
 is uneven — Jan–May occur three times in the window, Oct–Dec twice — so the
 index is built on *mean bookings per occurrence*, not raw totals. Use the
-pre-computed values rather than recalculating in the BI tool:
+pre-computed values rather than recalculating in the dashboard:
 
 | Month | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov | Dec |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -192,7 +192,7 @@ out-of-time test window) — caption that, or it reads as missing data.
 **Revenue by product** — donut on `dive_type`:
 Course ₹2.33 Cr (42.3%) · Fun Dive ₹2.24 Cr (40.8%) · Discovery Dive ₹0.93 Cr (16.9%).
 
-**Revenue by channel** — bar on `dim_customers[acquisition_channel]`, sorted
+**Revenue by channel** — bar on `dim_customers.acquisition_channel`, sorted
 descending, with `cancellation_rate` on a secondary axis.
 
 Include the **`Unknown` channel bucket** (₹50.96 L, 9.3% of revenue). It is the

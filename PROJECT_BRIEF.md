@@ -51,7 +51,7 @@ Frame every deliverable around the **business decision** ("where is revenue leak
 | 1 | Problem statement, BRD, stakeholder map, KPI definitions, **As-Is process flow** | Anshika Jain |
 | 2 | Messy synthetic dataset (raw), loaded into SQLite/Postgres | Anshika Jain |
 | 3 | SQL extraction queries; cleaning + EDA notebook; ONE model (cancellation-risk **or** RFM segmentation) | Anshika Jain |
-| 4 | Dashboard data export + dashboard spec (KPI cards, seasonality slicer, utilization heatmap, cancellation breakdown, revenue by product/channel) | Spec/export; **Anshhika** builds in Power BI/Tableau |
+| 4 | Dashboard data export + dashboard spec (KPI cards, seasonality slicer, utilization heatmap, cancellation breakdown, revenue by product/channel) | Anshika Jain builds spec/export and the HTML dashboard (`dashboard/index.html`) |
 | 5 | **To-Be process flow**, user stories + acceptance criteria, requirements traceability matrix, one-page recommendation memo (each rec tied to a number from Phase 3) | Anshika Jain |
 | 6 | README case study stitching it all together | Anshika Jain |
 
@@ -68,7 +68,7 @@ scuba-dive-analytics/
 │   └── clean/             # post-cleaning
 ├── sql/                   # extraction queries
 ├── notebooks/             # cleaning + EDA + model
-├── dashboard/             # .pbix / Tableau link + screenshots + spec
+├── dashboard/             # HTML dashboard (index.html) + export CSVs + spec
 └── docs/                  # BRD, As-Is & To-Be flows, user stories, RTM, recommendation memo
 ```
 
@@ -88,6 +88,6 @@ scuba-dive-analytics/
 
 ## 9. CV framing (target output)
 
-**Data Analyst:** "Built an end-to-end dive-operator analytics pipeline (SQL, Python, Power BI) on ~7K bookings; identified capacity and retention leaks projected to recover ₹X/season."
+**Data Analyst:** "Built an end-to-end dive-operator analytics pipeline (SQL, Python, HTML dashboard) on ~7K bookings; identified capacity and retention leaks projected to recover ₹X/season."
 
 **Business Analyst:** "Diagnosed a revenue decline end-to-end — authored BRD, As-Is/To-Be process flows, and user stories; recommended a rebooking + re-engagement workflow projected to lift utilization from 55% to 75%."

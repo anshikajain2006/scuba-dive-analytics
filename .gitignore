@@ -14,8 +14,7 @@ desktop.ini
 .vscode/
 .idea/
 
-# Power BI temp
-*.pbix.tmp
+# Office lock files
 ~$*
 
 # NOTE: data/raw/ and data/clean/ are intentionally COMMITTED.

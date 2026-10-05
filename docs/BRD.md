@@ -7,7 +7,7 @@
 | Evidence base | [`docs/FINDINGS.md`](FINDINGS.md). Every figure below cites its section and source query |
 | KPI names | Exactly as defined in [`PROJECT_BRIEF.md`](../PROJECT_BRIEF.md) §3 |
 | Currency | INR throughout |
-| Dashboard build | Anshhika (Power BI, brief §5) |
+| Dashboard | HTML dashboard, [`dashboard/index.html`](../dashboard/index.html) |
 
 > **Data note.** The dataset is synthetic. Its trends were deliberately planted by
 > `data/generate_data.py` (assumption **A10**) so that Phase 3 had real signal to

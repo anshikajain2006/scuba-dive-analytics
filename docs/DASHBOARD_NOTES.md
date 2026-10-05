@@ -5,13 +5,18 @@ Phase 4 build.
 
 ## Status
 
-> **Update:** an HTML dashboard now replaces the Power BI deliverable. See the note at the end of this file.
+**Built.** The dashboard is [`dashboard/index.html`](../dashboard/index.html), a
+self-contained HTML page with four tabs: Overview, Cancellations, Revenue leakage
+and Recommendations. It opens locally in any browser, with no server needed.
 
-**The Power BI dashboard has not been built yet.** The export files and the full
-build spec are ready. The build is owned by **Anshhika** (PROJECT_BRIEF.md §5).
-The complete specification, covering the data model, DAX measures, visuals and
+- **Opened as a local file:** it renders from a built-in copy of the figures in
+  [`FINDINGS.md`](FINDINGS.md), because browsers block reading local CSVs from
+  `file://` pages. A label in the header shows which source is in use.
+- **Served over HTTP** (e.g. `python -m http.server` in `dashboard/`, or GitHub
+  Pages): it computes every figure live from the CSVs below.
+
+The full specification, covering the data model, measure definitions, visuals and
 build checklist, is in [`dashboard/DASHBOARD_SPEC.md`](../dashboard/DASHBOARD_SPEC.md).
-This note is a summary of it and does not replace it.
 
 ## Pages
 
@@ -70,15 +75,3 @@ The values below come from `kpi_summary.csv` and match [`FINDINGS.md`](FINDINGS.
 - **OQ-3.** `revenue_per_customer` and `customer_ltv` use different denominators
   (5,495 vs 4,353 customers). Caption both cards with their denominator.
 - **OQ-4.** The `season` slicer's Peak/Shoulder split is an assumption.
-
-## README placeholder to update
-
-[`README.md`](../README.md) §5 ends with:
-
-> _Built in Power BI by Anshhika (Phase 4) — link to follow._
-
-When the `.pbix` is built, replace "link to follow" with the published report URL
-(or the path to the `.pbix` in `dashboard/`), add 1–2 screenshots to `dashboard/`,
-and tick the checklist in DASHBOARD_SPEC §7.
-
-HTML dashboard built at dashboard/index.html. Self-contained, no Power BI required. Opens locally in any browser.
